@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@200&family=Crimson+Text&display=swap");
+
 * {
   margin: 0;
 }
 #footer {
   background-color: red;
+}
+
+h1 {
+  font-family: "Crimson Text", serif;
 }
 
 /* Camilla */
