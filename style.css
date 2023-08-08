@@ -3,6 +3,7 @@
 * {
   margin: 0;
 }
+
 #footer {
   background-color: red;
 }
@@ -14,3 +15,569 @@ h1 {
 /* Camilla */
 
 /* Maja */
+/* Mobile first 
+// Tablet mediaquery: @media screen and (min-width: 672px) and (max-width: 950px) 
+// Desktop mediaqury: @media screen and (min-width: 951px) */
+/* ======================================================================= */
+/* ================================ GENERAL ============================== */
+* {
+  margin: 0;
+}
+
+body {
+  background: var(--black-gradient);
+  height: 1000px;
+}
+
+header,
+footer {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page {
+  width: 85%;
+  margin: auto;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .page {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .page {
+    width: 80%;
+  }
+}
+
+.primary-whitespace-horizontal {
+  height: 30px;
+}
+
+.secondary-whitespace-horizontal {
+  height: 15px;
+}
+
+.primary-whitespace-vertical {
+  width: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .flex {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+:root {
+  /* -------------------------------- COLORS ------------------------------- */
+  --primary-black: #1c1c1c;
+  --secondary-black: #262626;
+  --black-gradient: -webkit-linear-gradient(80deg,
+      #1c1c1c,
+      #1c1c1c,
+      #303030,
+      #1c1c1c,
+      #1c1c1c);
+  --white: #ffffff;
+  --red: #c20203;
+  --gold: #ceac68;
+  --gold-hover: #c29741;
+  --gold-gradient: -webkit-linear-gradient(100deg,
+      #ceac68,
+      #ceac68,
+      #f0d4a4,
+      #ceac68,
+      #ceac68);
+  --green: #37512e;
+  --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
+  /* --------------------------------- FONTS ------------------------------- */
+  --primary_font: "Arial";
+  --secondary_font: "Playfair Display", serif;
+}
+
+.text-padding {
+  padding: 30px;
+}
+
+.text-padding-small {
+  padding-bottom: 10px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* ------------------------------- BODY TEXT ----------------------------- */
+p,
+td,
+tr,
+h5 {
+  font-family: var(--primary_font);
+  color: var(--white);
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+/* ----------------------------------- H1 -------------------------------- */
+h1 {
+  font-family: var(--secondary_font);
+  color: var(--white);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+/* ----------------------------------- H2 -------------------------------- */
+h2 {
+  font-family: var(--secondary_font);
+  font-weight: 100;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----------------------------------- H3 -------------------------------- */
+h3 {
+  font-family: var(--secondary_font);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* ----------------------------------- H4 -------------------------------- */
+h4 {
+  font-family: var(--secondary_font);
+  font-weight: 100;
+  font-size: 18px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------------------------ H5 ------------------------------- */
+h5 {
+  font-size: 12px;
+}
+
+/* ------------------------------- GOLD TEXT ----------------------------- */
+.goldtext {
+  background: var(--gold-gradient);
+  background-size: 100px;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------- A LINKS ------------------------------ */
+a {
+  font-family: var(--primary_font);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ======================================================================= */
+/* ================================ BUTTONS ============================== */
+/* -------------------------------- STYLING ------------------------------ */
+button {
+  width: 165px;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  color: var(--white);
+  font-family: var(--primary_font);
+  font-size: 16px;
+}
+
+#primary-btn,
+#secondary-btn {
+  cursor: pointer;
+}
+
+.button-leftpart-primary,
+.leftpart-button-user {
+  border-radius: 8px 0px 0px 8px;
+  border: 2px solid var(--gold);
+  left: 0;
+  width: 130px;
+  background-color: var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.leftpart-button-user {
+  width: 85px;
+}
+
+.button-rightpart-primary,
+.rightpart-button-user {
+  border-radius: 0px 8px 8px 0px;
+  border: 2px solid var(--gold);
+  right: 0;
+  width: 30px;
+  background-color: var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.button-leftpart-secondary {
+  border-radius: 8px 0px 0px 8px;
+  left: 0;
+  width: 130px;
+  border: 2px solid var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.button-rightpart-secondary {
+  border: 2px solid var(--gold);
+  border-radius: 0px 8px 8px 0px;
+  right: 0;
+  width: 30px;
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.back-btn-profile,
+.back-btn,
+.user-btn {
+  width: 120px !important;
+}
+
+@media screen and (min-width: 951px) {
+  .back-btn-profile {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.leftpart-button-back {
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  border-radius: 8px 0px 0px 8px;
+  left: 0;
+  width: 30px;
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.rightpart-button-back {
+  border-radius: 0px 8px 8px 0px;
+  right: 0;
+  width: 85px;
+  background-color: none;
+  border: 2px solid var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------------------- HOVER ------------------------------- */
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary,
+.primary-btn:hover>.rightpart-button-user,
+.primary-btn:hover>.leftpart-button-user {
+  background-color: var(--gold-hover);
+  border: 2px solid var(--gold-hover);
+  cursor: pointer;
+}
+
+.secondary-btn:hover>.button-rightpart-secondary,
+.secondary-btn:hover>.button-leftpart-secondary,
+.secondary-btn:hover>.rightpart-button-back,
+.secondary-btn:hover>.leftpart-button-back {
+  background-color: var(--gold);
+  border: 2px solid var(--gold);
+  cursor: pointer;
+}
+
+/* -------------------------------- ALIGNMENT ---------------------------- */
+.btn-center,
+.hero-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 951px) {
+  .hero-btn {
+    justify-content: left;
+  }
+}
+
+.btn-center-margin {
+  margin: 0 auto;
+}
+
+/* ------------------------------ USER SECTION BTN ----------------------- */
+.user_section-btn_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* ======================================================================= */
+/* =============================== LOGO ================================== */
+.logo {
+  margin: 5px;
+  width: 40px;
+  z-index: 3;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .logo {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .logo {
+    width: 50px;
+  }
+}
+
+/* ======================================================================= */
+/* ================================ HEADER =============================== */
+header {
+  background-color: var(--primary-black);
+  height: 10vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 951px) {
+  header {
+    flex-direction: row;
+    height: 12vh;
+  }
+}
+
+nav {
+  background-color: var(--primary-black);
+  position: absolute;
+  top: 9vh;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+@media screen and (min-width: 951px) {
+  nav {
+    width: 1000px;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.flag {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.flags-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.en-flag {
+  background-image: url(image/engelsk.png);
+}
+
+.dk-flag {
+  background-image: url(image/dansk.png);
+}
+
+/* ---------------------------- DROPDOWN MENU ---------------------------- */
+menu {
+  cursor: pointer;
+}
+
+#menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #menu {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  #menu {
+    display: none;
+  }
+}
+
+.change {
+  display: block !important;
+}
+
+.change .bar {
+  background-color: var(--white);
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .bar {
+    height: 5px;
+  }
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotate(-45deg);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .change #bar1 {
+    transform: translateY(6px) rotate(-45deg) !important;
+  }
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #bar3 {
+    transform: translateY(4px);
+  }
+}
+
+.change #bar3 {
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.navigation_link {
+  list-style: none;
+  color: var(--white);
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.navigation_link a.active {
+  color: var(--red);
+}
+
+@media screen and (min-width: 951px) {
+  .navigation_link {
+    padding: 0;
+  }
+}
+
+.active {
+  color: var(--red);
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list a:hover {
+    color: var(--red);
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .fast-links a:hover {
+    color: var(--red);
+  }
+}
+
+.nav_list li {
+  padding: 12px 12px 4px 12px;
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list li {
+    padding: 12px 4px 4px 4px;
+  }
+}
+
+.nav_list {
+  padding: 0;
+  margin: 0 15px 20px;
+  transition: 0.3s ease;
+  display: none;
+  font-size: 15px;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list {
+    width: 96%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+  }
+}
