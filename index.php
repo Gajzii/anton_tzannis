@@ -1,8 +1,8 @@
 <html>
 
-<?php get_header(); ?>
 
 <body>
+    <header><?php get_header(); ?></header>
     <h1>CONTENT</h1>
 </body>
 
