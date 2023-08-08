@@ -1,6 +1,9 @@
-<div id= "ttr_footer">
-<h1>FOOTER</h1>
-</div>
-</div>
+<footer id="footer">
+    <h1>FOOTER</h1>
+</footer>
+
+<?php wp_footer(); ?>
+
 </body>
+
 </html>
