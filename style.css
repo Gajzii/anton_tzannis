@@ -3,17 +3,59 @@
 * {
   margin: 0;
 }
-
-#footer {
-  background-color: red;
+/* GENEREL */
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
-
-h1 {
-  font-family: "Crimson Text", serif;
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Camilla */
 
+/*--- FOOTER ---*/
+#footer-background {
+  background-image: url("img/footer_background.png");
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text {
+  color: white;
+}
+.opening-hours-text {
+  color: white;
+}
+.footer-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.footer-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.opening-hours-text-flex {
+  display: flex;
+  flex-direction: row;
+}
+.opening-hours-text {
+  display: flex;
+  flex-direction: column;
+}
+.footer-flex-opening-hours {
+  display: flex;
+  flex-direction: column;
+}
 /* Maja */
 /* Mobile first 
 // Tablet mediaquery: @media screen and (min-width: 672px) and (max-width: 950px) 
@@ -94,22 +136,12 @@ footer {
   /* -------------------------------- COLORS ------------------------------- */
   --primary-black: #1c1c1c;
   --secondary-black: #262626;
-  --black-gradient: -webkit-linear-gradient(80deg,
-      #1c1c1c,
-      #1c1c1c,
-      #303030,
-      #1c1c1c,
-      #1c1c1c);
+  --black-gradient: -webkit-linear-gradient(80deg, #1c1c1c, #1c1c1c, #303030, #1c1c1c, #1c1c1c);
   --white: #ffffff;
   --red: #c20203;
   --gold: #ceac68;
   --gold-hover: #c29741;
-  --gold-gradient: -webkit-linear-gradient(100deg,
-      #ceac68,
-      #ceac68,
-      #f0d4a4,
-      #ceac68,
-      #ceac68);
+  --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
   --green: #37512e;
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
   /* --------------------------------- FONTS ------------------------------- */
@@ -314,19 +346,19 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover>.button-rightpart-primary,
-.primary-btn:hover>.button-leftpart-primary,
-.primary-btn:hover>.rightpart-button-user,
-.primary-btn:hover>.leftpart-button-user {
+.primary-btn:hover > .button-rightpart-primary,
+.primary-btn:hover > .button-leftpart-primary,
+.primary-btn:hover > .rightpart-button-user,
+.primary-btn:hover > .leftpart-button-user {
   background-color: var(--gold-hover);
   border: 2px solid var(--gold-hover);
   cursor: pointer;
 }
 
-.secondary-btn:hover>.button-rightpart-secondary,
-.secondary-btn:hover>.button-leftpart-secondary,
-.secondary-btn:hover>.rightpart-button-back,
-.secondary-btn:hover>.leftpart-button-back {
+.secondary-btn:hover > .button-rightpart-secondary,
+.secondary-btn:hover > .button-leftpart-secondary,
+.secondary-btn:hover > .rightpart-button-back,
+.secondary-btn:hover > .leftpart-button-back {
   background-color: var(--gold);
   border: 2px solid var(--gold);
   cursor: pointer;

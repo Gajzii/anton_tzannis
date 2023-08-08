@@ -6,7 +6,7 @@
     <?php wp_head(); ?>
     <!-- Links to stylesheet named "style" -->
     <?php wp_enqueue_style( 'style', get_stylesheet_uri() ); ?>
-     <?php // p_enqueue_script( 'script', get_template_directory_uri() . 'script.js', array( 'jquery' ), 1.1, true); ?>
+    <?php // p_enqueue_script( 'script', get_template_directory_uri() . 'script.js', array( 'jquery' ), 1.1, true); ?>
 
 </head>
 
@@ -23,7 +23,7 @@
 </div>
 <!--- NAVIGATION --->
 <nav>
-    <ul class="nav_list"> 
+    <ul class="nav_list">
         <li>
             <a href="<?php echo get_stylesheet_directory_uri(); ?>index.php" class="navigation_link">Forside</a>
         </li>
@@ -56,4 +56,4 @@
             </li>
         </div>
     </ul>
-</nav> 
+</nav>
