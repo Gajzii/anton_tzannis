@@ -3,14 +3,57 @@
 * {
   margin: 0;
 }
-#footer {
-  background-color: red;
+/* GENEREL */
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
-
-h1 {
-  font-family: "Crimson Text", serif;
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Camilla */
 
+/*--- FOOTER ---*/
+#footer-background {
+  background-image: url("img/footer_background.png");
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text {
+  color: white;
+}
+.opening-hours-text {
+  color: white;
+}
+.footer-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.footer-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.opening-hours-text-flex {
+  display: flex;
+  flex-direction: row;
+}
+.opening-hours-text {
+  display: flex;
+  flex-direction: column;
+}
+.footer-flex-opening-hours {
+  display: flex;
+  flex-direction: column;
+}
 /* Maja */
