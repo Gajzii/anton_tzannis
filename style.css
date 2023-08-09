@@ -16,25 +16,23 @@
 /* Camilla */
 
 /*--- FOOTER ---*/
-#footer-background {
+/* #footer-background {
   background-image: url("img/footer_background.png");
   height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
-}
+} */
 .icons {
   display: flex;
   flex-direction: row;
   gap: 5px;
   justify-content: center;
   align-items: center;
+  color: red;
 }
-.footer-text {
-  color: white;
-}
+.footer-text,
 .opening-hours-text {
-  color: white;
+  color: black;
 }
 .footer-flex-row {
   display: flex;
@@ -44,18 +42,7 @@
   display: flex;
   flex-direction: column;
 }
-.opening-hours-text-flex {
-  display: flex;
-  flex-direction: row;
-}
-.opening-hours-text {
-  display: flex;
-  flex-direction: column;
-}
-.footer-flex-opening-hours {
-  display: flex;
-  flex-direction: column;
-}
+
 /* Maja */
 /* Mobile first 
 // Tablet mediaquery: @media screen and (min-width: 672px) and (max-width: 950px) 

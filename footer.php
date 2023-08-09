@@ -24,7 +24,7 @@
                         <iconify-icon class="icon" icon="material-symbols:calendar-month"></iconify-icon>
                         <h4>Åbningstider</h4>
                     </div>
-                    <div class="flex-col">
+                    <div class="flex-row">
                         <table>
                             <tr class="opening-hours-text">
                                 <th>Mandag:</th>
