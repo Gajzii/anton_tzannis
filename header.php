@@ -5,9 +5,7 @@
 <head>
     <?php wp_head(); ?>
     <!-- Links to stylesheet named "style" -->
-    <?php wp_enqueue_style( 'style', get_stylesheet_uri() ); ?>
-    <?php // p_enqueue_script( 'script', get_template_directory_uri() . 'script.js', array( 'jquery' ), 1.1, true); ?>
-
+    
 </head>
 
 <!--- LOGO --->
