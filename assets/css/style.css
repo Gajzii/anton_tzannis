@@ -25,6 +25,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--gold);
+  opacity: 40%;
+  filter: blur(1px);
   position: absolute;
 }
 
