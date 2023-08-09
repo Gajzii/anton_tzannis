@@ -19,17 +19,65 @@
 
 /*--- FOOTER ---*/
 #footer-background {
-  background-image: url("../images/footer_background.png");
-  width: 100%;
-  height: 335px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 400px;
+  position: relative;
   color: var(--gold);
-  opacity: 40%;
-  filter: blur(1px);
-  position: absolute;
+}
+@media screen and (min-width: 951px) {
+  #footer-background {
+    height: 260px;
+  }
 }
 
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #footer-background {
+    height: 250px;
+  }
+}
+
+#footer-background::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.9);
+  background-image: url("../images/footer_background.png");
+  background-position: center;
+}
+
+.footer-center {
+  margin: 0;
+  position: relative;
+  left: 50%;
+  text-align: center;
+  top: 15%;
+  transform: translate(-50%, -12%);
+}
+
+@media screen and (min-width: 951px) {
+  .footer-center {
+    text-align: left;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .footer-center {
+    top: 12%;
+    transform: translate(-50%, -5%);
+  }
+}
+
+.icon {
+  font-size: 22px;
+  color: var(--gold);
+}
 .icons {
   display: flex;
   flex-direction: row;
@@ -38,20 +86,32 @@
   align-items: center;
 }
 
-.footer-text,
-.opening-hours-text {
-  color: white;
-}
-
 .footer-flex-row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  margin: auto;
+  gap: 20px;
+}
+
+@media screen and (min-width: 951px), (min-width: 672px) and (max-width: 950px) {
+  .footer-flex-row {
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+  }
 }
 
 .footer-flex-col {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (min-width: 951px) {
+  .footer-flex-col {
+    gap: 0;
+  }
 }
 
 .opening-hours-text-flex {
@@ -64,33 +124,32 @@
   flex-direction: column;
 }
 
+.opening-hours-text th {
+  line-height: 15px;
+}
+
 .footer-flex-opening-hours {
   display: flex;
   flex-direction: column;
 }
 
-.footer-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .footer-logo {
   width: 30px;
   display: block;
-  margin: auto;
+  margin: 10px auto;
 }
 .copyright {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
   margin-bottom: 5px;
-  margin-top: 30px;
   font-family: var(--secondary_font);
   background: var(--gold-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-weight: 600;
 }
 
 /* Maja */
@@ -110,11 +169,11 @@ body {
 
 header,
 footer {
-  max-width: 1600px;
   margin: 0 auto;
 }
 header {
   width: 90%;
+  max-width: 1600px;
 }
 
 .center {
@@ -201,10 +260,11 @@ header {
 }
 
 /* ------------------------------- BODY TEXT ----------------------------- */
+a,
 p,
 td,
 tr,
-h5 {
+th {
   font-family: var(--primary_font);
   color: var(--white);
   font-weight: 100;
@@ -251,7 +311,12 @@ h4 {
 
 /* ------------------------------------ H5 ------------------------------- */
 h5 {
-  font-size: 12px;
+  font-family: var(--secondary_font);
+  font-weight: 700;
+  font-size: 21px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ------------------------------- GOLD TEXT ----------------------------- */
@@ -420,6 +485,10 @@ button {
 
 .btn-center-margin {
   margin: 0 auto;
+}
+
+.left-alignment {
+  text-align: left;
 }
 
 /* ------------------------------ USER SECTION BTN ----------------------- */
