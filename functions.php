@@ -1,13 +1,5 @@
-<?php function ti_custom_javascript() {
-    ?>
-        <script>
-          // your javscript code goes here
-function onClickMenu() {
-  document.getElementById("menu").classList.toggle("change");
+<?php
 
-  document.querySelector(".nav_list").classList.toggle("change");}
-        </script>
-    <?php
-}
-add_action('wp_head', 'ti_custom_javascript'); 
-?>
+// Load function partials
+require 'functions/navigation.php';
+require 'functions/scripts.php';
