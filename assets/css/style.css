@@ -106,17 +106,13 @@
 
 body {
   background: var(--black-gradient);
-  height: 1000px;
+  height: 100vh;
 }
 
 header,
 footer {
   max-width: 1600px;
   margin: 0 auto;
-}
-
-header {
-  width: 90%;
 }
 
 .center {
@@ -438,6 +434,7 @@ button {
   width: 40px;
   z-index: 3;
   vertical-align: middle;
+  margin: 0 15px 0 0;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -449,6 +446,7 @@ button {
 @media screen and (min-width: 951px) {
   .logo {
     width: 50px;
+    margin: 0 0 0 15px;
   }
 }
 
@@ -456,12 +454,12 @@ button {
 /* ================================ HEADER =============================== */
 .header {
   background-color: var(--primary-black);
+  width: 100%;
   height: 10vh;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 0 15px;
 }
 
 @media screen and (min-width: 951px) {
@@ -486,6 +484,8 @@ nav {
     position: static;
     display: flex;
     justify-content: flex-end;
+    margin-right: 15px;
+    background-color: transparent;
   }
 }
 
@@ -519,7 +519,7 @@ menu {
   width: 30px;
   height: 40px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 20px 0 0 15px;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
