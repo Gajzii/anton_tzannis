@@ -14,7 +14,8 @@
     <div class="header">
         <!--- LOGO --->
         <a href="<?php echo get_stylesheet_directory_uri(); ?>index.php">
-            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
+            <img class="logo"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/imagess/antontzannis-logo-red.png" />
 
         </a>
         <!--- MOBILE MENU --->
