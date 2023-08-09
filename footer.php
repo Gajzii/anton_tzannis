@@ -1,6 +1,6 @@
-<footer>
-    <div id="footer-background">
+<footer id="footer-background">
 
+    <div class="footer-center">
         <div class="footer-flex-row">
             <div class="footer-flex-col">
                 <!-- ADRESS -->
@@ -70,12 +70,12 @@
                             </tr>
                         </table>
                     </div>
-
                 </div>
             </div>
+        </div>
 
-
-
+        <img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/image/antontzannis-logo-red.png" />
+    </div>
 
 </footer>
 

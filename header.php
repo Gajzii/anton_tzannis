@@ -5,7 +5,7 @@
 <head>
     <?php wp_head(); ?>
     <!-- Links to stylesheet named "style" -->
-    
+
 </head>
 
 <!--- LOGO --->
