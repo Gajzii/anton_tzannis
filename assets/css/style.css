@@ -82,6 +82,7 @@
   display: block;
   margin: auto;
 }
+
 .copyright {
   font-size: 11px;
   text-align: center;
@@ -113,6 +114,7 @@ footer {
   max-width: 1600px;
   margin: 0 auto;
 }
+
 header {
   width: 90%;
 }
@@ -385,19 +387,19 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover > .button-rightpart-primary,
-.primary-btn:hover > .button-leftpart-primary,
-.primary-btn:hover > .rightpart-button-user,
-.primary-btn:hover > .leftpart-button-user {
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary,
+.primary-btn:hover>.rightpart-button-user,
+.primary-btn:hover>.leftpart-button-user {
   background-color: var(--gold-hover);
   border: 2px solid var(--gold-hover);
   cursor: pointer;
 }
 
-.secondary-btn:hover > .button-rightpart-secondary,
-.secondary-btn:hover > .button-leftpart-secondary,
-.secondary-btn:hover > .rightpart-button-back,
-.secondary-btn:hover > .leftpart-button-back {
+.secondary-btn:hover>.button-rightpart-secondary,
+.secondary-btn:hover>.button-leftpart-secondary,
+.secondary-btn:hover>.rightpart-button-back,
+.secondary-btn:hover>.leftpart-button-back {
   background-color: var(--gold);
   border: 2px solid var(--gold);
   cursor: pointer;
@@ -433,10 +435,21 @@ button {
 /* ======================================================================= */
 /* =============================== LOGO ================================== */
 .logo {
-  margin: 5px;
   width: 40px;
   z-index: 3;
   vertical-align: middle;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .logo {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .logo {
+    width: 50px;
+  }
 }
 
 /* ======================================================================= */
@@ -448,6 +461,14 @@ button {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  margin: 0 15px;
+}
+
+@media screen and (min-width: 951px) {
+  .header {
+    flex-direction: row;
+    height: 12vh;
+  }
 }
 
 nav {
@@ -459,10 +480,18 @@ nav {
   z-index: 2;
 }
 
+@media screen and (min-width: 951px) {
+  nav {
+    width: 1000px;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .flag {
   display: flex;
   flex-direction: row;
-  gap: 5px;
 }
 
 .flags-image {
@@ -493,6 +522,19 @@ menu {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #menu {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  #menu {
+    display: none;
+  }
+}
+
 .change {
   display: block !important;
 }
@@ -510,12 +552,24 @@ menu {
   transition: 0.3s ease;
 }
 
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .bar {
+    height: 5px;
+  }
+}
+
 #bar1 {
   transform: translateY(-4px);
 }
 
 .change #bar1 {
   transform: translateY(4px) rotate(-45deg);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .change #bar1 {
+    transform: translateY(6px) rotate(-45deg) !important;
+  }
 }
 
 .change #bar2 {
@@ -526,6 +580,12 @@ menu {
   transform: translateY(4px);
 }
 
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #bar3 {
+    transform: translateY(4px);
+  }
+}
+
 .change #bar3 {
   transform: translateY(-2px) rotate(45deg);
 }
@@ -533,8 +593,14 @@ menu {
 .navigation_link {
   list-style: none;
   color: var(--white);
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
+}
+
+@media screen and (min-width: 951px) {
+  .navigation_link {
+    padding: 0;
+  }
 }
 
 .navigation_link a.active {
@@ -549,6 +615,20 @@ menu {
   padding: 12px 12px 4px 12px;
 }
 
+.nav_list li:last-child {
+  padding-left: 2px;
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list li {
+    padding: 12px 4px 4px 18px;
+  }
+
+  .nav_list li:last-child {
+    padding-left: 8px;
+  }
+}
+
 .nav_list {
   padding: 0;
   margin: 0 15px 20px;
@@ -556,4 +636,22 @@ menu {
   display: none;
   font-size: 20px;
   list-style-type: none;
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+  }
+
+  .nav_list a:hover {
+    color: var(--red);
+  }
+
+  .fast-links a:hover {
+    color: var(--red);
+  }
 }
