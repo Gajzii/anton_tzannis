@@ -138,6 +138,7 @@
   display: block;
   margin: 10px auto;
 }
+
 .copyright {
   font-size: 12px;
   text-align: center;
@@ -164,7 +165,7 @@
 
 body {
   background: var(--black-gradient);
-  height: 1000px;
+  height: 100vh;
 }
 
 header,
@@ -173,7 +174,6 @@ footer {
 }
 header {
   width: 90%;
-  max-width: 1600px;
 }
 
 .center {
@@ -502,21 +502,42 @@ button {
 /* ======================================================================= */
 /* =============================== LOGO ================================== */
 .logo {
-  margin: 5px;
   width: 40px;
   z-index: 3;
   vertical-align: middle;
+  margin: 0 15px 0 0;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .logo {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .logo {
+    width: 50px;
+    margin: 0 0 0 15px;
+  }
 }
 
 /* ======================================================================= */
 /* ================================ HEADER =============================== */
 .header {
   background-color: var(--primary-black);
+  width: 100%;
   height: 10vh;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 951px) {
+  .header {
+    flex-direction: row;
+    height: 12vh;
+  }
 }
 
 nav {
@@ -528,10 +549,20 @@ nav {
   z-index: 2;
 }
 
+@media screen and (min-width: 951px) {
+  nav {
+    width: 1000px;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    background-color: transparent;
+  }
+}
+
 .flag {
   display: flex;
   flex-direction: row;
-  gap: 5px;
 }
 
 .flags-image {
@@ -557,9 +588,22 @@ menu {
 
 #menu {
   width: 30px;
-  height: 30px;
+  height: 40px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 20px 0 0 15px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #menu {
+    height: 55px;
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  #menu {
+    display: none;
+  }
 }
 
 .change {
@@ -572,6 +616,7 @@ menu {
 
 .bar {
   height: 3px;
+  margin-top: 3px;
   width: 100%;
   background-color: var(--white);
   display: block;
@@ -579,12 +624,25 @@ menu {
   transition: 0.3s ease;
 }
 
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .bar {
+    height: 5px;
+    margin-top: 5px;
+  }
+}
+
 #bar1 {
   transform: translateY(-4px);
 }
 
 .change #bar1 {
-  transform: translateY(4px) rotate(-45deg);
+  transform: translateY(6px) rotate(45deg);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .change #bar1 {
+    transform: translateY(10px) rotate(45deg) !important;
+  }
 }
 
 .change #bar2 {
@@ -596,14 +654,26 @@ menu {
 }
 
 .change #bar3 {
-  transform: translateY(-2px) rotate(45deg);
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .change #bar3 {
+    transform: translateY(-10px) rotate(-45deg);
+  }
 }
 
 .navigation_link {
   list-style: none;
   color: var(--white);
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
+}
+
+@media screen and (min-width: 951px) {
+  .navigation_link {
+    padding: 0;
+  }
 }
 
 .navigation_link a.active {
@@ -615,7 +685,23 @@ menu {
 }
 
 .nav_list li {
-  padding: 12px 12px 4px 12px;
+  padding: 12px 12px 5px 2px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .nav_list li {
+    padding: 12px 12px 5px 5px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list li {
+    padding: 12px 4px 4px 18px;
+  }
+
+  .nav_list li:last-child {
+    padding-left: 8px;
+  }
 }
 
 .nav_list {
@@ -625,4 +711,22 @@ menu {
   display: none;
   font-size: 20px;
   list-style-type: none;
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+  }
+
+  .nav_list a:hover {
+    color: var(--red);
+  }
+
+  .fast-links a:hover {
+    color: var(--red);
+  }
 }
