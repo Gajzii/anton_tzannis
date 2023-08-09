@@ -82,6 +82,7 @@
   display: block;
   margin: auto;
 }
+
 .copyright {
   font-size: 11px;
   text-align: center;
@@ -113,6 +114,7 @@ footer {
   max-width: 1600px;
   margin: 0 auto;
 }
+
 header {
   width: 90%;
 }
@@ -385,19 +387,19 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover > .button-rightpart-primary,
-.primary-btn:hover > .button-leftpart-primary,
-.primary-btn:hover > .rightpart-button-user,
-.primary-btn:hover > .leftpart-button-user {
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary,
+.primary-btn:hover>.rightpart-button-user,
+.primary-btn:hover>.leftpart-button-user {
   background-color: var(--gold-hover);
   border: 2px solid var(--gold-hover);
   cursor: pointer;
 }
 
-.secondary-btn:hover > .button-rightpart-secondary,
-.secondary-btn:hover > .button-leftpart-secondary,
-.secondary-btn:hover > .rightpart-button-back,
-.secondary-btn:hover > .leftpart-button-back {
+.secondary-btn:hover>.button-rightpart-secondary,
+.secondary-btn:hover>.button-leftpart-secondary,
+.secondary-btn:hover>.rightpart-button-back,
+.secondary-btn:hover>.leftpart-button-back {
   background-color: var(--gold);
   border: 2px solid var(--gold);
   cursor: pointer;
@@ -433,7 +435,6 @@ button {
 /* ======================================================================= */
 /* =============================== LOGO ================================== */
 .logo {
-  margin: 5px;
   width: 40px;
   z-index: 3;
   vertical-align: middle;
@@ -448,6 +449,7 @@ button {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  margin: 0 15px;
 }
 
 nav {
@@ -462,7 +464,6 @@ nav {
 .flag {
   display: flex;
   flex-direction: row;
-  gap: 5px;
 }
 
 .flags-image {
