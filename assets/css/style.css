@@ -23,6 +23,7 @@
   position: relative;
   color: var(--gold);
 }
+
 @media screen and (min-width: 951px) {
   #footer-background {
     height: 260px;
@@ -78,6 +79,7 @@
   font-size: 22px;
   color: var(--gold);
 }
+
 .icons {
   display: flex;
   flex-direction: row;
@@ -94,7 +96,8 @@
   gap: 20px;
 }
 
-@media screen and (min-width: 951px), (min-width: 672px) and (max-width: 950px) {
+@media screen and (min-width: 951px),
+(min-width: 672px) and (max-width: 950px) {
   .footer-flex-row {
     flex-direction: row;
     margin: 0;
@@ -108,6 +111,7 @@
   justify-content: space-between;
   gap: 20px;
 }
+
 @media screen and (min-width: 951px) {
   .footer-flex-col {
     gap: 0;
@@ -172,6 +176,7 @@ header,
 footer {
   margin: 0 auto;
 }
+
 header {
   width: 90%;
 }
@@ -450,19 +455,19 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover > .button-rightpart-primary,
-.primary-btn:hover > .button-leftpart-primary,
-.primary-btn:hover > .rightpart-button-user,
-.primary-btn:hover > .leftpart-button-user {
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary,
+.primary-btn:hover>.rightpart-button-user,
+.primary-btn:hover>.leftpart-button-user {
   background-color: var(--gold-hover);
   border: 2px solid var(--gold-hover);
   cursor: pointer;
 }
 
-.secondary-btn:hover > .button-rightpart-secondary,
-.secondary-btn:hover > .button-leftpart-secondary,
-.secondary-btn:hover > .rightpart-button-back,
-.secondary-btn:hover > .leftpart-button-back {
+.secondary-btn:hover>.button-rightpart-secondary,
+.secondary-btn:hover>.button-leftpart-secondary,
+.secondary-btn:hover>.rightpart-button-back,
+.secondary-btn:hover>.leftpart-button-back {
   background-color: var(--gold);
   border: 2px solid var(--gold);
   cursor: pointer;
@@ -729,4 +734,50 @@ menu {
   .fast-links a:hover {
     color: var(--red);
   }
+}
+
+/* ======================================================================= */
+/* ========================== PRODUCTS PAGE ============================== */
+.product-americancrew::before {
+  background-image: url(../images/americancrew.webp);
+}
+
+.product-nineyards::before {
+  background-image: url(../images/anton-tzannis.jpg);
+}
+
+.product-eksperience::before {
+  background-image: url(../images/eksperience.webp);
+}
+
+.product-stylemasters::before {
+  background-image: url(../images/stylemasters.webp);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .cta-section-products {
+    height: 250px;
+    width: 280px;
+  }
+}
+
+#americancrew-info,
+#nineyards-info,
+#eksperience-info,
+#stylemasters-info,
+#cta-facebook-info,
+#cta-products-info,
+#cta-offer-info {
+  display: none;
+  padding: 10px;
+}
+
+#americancrew-info-btn,
+#nineyards-info-btn,
+#eksperience-info-btn,
+#stylemasters-info-btn,
+#cta-facebook-info-btn,
+#cta-products-info-btn,
+#cta-offer-info-btn {
+  display: none;
 }
