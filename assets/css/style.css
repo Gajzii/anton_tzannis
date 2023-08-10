@@ -96,8 +96,7 @@
   gap: 20px;
 }
 
-@media screen and (min-width: 951px),
-(min-width: 672px) and (max-width: 950px) {
+@media screen and (min-width: 951px), (min-width: 672px) and (max-width: 950px) {
   .footer-flex-row {
     flex-direction: row;
     margin: 0;
@@ -455,19 +454,19 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover>.button-rightpart-primary,
-.primary-btn:hover>.button-leftpart-primary,
-.primary-btn:hover>.rightpart-button-user,
-.primary-btn:hover>.leftpart-button-user {
+.primary-btn:hover > .button-rightpart-primary,
+.primary-btn:hover > .button-leftpart-primary,
+.primary-btn:hover > .rightpart-button-user,
+.primary-btn:hover > .leftpart-button-user {
   background-color: var(--gold-hover);
   border: 2px solid var(--gold-hover);
   cursor: pointer;
 }
 
-.secondary-btn:hover>.button-rightpart-secondary,
-.secondary-btn:hover>.button-leftpart-secondary,
-.secondary-btn:hover>.rightpart-button-back,
-.secondary-btn:hover>.leftpart-button-back {
+.secondary-btn:hover > .button-rightpart-secondary,
+.secondary-btn:hover > .button-leftpart-secondary,
+.secondary-btn:hover > .rightpart-button-back,
+.secondary-btn:hover > .leftpart-button-back {
   background-color: var(--gold);
   border: 2px solid var(--gold);
   cursor: pointer;
@@ -781,3 +780,7 @@ menu {
 #cta-offer-info-btn {
   display: none;
 }
+/* ======================================================================= */
+/* ========================== PRICING PAGE ============================== */
+
+/* ======================================================================= */

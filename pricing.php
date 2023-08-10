@@ -1,18 +1,17 @@
-<html>
+<?php get_header(); ?>
+
+
+<div class="page"></div>
+
+
 <h1>Prisliste</h1>
 <p>Priserne er opgivet i DKK.</p>
-
 <div class="price-grid">
     <!--- HAIRCUT --->
     <div class="price-grid-item haircut">
         <div class="icon-header">
-            <img class="icon-header-icon" src="/assets/images/antontzannis-logo-red.png" alt="haircut icon">
-
-
-            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>../assets/images/haircut.svg" />
-
-
-
+            <img alt="haircut icon" class="icon-header-icon"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/haircut.svg" />
             <h2>Klip</h2>
         </div>
         <div class="secondary-whitespace-horizontal"></div>
@@ -44,7 +43,8 @@
     <!--- BROWS --->
     <div class="price-grid-item brows">
         <div class="icon-header">
-            <img class="icon-header-icon" src="../img/bryn_og_vipper.svg" alt="brows and lashes icon">
+            <img alt="brows and lashes icon" class="icon-header-icon"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brows-and-lashes.svg" />
             <h2>Bryn og vipper</h2>
         </div>
         <div class="secondary-whitespace-horizontal"></div>
@@ -74,7 +74,8 @@
     <!--- PERMANENT --->
     <div class="price-grid-item permanent">
         <div class="icon-header">
-            <img class="icon-header-icon" src="../img/permanent.svg" alt="permanent curls icon">
+            <img alt="permanent curls icon" class="icon-header-icon"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/permanent.svg" />
             <h2>Permanent</h2>
         </div>
         <div class="secondary-whitespace-horizontal"></div>
@@ -106,10 +107,12 @@
     <!--- OTHER TREATMENTS --->
     <div class="price-grid-item other-treatments">
         <div class="icon-header">
-            <img class="icon-header-icon" src="../img/anden_behandling.svg" alt="permanent curls icon">
+            <img alt="other treatments icon" class="icon-header-icon"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/other-treatments.svg" />
             <h2>Anden behandling</h2>
         </div>
-        <div class="secondary-whitespace-horizontal"></div>
+        <div class="secondary-whitespace-horizontal">
+        </div>
         <div class="price-table">
             <table>
                 <tbody>
@@ -142,7 +145,8 @@
     <!--- COLORING --->
     <div class="price-grid-item price-grid-item_haircolor haircolor">
         <div class="icon-header">
-            <img class="icon-header-icon" src="../img/farve.svg" alt="permanent curls icon">
+            <img alt="haircoloring con" class="icon-header-icon"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/coloring.svg" />
             <h2>Farve</h2>
         </div>
         <div class="secondary-whitespace-horizontal"></div>
@@ -207,3 +211,4 @@
 </div>
 
 </html>
+<?php get_footer(); ?>

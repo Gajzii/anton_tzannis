@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <!--- LOGO --->
-        <a href="<?php echo get_stylesheet_directory_uri(); ?>/index.php">
+        <a href="<?php echo get_stylesheet_directory_uri(); ?>index.php">
             <img class="logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
 
@@ -28,14 +28,14 @@
         <nav>
             <ul class="nav_list">
                 <li>
-                    <a href="<?php echo get_stylesheet_directory_uri(); ?>/index.php" class="navigation_link">Forside</a>
+                    <a href="<?php echo get_stylesheet_directory_uri(); ?>index.php" class="navigation_link">Forside</a>
                 </li>
                 <li>
                     <a href="<?php echo get_stylesheet_directory_uri(); ?>/booking.php" class="navigation_link">Book
                         tid</a>
                 </li>
                 <li>
-                    <a href="<?php echo get_stylesheet_directory_uri(); ?>/pricing.php"
+                    <a href="<?php echo get_stylesheet_directory_uri(); ?>pricing.php"
                         class="navigation_link">Priser</a>
                 </li>
                 <li>
