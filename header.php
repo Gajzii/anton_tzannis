@@ -14,7 +14,8 @@
     <div class="header">
         <!--- LOGO --->
         <a href="<?php echo get_stylesheet_directory_uri(); ?>index.php">
-            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
+            <img class="logo"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
 
         </a>
         <!--- MOBILE MENU --->
@@ -30,7 +31,7 @@
                     <a href="<?php echo get_stylesheet_directory_uri(); ?>index.php" class="navigation_link">Forside</a>
                 </li>
                 <li>
-                    <a href="<?php echo get_stylesheet_directory_uri(); ?>booking.php" class="navigation_link">Book
+                    <a href="<?php echo get_stylesheet_directory_uri(); ?>/booking.php" class="navigation_link">Book
                         tid</a>
                 </li>
                 <li>
@@ -38,15 +39,15 @@
                         class="navigation_link">Priser</a>
                 </li>
                 <li>
-                    <a href="<?php echo get_stylesheet_directory_uri(); ?>products.php"
+                    <a href="<?php echo get_stylesheet_directory_uri(); ?>/products.php"
                         class="navigation_link">Produkter</a>
                 </li>
                 <li>
-                    <a href="<?php echo get_stylesheet_directory_uri(); ?>about.php" class="navigation_link">Om
+                    <a href="<?php echo get_stylesheet_directory_uri(); ?>/about.php" class="navigation_link">Om
                         frisøren</a>
                 </li>
                 <li>
-                    <a href="<?php echo get_stylesheet_directory_uri(); ?>contact.php"
+                    <a href="<?php echo get_stylesheet_directory_uri(); ?>/contact.php"
                         class="navigation_link">Kontakt</a>
                 </li>
                 <!--- LANGUAGE --->
