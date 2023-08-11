@@ -1,4 +1,3 @@
-<html>
 <?php get_header(); ?>
 
 <h1 class="goldtext text-padding">Produkter</h1>
@@ -86,4 +85,3 @@
                 </div>
             </div>
 <?php get_footer(); ?>
-</html>
