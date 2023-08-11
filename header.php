@@ -10,6 +10,7 @@
 
 </head>
 
-<body>
-    
-    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+<body <?php body_class(); ?>
+
+    <?php get_template_part( 'partials/components/header-desktop' ); ?>
+    <?php get_template_part( 'partials/components/header-mobile' ); ?>
