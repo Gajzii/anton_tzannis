@@ -5,6 +5,8 @@
     <?php get_template_part('includes/section', 'content');?>
     <?php get_template_part('partials/components/hero');?>
     <?php get_template_part('partials/components/salon-section');?>
+    <?php get_template_part('partials/components/opening-hours-section');?>
+    <?php get_template_part('partials/components/cta-btn-section');?>
 
 </div>
 
