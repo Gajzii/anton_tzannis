@@ -12,4 +12,3 @@
 <body <?php body_class(); ?>
 
     <?php get_template_part( 'partials/components/header-desktop' ); ?>
-    <?php get_template_part( 'partials/components/header-mobile' ); ?>
