@@ -876,6 +876,34 @@ menu {
     width: 100%;
   }
 }
+
+.salon-text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.salon-img {
+  width: 50%;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .salon-img {
+    width: 30%;
+    margin: 10px auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 951px) {
+  .salon-img {
+    width: 30%;
+    margin: auto;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
 /* ======================================================================= */
 /* ========================== PRODUCTS PAGE ============================== */
 .product-americancrew::before {
