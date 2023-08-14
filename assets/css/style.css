@@ -786,8 +786,13 @@ menu {
   background-color: var(--white);
   background-blend-mode: luminosity;
   /* filter: grayscale(80%); */
-  -webkit-clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
-  clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
+  /* -webkit-clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%); */
+  /* clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%); */
+
+  /* VIDEO */
+  -webkit-clip-path: polygon(0% 0, 78% 0, 52.5% 100%, 0% 100%);
+
+  clip-path: polygon(0% 0, 78% 0, 52.5% 100%, 0% 100%);
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
