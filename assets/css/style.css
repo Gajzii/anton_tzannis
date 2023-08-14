@@ -780,11 +780,12 @@ menu {
   height: 675px;
   opacity: 80%;
   /* filter: blur(1px); */
-  background-image: url("../images/hero-left.webp");
+  /* background-image: url("../images/hero-left.webp"); */
+  background-image: url("../images/wepik-export-20230814143146mjdj.png");
   background-size: cover;
   background-color: var(--white);
-  /* background-blend-mode: luminosity; */
-  filter: grayscale(20%);
+  background-blend-mode: luminosity;
+  /* filter: grayscale(80%); */
   -webkit-clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
   clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
 }
@@ -836,6 +837,7 @@ menu {
   width: 90%;
   font-family: var(--tertiary_font);
   font-weight: bold;
+  text-shadow: 0 0 5px #1c1c1c;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -881,7 +883,7 @@ menu {
 
 @media screen and (min-width: 951px) {
   .salon-text {
-    width: 30%;
+    width: 35%;
     text-align: left;
     /* margin: 10px auto; */
     margin: 0 auto;
@@ -1071,8 +1073,9 @@ menu {
 }
 
 .cta-section-facebook::before {
-  background-image: url(../images/hero-left.webp);
+  background-image: url(../images/cta-facebook.jpg);
   filter: grayscale(40%);
+  background-position-x: left;
 }
 
 .cta-section-seeProducts::before {
