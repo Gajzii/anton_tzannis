@@ -544,6 +544,12 @@ button {
   margin: 0 20px;
 }
 
+@media screen and (min-width: 951px) {
+  .header-inner {
+    flex-direction: row;
+  }
+}
+
 .top-menu ul {
   list-style-type: none;
   display: flex;
@@ -553,44 +559,7 @@ button {
   padding-left: 20px;
 }
 
-/* .header {
-  background-color: var(--primary-black);
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media screen and (min-width: 951px) {
-  .header {
-    flex-direction: row;
-    height: 12vh;
-  }
-}
-
-nav {
-  background-color: var(--primary-black);
-  position: absolute;
-  top: 9vh;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-@media screen and (min-width: 951px) {
-  nav {
-    width: 1000px;
-    position: static;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-    background-color: transparent;
-  }
-}
-
-.flag {
+/* .flag {
   display: flex;
   flex-direction: row;
 }
@@ -609,7 +578,7 @@ nav {
 
 .dk-flag {
   background-image: url(../images/dansk.png);
-}
+} */
 
 /* ---------------------------- DROPDOWN MENU ---------------------------- */
 menu {
@@ -760,12 +729,14 @@ menu {
     color: var(--red);
   }
 }
+
 /* ======================================================================= */
 /* ========================== FRONT PAGE ============================== */
 .hero {
   width: 100%;
   height: 675px;
 }
+
 .hero-right {
   position: absolute;
   width: 100%;
@@ -876,6 +847,34 @@ menu {
     width: 100%;
   }
 }
+
+.salon-text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.salon-img {
+  width: 50%;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .salon-img {
+    width: 30%;
+    margin: 10px auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 951px) {
+  .salon-img {
+    width: 30%;
+    margin: auto;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
 /* ======================================================================= */
 /* ========================== PRODUCTS PAGE ============================== */
 .product-americancrew::before {
