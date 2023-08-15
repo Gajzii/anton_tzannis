@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header-inner">
-        <a src="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img class="logo"
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
         </a>
