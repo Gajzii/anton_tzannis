@@ -1,5 +1,4 @@
 function onClickMenu() {
-  document.getElementById("menu").classList.toggle("change");
-
-  document.querySelector(".nav_list").classList.toggle("change");
+  document.getElementById("dropdownmenu").classList.toggle("change");
+  document.querySelector(".top-menu").classList.toggle("change");
 }
