@@ -8,7 +8,6 @@
     <?php get_template_part('partials/components/salon-section');?>
     <?php get_template_part('partials/components/opening-hours-section');?>
     <?php get_template_part('partials/components/cta-btn-section');?>
-
 </div>
 
 <?php get_footer(); ?>
