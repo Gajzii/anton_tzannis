@@ -101,7 +101,8 @@ Author: Noerwald v/ Camilla Nørgaard og Maja Wennwewald
   gap: 20px;
 }
 
-@media screen and (min-width: 951px), (min-width: 672px) and (max-width: 950px) {
+@media screen and (min-width: 951px),
+(min-width: 672px) and (max-width: 950px) {
   .footer-flex-row {
     flex-direction: row;
     margin: 0;
@@ -245,12 +246,14 @@ header {
   --secondary-black: #262626;
   --black-gradient: -webkit-linear-gradient(80deg, #1c1c1c, #1c1c1c, #303030, #1c1c1c, #1c1c1c);
   --white: #ffffff;
+  --secondary-white: #ececec;
   --red: #c20203;
   --gold: #ceac68;
   --gold-hover: #c29741;
   --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
   --green: #37512e;
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
+  --grey-hover: #bcbcbc;
   /* --------------------------------- FONTS ------------------------------- */
   --primary_font: "Arial";
   --secondary_font: "Crimson Text", serif;
@@ -461,19 +464,19 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover > .button-rightpart-primary,
-.primary-btn:hover > .button-leftpart-primary,
-.primary-btn:hover > .rightpart-button-user,
-.primary-btn:hover > .leftpart-button-user {
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary,
+.primary-btn:hover>.rightpart-button-user,
+.primary-btn:hover>.leftpart-button-user {
   background-color: var(--gold-hover);
   border: 2px solid var(--gold-hover);
   cursor: pointer;
 }
 
-.secondary-btn:hover > .button-rightpart-secondary,
-.secondary-btn:hover > .button-leftpart-secondary,
-.secondary-btn:hover > .rightpart-button-back,
-.secondary-btn:hover > .leftpart-button-back {
+.secondary-btn:hover>.button-rightpart-secondary,
+.secondary-btn:hover>.button-leftpart-secondary,
+.secondary-btn:hover>.rightpart-button-back,
+.secondary-btn:hover>.leftpart-button-back {
   background-color: var(--gold);
   border: 2px solid var(--gold);
   cursor: pointer;
@@ -512,37 +515,51 @@ button {
 
 /* ======================================================================= */
 /* =============================== LOGO ================================== */
-.logo {
+.logo .logocontainer {
   width: 40px;
-  z-index: 3;
+  z-index: 9999;
   vertical-align: middle;
-  margin: 0 15px 0 0;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .logo {
-    width: 40px;
+    width: 50px;
   }
 }
 
 @media screen and (min-width: 951px) {
   .logo {
     width: 50px;
-    margin: 0 0 0 15px;
+    margin: 0;
   }
 }
 
 /* ======================================================================= */
 /* ================================ HEADER =============================== */
+#dropdownmenu {
+  width: 30px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #dropdownmenu {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  #dropdownmenu {
+    display: none;
+  }
+}
+
 .header-inner {
-  background-color: var(--primary-black);
-  /* width: 100%; */
-  height: 10vh;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
+  margin: 10px 20px;
+  cursor: pointer;
+  background-color: var(--primary-black);
 }
 
 @media screen and (min-width: 951px) {
@@ -551,61 +568,56 @@ button {
   }
 }
 
+.top-menu {
+  background-color: var(--primary-black);
+  position: absolute;
+  top: 7vh;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: none;
+}
+
+@media screen and (min-width: 951px) {
+  .top-menu {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .top-menu ul {
   list-style-type: none;
-  display: flex;
+  color: var(--secondary-white);
+  font-size: 15px;
+  padding: 5px 20px 15px 20px;
 }
 
-.top-menu ul li {
-  padding-left: 20px;
+@media screen and (min-width: 951px) {
+  .top-menu ul {
+    display: flex;
+    padding: 0;
+  }
 }
 
-/* .flag {
-  display: flex;
-  flex-direction: row;
+.top-menu li {
+  padding: 8px 0;
 }
 
-.flags-image {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.en-flag {
-  background-image: url(../images/engelsk.png);
-}
-
-.dk-flag {
-  background-image: url(../images/dansk.png);
-} */
-
-/* ---------------------------- DROPDOWN MENU ---------------------------- */
-menu {
-  cursor: pointer;
-}
-
-#menu {
-  width: 30px;
-  height: 40px;
-  cursor: pointer;
-  margin: 20px 0 0 15px;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  #menu {
-    height: 55px;
-    width: 40px;
+@media screen and (min-width: 951px) {
+  .top-menu li {
+    padding: 12px 0px 4px 22px;
   }
 }
 
 @media screen and (min-width: 951px) {
-  #menu {
-    display: none;
+  .top-menu li a:hover {
+    color: var(--grey-hover);
   }
 }
 
+/* ------------------------- BURGER MENU SYMBOL -------------------------- */
 .change {
   display: block !important;
 }
@@ -660,74 +672,6 @@ menu {
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .change #bar3 {
     transform: translateY(-10px) rotate(-45deg);
-  }
-}
-
-.navigation_link {
-  list-style: none;
-  color: var(--white);
-  font-size: 18px;
-  text-decoration: none;
-}
-
-@media screen and (min-width: 951px) {
-  .navigation_link {
-    padding: 0;
-  }
-}
-
-.navigation_link a.active {
-  color: var(--red);
-}
-
-.active {
-  color: var(--red);
-}
-
-.nav_list li {
-  padding: 12px 12px 5px 2px;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .nav_list li {
-    padding: 12px 12px 5px 5px;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .nav_list li {
-    padding: 12px 4px 4px 18px;
-  }
-
-  .nav_list li:last-child {
-    padding-left: 8px;
-  }
-}
-
-.nav_list {
-  padding: 0;
-  margin: 0 15px 20px;
-  transition: 0.3s ease;
-  display: none;
-  font-size: 20px;
-  list-style-type: none;
-}
-
-@media screen and (min-width: 951px) {
-  .nav_list {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-  }
-
-  .nav_list a:hover {
-    color: var(--red);
-  }
-
-  .fast-links a:hover {
-    color: var(--red);
   }
 }
 
@@ -851,6 +795,7 @@ menu {
     width: 100%;
   }
 }
+
 /* FRONT PAGE - SALON SECTION */
 .salon-section {
   margin: 55px 0;
@@ -899,6 +844,7 @@ menu {
     object-fit: cover;
   }
 }
+
 @media screen and (min-width: 951px) {
   .salon-img {
     width: 40%;
@@ -913,6 +859,7 @@ menu {
     object-fit: cover; */
   }
 }
+
 /* FRONT PAGE - OPENING HOURS SECTION*/
 .opening-hours-section,
 .about-cover-section {
@@ -923,7 +870,9 @@ menu {
   position: relative;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
+
   .opening-hours-section,
   .about-cover-section {
     height: 350px;
@@ -999,6 +948,7 @@ menu {
     grid-template-areas: "monday tuesday wednesday thursday friday saturday sunday";
   }
 }
+
 @media screen and (min-width: 951px) {
   .opening-hours-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1024,6 +974,7 @@ menu {
     margin-bottom: 20px;
   }
 }
+
 @media screen and (min-width: 951px) {
   .opening-hours-days {
     font-size: 22px;
@@ -1035,6 +986,7 @@ menu {
   font-size: 18px;
   margin-bottom: 8px;
 }
+
 /*CTA BTN SECTION*/
 .cta-section {
   height: 250px;
@@ -1045,12 +997,14 @@ menu {
   position: relative;
   overflow: hidden;
 }
+
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .cta-section {
     height: 250px;
     width: 190px;
   }
 }
+
 @media screen and (min-width: 951px) {
   .cta-section {
     height: 250px;
@@ -1109,6 +1063,7 @@ menu {
     height: 60px;
   }
 }
+
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .cta-flex {
     gap: 10px;
