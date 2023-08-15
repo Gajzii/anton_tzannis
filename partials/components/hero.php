@@ -1,5 +1,13 @@
 <div class="hero">
-    <div class="hero-left"></div>
+    <div class="hero-left">
+        <!-- VIDEO -->
+        <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?> /assets/images/hero-video.mp4"
+            autoplay muted loop></video>
+        <!--  -->
+
+        <!-- <img class="footer-logo"
+            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" /> -->
+    </div>
     <div class="hero-right"></div>
     <div class="hero-text">
         <h1 class="hero-h1">Anton Tzannis | Bedste frisør i Aarhus</h1>

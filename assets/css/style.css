@@ -779,28 +779,41 @@ menu {
   width: 100%;
   height: 675px;
   opacity: 80%;
-  /* filter: blur(1px); */
-  /* background-image: url("../images/hero-left.webp"); */
-  background-image: url("../images/wepik-export-20230814143146mjdj.png");
-  background-size: cover;
   background-color: var(--white);
-  background-blend-mode: luminosity;
-  /* filter: grayscale(80%); */
   -webkit-clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
   clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
+  filter: grayscale(60%);
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .hero-left {
-    -webkit-clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
-    clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
+    clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
   }
 }
 
 @media screen and (min-width: 951px) {
   .hero-left {
-    -webkit-clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
-    clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
+    clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
+  }
+}
+
+.hero-video {
+  width: 100%;
+  height: 505px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero-video {
+    height: 745px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .hero-video {
+    height: 745px;
   }
 }
 
