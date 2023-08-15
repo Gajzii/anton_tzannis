@@ -515,10 +515,11 @@ button {
 
 /* ======================================================================= */
 /* =============================== LOGO ================================== */
-.logo .logocontainer {
+.logo {
   width: 40px;
   z-index: 9999;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -558,7 +559,6 @@ button {
   justify-content: space-between;
   align-items: center;
   margin: 10px 20px;
-  cursor: pointer;
   background-color: var(--primary-black);
 }
 
@@ -614,6 +614,7 @@ button {
 @media screen and (min-width: 951px) {
   .top-menu li a:hover {
     color: var(--grey-hover);
+    cursor: pointer;
   }
 }
 
