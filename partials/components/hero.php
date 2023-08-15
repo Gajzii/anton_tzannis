@@ -1,8 +1,8 @@
 <div class="hero">
     <div class="hero-left">
         <!-- VIDEO -->
-        <video src="<?php echo get_stylesheet_directory_uri(); ?> /assets/images/hero-video.mp4" autoplay muted
-            loop></video>
+        <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?> /assets/images/hero-video.mp4"
+            autoplay muted loop></video>
         <!--  -->
 
         <!-- <img class="footer-logo"
