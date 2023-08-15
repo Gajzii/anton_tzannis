@@ -850,7 +850,7 @@ menu {
   width: 90%;
   font-family: var(--tertiary_font);
   font-weight: bold;
-  text-shadow: 0 0 5px #1c1c1c;
+  text-shadow: 0 0 5px var(--primary-black);
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
