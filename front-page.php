@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
 <div class="container">
     <!-- GET TITLE FRA WORDPRESS INDLÆG  -->
