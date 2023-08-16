@@ -1083,7 +1083,37 @@ button {
 
 /* ======================================================================= */
 /* ========================== PRODUCTS PAGE ============================== */
-.product-americancrew::before {
+.product_card {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5%;
+  gap: 2%;
+  margin-bottom: 530px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .product_card {
+    grid-template-columns: 1fr 1fr;
+    padding: 2%;
+    margin-bottom: 140px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .product_card {
+    grid-template-columns: 1fr 1fr;
+    padding: 2%;
+    margin-bottom: 220px;
+  }
+}
+
+.product_card_inner {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .product-americancrew::before {
   background-image: url(../images/americancrew.webp);
 }
 
@@ -1125,7 +1155,7 @@ button {
 #cta-products-info-btn,
 #cta-offer-info-btn {
   display: none;
-}
+} */
 
 /* ======================================================================= */
 /* ========================== PRICING PAGE ============================== */
