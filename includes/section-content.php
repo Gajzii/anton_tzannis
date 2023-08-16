@@ -1,1 +1,1 @@
-This is the content section
+<!-- This is the content section -->
