@@ -101,8 +101,7 @@ Author: Noerwald v/ Camilla Nørgaard og Maja Wennwewald
   gap: 20px;
 }
 
-@media screen and (min-width: 951px),
-(min-width: 672px) and (max-width: 950px) {
+@media screen and (min-width: 951px), (min-width: 672px) and (max-width: 950px) {
   .footer-flex-row {
     flex-direction: row;
     margin: 0;
@@ -279,7 +278,8 @@ a,
 p,
 td,
 tr,
-th {
+th,
+span {
   font-family: var(--primary_font);
   color: var(--white);
   font-weight: 100;
@@ -391,8 +391,8 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover>.button-rightpart-primary,
-.primary-btn:hover>.button-leftpart-primary {
+.primary-btn:hover > .button-rightpart-primary,
+.primary-btn:hover > .button-leftpart-primary {
   opacity: 0.5;
 }
 
@@ -798,9 +798,7 @@ button {
   position: relative;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px),
-(min-width: 951px) {
-
+@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
   .opening-hours-section,
   .about-cover-section {
     height: 350px;
@@ -1047,11 +1045,11 @@ button {
   overflow: hidden;
 }
 
-.product_card_inner:hover>.product_card_inner_background>.productdetails {
+.product_card_inner:hover > .product_card_inner_background > .productdetails {
   display: block;
 }
 
-.product_card_inner:hover>.product_card_inner_background {
+.product_card_inner:hover > .product_card_inner_background {
   width: 100%;
   height: 100%;
 }
@@ -1070,7 +1068,6 @@ button {
   border-radius: 10px;
   background: var(--gold-gradient);
   display: block;
-
 }
 
 /* .product-americancrew::before {
@@ -1153,30 +1150,42 @@ button {
   }
 }
 
+.haircolor {
+  grid-area: haircolor;
+}
+
 .price-category {
   color: var(--white);
   background-color: var(--secondary-black);
   padding: 10px;
-  height: 290px;
+  height: 300px;
   box-shadow: var(--box-shadow);
   --webkit-box-shadow: var(--box-shadow);
 }
 
-.price-category-header {
+@media screen and (min-width: 951px) {
+  .price-category {
+    padding: 20px;
+  }
+}
+
+.price-category-heading {
   display: flex;
   flex-direction: row;
   gap: 10px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
-.price-category-header-icon {
+.price-category-heading-icon {
   width: 30px;
 }
 
 .price-category__item {
   display: flex;
-  flex: 1 0 50%;
+  justify-content: space-between;
 }
+/* ======================================================================= */
 
 /* ======================================================================= */
