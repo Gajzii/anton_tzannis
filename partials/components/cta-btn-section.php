@@ -1,4 +1,4 @@
-<div class="page">
+<div class="page-margin">
     <div class="salon-section">
         <div class="flex cta-flex">
             <!--- FACEBOOK CTA --->
