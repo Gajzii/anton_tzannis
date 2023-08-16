@@ -101,8 +101,7 @@ Author: Noerwald v/ Camilla Nørgaard og Maja Wennwewald
   gap: 20px;
 }
 
-@media screen and (min-width: 951px),
-(min-width: 672px) and (max-width: 950px) {
+@media screen and (min-width: 951px), (min-width: 672px) and (max-width: 950px) {
   .footer-flex-row {
     flex-direction: row;
     margin: 0;
@@ -192,19 +191,19 @@ header {
   text-align: center;
 }
 
-.page {
+.page-margin {
   width: 85%;
   margin: auto;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
-  .page {
+  .page-margin {
     width: 90%;
   }
 }
 
 @media screen and (min-width: 951px) {
-  .page {
+  .page-margin {
     width: 80%;
   }
 }
@@ -464,19 +463,19 @@ button {
 }
 
 /* --------------------------------- HOVER ------------------------------- */
-.primary-btn:hover>.button-rightpart-primary,
-.primary-btn:hover>.button-leftpart-primary,
-.primary-btn:hover>.rightpart-button-user,
-.primary-btn:hover>.leftpart-button-user {
+.primary-btn:hover > .button-rightpart-primary,
+.primary-btn:hover > .button-leftpart-primary,
+.primary-btn:hover > .rightpart-button-user,
+.primary-btn:hover > .leftpart-button-user {
   background-color: var(--gold-hover);
   border: 2px solid var(--gold-hover);
   cursor: pointer;
 }
 
-.secondary-btn:hover>.button-rightpart-secondary,
-.secondary-btn:hover>.button-leftpart-secondary,
-.secondary-btn:hover>.rightpart-button-back,
-.secondary-btn:hover>.leftpart-button-back {
+.secondary-btn:hover > .button-rightpart-secondary,
+.secondary-btn:hover > .button-leftpart-secondary,
+.secondary-btn:hover > .rightpart-button-back,
+.secondary-btn:hover > .leftpart-button-back {
   background-color: var(--gold);
   border: 2px solid var(--gold);
   cursor: pointer;
@@ -884,9 +883,7 @@ button {
   position: relative;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px),
-(min-width: 951px) {
-
+@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
   .opening-hours-section,
   .about-cover-section {
     height: 350px;
@@ -1162,5 +1159,62 @@ button {
 
 /* ======================================================================= */
 /* ========================== PRICING PAGE ============================== */
+.prices-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px 0px;
+  grid-template-areas:
+    "haircut"
+    "brows"
+    "permanent"
+    "other-treatments"
+    "haircolor";
+  width: 100%;
+  height: 1680px;
+}
+.haircolor {
+  grid-area: haircolor;
+}
 
+@media screen and (min-width: 951px) {
+  .prices-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px 30px;
+    grid-template-areas:
+      "haircut brows"
+      "permanent other-treatments"
+      "haircolor haircolor";
+    height: 940px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.price-category {
+  color: var(--white);
+  background-color: var(--secondary-black);
+  padding: 10px;
+  height: 290px;
+  box-shadow: var(--box-shadow);
+  --webkit-box-shadow: var(--box-shadow);
+}
+
+.price-category-header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-category-header-icon {
+  width: 30px;
+}
+
+.price-category__item {
+  display: flex;
+  flex: 1 0 50%;
+}
 /* ======================================================================= */
