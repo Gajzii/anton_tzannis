@@ -276,7 +276,8 @@ a,
 p,
 td,
 tr,
-th {
+th,
+span {
   font-family: var(--primary_font);
   color: var(--white);
   font-weight: 100;
@@ -1143,9 +1144,6 @@ button {
   width: 100%;
   height: 1680px;
 }
-.haircolor {
-  grid-area: haircolor;
-}
 
 @media screen and (min-width: 951px) {
   .prices-grid {
@@ -1162,29 +1160,54 @@ button {
   }
 }
 
+.haircolor {
+  grid-area: haircolor;
+}
+
 .price-category {
   color: var(--white);
   background-color: var(--secondary-black);
   padding: 10px;
-  height: 290px;
+  height: 300px;
   box-shadow: var(--box-shadow);
   --webkit-box-shadow: var(--box-shadow);
 }
 
-.price-category-header {
+@media screen and (min-width: 951px) {
+  .price-category {
+    padding: 20px;
+  }
+}
+
+.price-category-heading {
   display: flex;
   flex-direction: row;
   gap: 10px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
-.price-category-header-icon {
+.price-category-heading-icon {
   width: 30px;
 }
 
 .price-category__item {
   display: flex;
-  flex: 1 0 50%;
+  justify-content: space-between;
 }
+
+@media screen and (min-width: 951px) {
+  .price-category__item-coloring {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 10%;
+  }
+}
+
+.price-category__item-price {
+  display: flex;
+}
+
 /* ======================================================================= */
