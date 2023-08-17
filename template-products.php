@@ -4,14 +4,14 @@
 ?>
 <?php get_header(); ?>
 <div class="page-margin">
-<h1><?php echo get_the_title(); ?></h1>
-<p><?php the_content(); ?></p>
+    <h1><?php echo get_the_title(); ?></h1>
+    <p><?php the_content(); ?></p>
 
-<?php if ( have_rows('products') ) : ?>
-<div class="product_card">
-    <?php while ( have_rows('products') ) : the_row(); ?>
+    <?php if ( have_rows('products') ) : ?>
+    <div class="product_card">
+        <?php while ( have_rows('products') ) : the_row(); ?>
 
-    <?php
+        <?php
         $product_name = get_sub_field('product_name');
         $product_specification = get_sub_field('product_specification');
         $background_image = get_sub_field('background_image');
@@ -38,9 +38,9 @@
     </div>
 </div>
 
-    <?php endwhile; ?>
-</div>
+        <?php endwhile; ?>
+    </div>
 
-<?php endif; ?>
+    <?php endif; ?>
 </div>
 <?php get_footer(); ?>

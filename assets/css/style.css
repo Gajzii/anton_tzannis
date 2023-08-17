@@ -278,7 +278,8 @@ a,
 p,
 td,
 tr,
-th {
+th,
+span {
   font-family: var(--primary_font);
   color: var(--white);
   font-weight: 100;
@@ -1052,7 +1053,6 @@ button {
   border-radius: 10px;
   background: var(--gold-gradient);
   display: block;
-
 }
 
 /* ======================================================================= */
@@ -1069,11 +1069,17 @@ button {
     "other-treatments"
     "haircolor";
   width: 100%;
-  height: 1680px;
+  height: 1310px;
 }
 
 .haircolor {
   grid-area: haircolor;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .prices-grid {
+    height: 1260px;
+  }
 }
 
 @media screen and (min-width: 951px) {
@@ -1085,36 +1091,252 @@ button {
       "haircut brows"
       "permanent other-treatments"
       "haircolor haircolor";
-    height: 940px;
+    height: 780px;
     max-width: 1000px;
     margin: 0 auto;
   }
 }
 
+.haircolor {
+  grid-area: haircolor;
+}
+
 .price-category {
   color: var(--white);
   background-color: var(--secondary-black);
-  padding: 10px;
-  height: 290px;
+  padding: 20px 10px;
+  height: max-content;
   box-shadow: var(--box-shadow);
   --webkit-box-shadow: var(--box-shadow);
 }
 
-.price-category-header {
+@media screen and (min-width: 951px) {
+  .price-category {
+    padding: 20px;
+    height: 170px;
+  }
+
+  .price-category:last-child {
+    height: 260px;
+  }
+}
+
+.price-category-heading {
   display: flex;
   flex-direction: row;
   gap: 10px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
-.price-category-header-icon {
+.price-category-heading-icon {
   width: 30px;
 }
 
 .price-category__item {
   display: flex;
-  flex: 1 0 50%;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+/* @media screen and (min-width: 951px) {
+  .price-category__item {
+    margin: 5px 0;
+  }
+} */
+
+.product-name {
+  width: 70%;
+}
+
+@media screen and (min-width: 951px) {
+  .product-name {
+    width: 100%;
+  }
+}
+
+.price-category__item-price {
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 951px) {
+  .price-category__item-coloring {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 6%;
+  }
+}
+
+/* ======================================================================= */
+/* ========================== ABOUT PAGE ============================== */
+
+/* ======================================================================= */
+/* ========================== CONTACT PAGE ============================== */
+.contact-heading {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
+  .contact-heading {
+    font-size: 22px;
+  }
+}
+
+.contact-heading-icon {
+  font-size: 30px;
+  color: var(--gold);
+}
+
+.contact-text {
+  font-size: 20px;
+}
+
+.contact-text:first-child {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
+  .contact-text {
+    font-size: 20px;
+  }
+}
+
+.contact-hero {
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
+  .contact-hero {
+    height: 675px;
+  }
+}
+
+.contact-hero-left {
+  position: absolute;
+  width: 100%;
+  height: 735px;
+  opacity: 70%;
+  background-image: url(../images/contact-hero-left.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  -webkit-clip-path: polygon(0 51%, 100% 67%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 51%, 100% 67%, 100% 100%, 0% 100%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .contact-hero-left {
+    -webkit-clip-path: polygon(0% 0, 53% 0, 13% 158%, 0% 100%);
+    clip-path: polygon(0% 0, 53% 0, 13% 158%, 0% 100%);
+    height: 675px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .contact-hero-left {
+    -webkit-clip-path: polygon(0% 0, 55% 0, 20% 149%, 0% 100%);
+    clip-path: polygon(0% 0, 55% 0, 20% 149%, 0% 100%);
+    height: 675px;
+    background-size: contain;
+  }
+}
+
+.contact-hero-right {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  height: 675px;
+  opacity: 50%;
+  background-color: var(--primary-black);
+  -webkit-clip-path: polygon(0 0%, 130% 0%, 100% 69%, 0 52%);
+  clip-path: polygon(0 0%, 130% 0%, 100% 69%, 0 52%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .contact-hero-right {
+    width: 71%;
+    -webkit-clip-path: polygon(38% 0, 100% 0, 100% 100%, 2% 100%);
+    clip-path: polygon(38% 0, 100% 0, 100% 100%, 2% 100%);
+    background-size: cover;
+    background-position: right;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .contact-hero-right {
+    width: 75%;
+    -webkit-clip-path: polygon(42% 0, 100% 0, 100% 101%, 11% 100%);
+    clip-path: polygon(42% 0, 100% 0, 100% 101%, 11% 100%);
+    background-size: cover;
+    background-position: right;
+  }
+}
+
+.adress-map {
+  width: 100% !important;
+  height: 100%;
+}
+
+.contact-information {
+  position: relative;
+  top: 58%;
+  text-align: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .contact-information {
+    top: 22%;
+    left: 15%;
+    transform: translate(-50%, -45%);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .contact-information {
+    top: 10%;
+    left: 7%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.contact-logo {
+  width: 50px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .contact-logo {
+    width: 100px;
+    position: absolute;
+    top: 430px;
+    left: 7%;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .contact-logo {
+    width: 120px;
+    position: absolute;
+    top: 430px;
+    left: 7%;
+  }
 }
 
 /* ======================================================================= */
