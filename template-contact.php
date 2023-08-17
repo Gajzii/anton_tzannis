@@ -29,7 +29,7 @@
 
             ?>
             <div class="price-category__item">
-                <span><?= $product_name; ?></span>
+                <span class="product-name"><?= $product_name; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?></span>
                     <span><?= $product_price; ?></span>
@@ -58,7 +58,7 @@
             ?>
 
             <div class="price-category__item">
-                <span><?= $product_name; ?></span>
+                <span class="product-name"><?= $product_name; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?>&nbsp;</span>
                     <span><?= $product_price; ?></span>
@@ -74,7 +74,7 @@
         <?php if ( have_rows('prices_permanent') ) : ?>
         <div class="price-category permanent">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt=""
+                <img class="price-category-heading-icon" alt="permanent curls icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/permanent.svg" />
                 <h2>Permanent</h2>
             </div>
@@ -88,7 +88,7 @@
             ?>
 
             <div class="price-category__item">
-                <span><?= $product_name; ?></span>
+                <span class="product-name"><?= $product_name; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?>&nbsp;</span>
                     <span><?= $product_price; ?></span>
@@ -103,7 +103,7 @@
         <?php if ( have_rows('prices_other_treatments') ) : ?>
         <div class="price-category other-treatments">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt=""
+                <img class="price-category-heading-icon" alt="other treatments icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/other-treatments.svg" />
                 <h2>Anden behandling</h2>
             </div>
@@ -117,7 +117,7 @@
             ?>
 
             <div class="price-category__item">
-                <span><?= $product_name; ?></span>
+                <span class="product-name"><?= $product_name; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?>&nbsp;</span>
                     <span><?= $product_price; ?></span>
@@ -132,7 +132,7 @@
         <?php if ( have_rows('prices_coloring') ) : ?>
         <div class="price-category haircolor">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt=""
+                <img class="price-category-heading-icon" alt="haircoloring icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/coloring.svg" />
                 <h2>Farve</h2>
             </div>
@@ -146,7 +146,7 @@
 
             ?>
                 <div class="price-category__item">
-                    <span><?= $product_name; ?></span>
+                    <span class="product-name"><?= $product_name; ?></span>
                     <div class="price-category__item-price">
                         <span><?= $price_specification; ?>&nbsp;</span>
                         <span><?= $product_price; ?></span>
