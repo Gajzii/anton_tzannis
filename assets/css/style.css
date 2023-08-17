@@ -1128,11 +1128,17 @@ button {
     "other-treatments"
     "haircolor";
   width: 100%;
-  height: 1680px;
+  height: 1310px;
 }
 
 .haircolor {
   grid-area: haircolor;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .prices-grid {
+    height: 1260px;
+  }
 }
 
 @media screen and (min-width: 951px) {
@@ -1144,7 +1150,7 @@ button {
       "haircut brows"
       "permanent other-treatments"
       "haircolor haircolor";
-    height: 940px;
+    height: 780px;
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -1157,8 +1163,8 @@ button {
 .price-category {
   color: var(--white);
   background-color: var(--secondary-black);
-  padding: 10px;
-  height: 300px;
+  padding: 20px 10px;
+  height: max-content;
   box-shadow: var(--box-shadow);
   --webkit-box-shadow: var(--box-shadow);
 }
@@ -1166,6 +1172,10 @@ button {
 @media screen and (min-width: 951px) {
   .price-category {
     padding: 20px;
+    height: 170px;
+  }
+  .price-category:last-child {
+    height: 260px;
   }
 }
 
@@ -1185,7 +1195,44 @@ button {
 .price-category__item {
   display: flex;
   justify-content: space-between;
+  margin: 5px 0;
+}
+
+/* @media screen and (min-width: 951px) {
+  .price-category__item {
+    margin: 5px 0;
+  }
+} */
+
+.product-name {
+  width: 70%;
+}
+
+@media screen and (min-width: 951px) {
+  .product-name {
+    width: 100%;
+  }
+}
+
+.price-category__item-price {
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 951px) {
+  .price-category__item-coloring {
+    /* display: grid;
+    grid-template-columns: 46% 48%;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 6%; */
+
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 6%;
+  }
 }
 /* ======================================================================= */
+/* ========================== XXXXX PAGE ============================== */
 
 /* ======================================================================= */
