@@ -202,9 +202,9 @@ button {
   border: none;
   font-family: var(--primary_font);
   text-shadow: 0 0 5px var(--primary-black);
-  color: white;
   cursor: pointer;
-  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.5px;
 }
 
 .button-leftpart-primary {
@@ -272,6 +272,8 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
+  text-transform: uppercase;
+
 }
 
 .hero-btn {
