@@ -1,4 +1,4 @@
-<div class="page-margin">
+<div class="page-margin" id="opening-hours-section">
     <div class="opening-hours-section opening-hours-section-left">
         <div class="opening-hours-section opening-hours-section-right">
             <div class="opening-hours-section-inside">
