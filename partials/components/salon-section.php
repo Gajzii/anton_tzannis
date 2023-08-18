@@ -1,8 +1,8 @@
-<div class="page">
+<div class="page-margin">
     <div class="salon-section">
         <div class="flex">
             <div class="salon-text">
-                <h2 class="text-padding-small">Frisøren med det røde gulv</h2>
+                <h2 class="goldtext">Frisøren med det røde gulv</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore
