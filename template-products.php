@@ -4,8 +4,8 @@
 ?>
 <?php get_header(); ?>
 <div class="page-margin">
-    <h1><?php echo get_the_title(); ?></h1>
-    <p><?php the_content(); ?></p>
+    <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
+    <div class="center"><?php the_content(); ?></div>
 
     <?php if ( have_rows('products') ) : ?>
     <div class="product_card">
@@ -20,7 +20,7 @@
 
     <div class="cta_card_inner product_card_inner" style="background-image: url(<?= $background_image['url']; ?>)">
     <div class="cta_card_inner_background">    
-    <h3><?= $product_name; ?></h3>
+    <h3 class="goldtext"><?= $product_name; ?></h3>
         <div class="ctadetails">
             <p class="cta_description"><?= $product_description; ?></p>
             <form target="_blank" action="<?= $product_specification['url']; ?>">

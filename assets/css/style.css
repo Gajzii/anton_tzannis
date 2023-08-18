@@ -5,163 +5,6 @@ Theme Name: Anton Tzannis
 Author: Noerwald v/ Camilla Nørgaard og Maja Wennwewald  
 **/
 
-* {
-  margin: 0;
-}
-
-/* GENEREL */
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Camilla */
-
-/*--- FOOTER ---*/
-#footer-background {
-  height: 400px;
-  position: relative;
-  color: var(--gold);
-}
-
-@media screen and (min-width: 951px) {
-  #footer-background {
-    height: 260px;
-  }
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  #footer-background {
-    height: 250px;
-  }
-}
-
-#footer-background::before {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(0.9);
-  background-image: url("../images/footer_background.png");
-  background-position: center;
-}
-
-.footer-center {
-  margin: 0;
-  position: relative;
-  left: 50%;
-  text-align: center;
-  top: 15%;
-  transform: translate(-50%, -12%);
-}
-
-@media screen and (min-width: 951px) {
-  .footer-center {
-    text-align: left;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .footer-center {
-    top: 12%;
-    transform: translate(-50%, -5%);
-  }
-}
-
-.icon {
-  font-size: 22px;
-  color: var(--gold);
-}
-
-.icons {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-flex-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: auto;
-  gap: 20px;
-}
-
-@media screen and (min-width: 951px), (min-width: 672px) and (max-width: 950px) {
-  .footer-flex-row {
-    flex-direction: row;
-    margin: 0;
-    gap: 0;
-  }
-}
-
-.footer-flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-@media screen and (min-width: 951px) {
-  .footer-flex-col {
-    gap: 0;
-  }
-}
-
-.opening-hours-text-flex {
-  display: flex;
-  flex-direction: row;
-}
-
-.opening-hours-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.opening-hours-text th {
-  line-height: 15px;
-}
-
-.footer-flex-opening-hours {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-logo {
-  width: 30px;
-  display: block;
-  margin: 10px auto;
-}
-
-.copyright {
-  font-size: 12px;
-  text-align: center;
-  margin-bottom: 5px;
-  font-family: var(--secondary_font);
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
-  font-weight: 600;
-}
-
-/* Maja */
 /* Mobile first 
 // Tablet mediaquery: @media screen and (min-width: 672px) and (max-width: 950px) 
 // Desktop mediaqury: @media screen and (min-width: 951px) */
@@ -208,7 +51,7 @@ header {
   }
 }
 
-.primary-whitespace-horizontal {
+/* .primary-whitespace-horizontal {
   height: 30px;
 }
 
@@ -218,7 +61,7 @@ header {
 
 .primary-whitespace-vertical {
   width: 20px;
-}
+} */
 
 .flex {
   display: flex;
@@ -247,20 +90,19 @@ header {
   --white: #ffffff;
   --secondary-white: #ececec;
   --red: #c20203;
-  --gold: #ceac68;
-  --gold-hover: #c29741;
+  /* --gold: #ceac68;
+  --gold-hover: #c29741; */
   --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
-  --green: #37512e;
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
   --grey-hover: #bcbcbc;
   --black-transparent: #1c1c1cdb;
   /* --------------------------------- FONTS ------------------------------- */
   --primary_font: "Arial";
   --secondary_font: "Crimson Text", serif;
-  --tertiary_font: "Playfair Display", serif;
+  /* --tertiary_font: "Playfair Display", serif; */
 }
 
-.text-padding {
+/* .text-padding {
   padding: 30px;
 }
 
@@ -270,7 +112,7 @@ header {
 
 .uppercase {
   text-transform: uppercase;
-}
+} */
 
 /* ------------------------------- BODY TEXT ----------------------------- */
 a,
@@ -293,24 +135,23 @@ h1 {
   text-align: center;
   font-size: 30px;
   font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 /* ----------------------------------- H2 -------------------------------- */
 h2 {
   font-family: var(--secondary_font);
-  font-weight: 600;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 100;
+  margin-bottom: 10px;
 }
 
 /* ----------------------------------- H3 -------------------------------- */
 h3 {
   font-family: var(--secondary_font);
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* ----------------------------------- H4 -------------------------------- */
@@ -363,6 +204,7 @@ button {
   text-shadow: 0 0 5px var(--primary-black);
   color: white;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .button-leftpart-primary {
@@ -390,8 +232,8 @@ button {
   transition: 1s;
 }
 
-.primary-btn:hover > .button-rightpart-primary,
-.primary-btn:hover > .button-leftpart-primary {
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary {
   opacity: 0.5;
 }
 
@@ -439,11 +281,13 @@ button {
 }
 
 @media screen and (min-width: 951px) {
+
   .hero-btn,
   .gradient-border-mask {
     margin: 0;
     width: 210px;
     height: 45px;
+    font-size: 15px;
   }
 }
 
@@ -455,7 +299,7 @@ button {
   right: 0;
   bottom: 0;
   border-radius: 5px;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   background: var(--gold-gradient) border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
@@ -463,7 +307,85 @@ button {
 }
 
 /* ======================================================================= */
-/* =============================== LOGO ================================== */
+/* ======================== CALL TO ACTION BUTTONS ======================= */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .cta-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .cta-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.cta_card_inner {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .cta_card_inner {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .cta_card_inner {
+    width: 30%;
+  }
+}
+
+.ctadetails {
+  display: none;
+}
+
+.cta_card_inner_background {
+  transition: 0.5s;
+  width: 100%;
+  height: 20%;
+  background-color: var(--black-transparent);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cta_card_inner:hover>.cta_card_inner_background>.ctadetails {
+  display: block;
+}
+
+.cta_card_inner:hover>.cta_card_inner_background {
+  width: 100%;
+  height: 100%;
+}
+
+.cta_description {
+  text-align: center;
+  padding: 15px 5%;
+}
+
+/* ======================================================================= */
+/* ================================ HEADER =============================== */
 .logo {
   width: 40px;
   z-index: 9999;
@@ -484,8 +406,6 @@ button {
   }
 }
 
-/* ======================================================================= */
-/* ================================ HEADER =============================== */
 #dropdownmenu {
   width: 30px;
 }
@@ -626,6 +546,158 @@ button {
 }
 
 /* ======================================================================= */
+/* ================================ FOOTER =============================== */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-background {
+  height: 400px;
+  position: relative;
+  color: var(--gold);
+}
+
+@media screen and (min-width: 951px) {
+  #footer-background {
+    height: 260px;
+  }
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #footer-background {
+    height: 250px;
+  }
+}
+
+#footer-background::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.9);
+  background-image: url("../images/footer_background.png");
+  background-position: center;
+}
+
+.footer-center {
+  margin: 0;
+  position: relative;
+  left: 50%;
+  text-align: center;
+  top: 15%;
+  transform: translate(-50%, -12%);
+}
+
+@media screen and (min-width: 951px) {
+  .footer-center {
+    text-align: left;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .footer-center {
+    top: 12%;
+    transform: translate(-50%, -5%);
+  }
+}
+
+.icon {
+  font-size: 22px;
+  color: var(--gold);
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-flex-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+  gap: 20px;
+}
+
+@media screen and (min-width: 951px),
+(min-width: 672px) and (max-width: 950px) {
+  .footer-flex-row {
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+  }
+}
+
+.footer-flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media screen and (min-width: 951px) {
+  .footer-flex-col {
+    gap: 0;
+  }
+}
+
+.opening-hours-text-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.opening-hours-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.opening-hours-text th {
+  line-height: 15px;
+}
+
+.footer-flex-opening-hours {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 30px;
+  display: block;
+  margin: 10px auto;
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: var(--secondary_font);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-weight: 600;
+}
+
+/* ======================================================================= */
 /* ========================== FRONT PAGE ============================== */
 .hero {
   width: 100%;
@@ -713,7 +785,7 @@ button {
 
 .hero-container {
   position: relative;
-  top: 25%;
+  top: 20%;
   width: 85%;
   margin: 0 auto;
 }
@@ -822,7 +894,9 @@ button {
   position: relative;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
+
   .opening-hours-section,
   .about-cover-section {
     height: 350px;
@@ -937,89 +1011,13 @@ button {
   margin-bottom: 8px;
 }
 
-/* ======================================================================= */
-/* ======================== CALL TO ACTION BUTTONS ======================= */
-.cta-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .cta-section {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .cta-section {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.cta_card_inner {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 250px;
-  position: relative;
-  box-shadow: var(--box-shadow);
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .cta_card_inner {
-    width: 30%;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .cta_card_inner {
-    width: 30%;
-  }
-}
-
-.ctadetails {
-  display: none;
-}
-
-.cta_card_inner_background {
-  transition: 0.5s;
-  width: 100%;
-  height: 20%;
-  background-color: var(--black-transparent);
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.cta_card_inner:hover > .cta_card_inner_background > .ctadetails {
-  display: block;
-}
-
-.cta_card_inner:hover > .cta_card_inner_background {
-  width: 100%;
-  height: 100%;
-}
-
-.cta_description {
-  text-align: center;
-  padding: 15px 5%;
-}
 
 /* ======================================================================= */
 /* ========================== PRODUCTS PAGE ============================== */
 .product_card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 30px;
   margin: 20px auto 0 auto;
 }
 
@@ -1037,17 +1035,6 @@ button {
 
 .product_card_inner {
   width: 100% !important;
-}
-
-.goldbutton {
-  width: 165px;
-  height: auto;
-  padding: 4px;
-  border: none;
-  font-family: var(--primary_font);
-  border-radius: 10px;
-  background: var(--gold-gradient);
-  display: block;
 }
 
 /* ======================================================================= */
@@ -1180,7 +1167,8 @@ button {
   font-size: 20px;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
   .contact-heading {
     font-size: 22px;
   }
@@ -1199,7 +1187,8 @@ button {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
   .contact-text {
     font-size: 20px;
   }
@@ -1210,7 +1199,8 @@ button {
   height: 100vh;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
   .contact-hero {
     height: 675px;
   }

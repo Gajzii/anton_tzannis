@@ -3,13 +3,10 @@
  *  Template Name: Prices */
 ?>
 
-<!-- <h1>PRiser</h1>
-<h3>sub titiel</h3> -->
-
 <?php get_header();?>
 <div class="page-margin">
-    <h1 class="goldtext text-padding">Priser</h1>
-    <p>Priserne er opgivet i DKK.</p>
+    <h1><?php echo get_the_title(); ?></h1>
+    <div class="center"><?php the_content(); ?></div>
     <div class="prices-grid">
         <!----------------- HAIRCUT ----------------->
         <?php if ( have_rows('prices_cut') ) : ?>
