@@ -46,8 +46,7 @@
         </a>
         <!----------------------------------------->
         <img class="contact-logo"
-            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
+            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis_secondary-logo.svg" />
     </div>
-</div>
 
 <?php get_footer(); ?>

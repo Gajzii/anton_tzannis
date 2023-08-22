@@ -31,7 +31,7 @@
                     <?php echo '<form action="' . get_site_url() . '/products">' ?>
                         <button class="primary-btn center">
                             <span class="button-leftpart-primary">
-                                Læs mere
+                                Gå til produkter
                             </span>
                             <span class="button-rightpart-primary">
                                 <iconify-icon class="button-content-right"
@@ -53,7 +53,7 @@
                     <?php echo '<form action="' . get_site_url() . '/prices">' ?>
                         <button class="primary-btn center">
                             <span class="button-leftpart-primary">
-                                Se priser
+                                Gå til priser
                             </span>
                             <span class="button-rightpart-primary">
                                 <iconify-icon class="button-content-right"
