@@ -1,3 +1,5 @@
+<?php $dataforordning = get_field('dataforordning', 'options'); ?>
+
 <footer class="footer-background">
 
     <div class="footer-grid">
@@ -10,24 +12,23 @@
         <div class="footer-links">
             <!-- ADRESS -->
             <?php echo '<a href="' . get_site_url() . '/contact">' ?>
-            <h4>Adresse</h4>
+                <h4>Adresse</h4>
             </a>
 
             <!-- CONTACT -->
             <?php echo '<a href="' . get_site_url() . '/contact">' ?>
-            <h4>Kontakt</h4>
+                <h4>Kontakt</h4>
             </a>
 
             <!-- OPENING HOURS -->
             <?php echo '<a href="' . get_site_url() . '/#opening-hours-section">' ?>
-            <h4>Åbningstider</h4>
+                <h4>Åbningstider</h4>
             </a>
 
             <!-- DATAFORORDNING -->
-            <?php echo '<a href="' . get_site_url() . '/#opening-hours-section">' ?>
-            <h4>Dataforordning</h4>
+            <a target="_blank" href="<?= $dataforordning['url']; ?>">
+                <h4>Dataforordning</h4>
             </a>
-
         </div>
         <!-- COPYRIGHT -->
         <div class="footer-copyright">
