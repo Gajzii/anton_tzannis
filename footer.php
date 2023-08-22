@@ -2,6 +2,7 @@
 
     <div class="footer-grid">
 
+
         <div class="footer-logo">
             <img class="footer-logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
@@ -24,10 +25,11 @@
             </a>
 
             <!-- DATAFORORDNING -->
-            <?php echo '<a href="' . get_site_url() . '/#opening-hours-section">' ?>
-            <h4>Dataforordning</h4>
-            </a>
-
+            <h4>
+                <?php if( get_field('dataforordning') ): ?>
+                <a href="<?php the_field('dataforordning'); ?>">d</a>
+                <?php endif; ?>
+            </h4>
         </div>
         <!-- COPYRIGHT -->
         <div class="footer-copyright">
