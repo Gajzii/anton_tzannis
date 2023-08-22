@@ -271,7 +271,6 @@ button {
   align-items: center;
   position: relative;
   text-transform: uppercase;
-
 }
 
 .hero-btn {
@@ -1059,7 +1058,8 @@ button {
 @media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
   .opening-hours-section,
   .about-cover-section {
-    height: 350px;
+    /* height: 350px; */
+    height: 140px;
   }
 }
 
@@ -1075,7 +1075,8 @@ button {
   background-position: -323px;
   background-size: 270%;
   background-repeat: no-repeat;
-  background-image: url(../images/opening-hours-background-img.webp);
+  /* background-image: url(../images/opening-hours-background-img.webp); */
+  background-color: var(--secondary-black);
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
