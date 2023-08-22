@@ -1,8 +1,8 @@
-<div class="page-margin" id="opening-hours-section">
+<div id="opening-hours-section">
     <div class="opening-hours-section opening-hours-section-left">
         <div class="opening-hours-section opening-hours-section-right">
             <div class="opening-hours-section-inside">
-                <h2>Åbningstider</h2>
+                <h2 class="goldtext">Åbningstider</h2>
                 <div class="opening-hours-container">
                     <div class="monday">
                         <p class="opening-hours-days">Mandag</p>
