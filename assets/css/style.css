@@ -86,7 +86,9 @@ header {
   /* -------------------------------- COLORS ------------------------------- */
   --primary-black: #1c1c1c;
   --secondary-black: #262626;
-  --black-gradient: -webkit-linear-gradient(80deg, #1c1c1c, #1c1c1c, #303030, #1c1c1c, #1c1c1c);
+  --black-gradient: -webkit-linear-gradient(180deg, #1c1c1c, #303030, #1c1c1c,
+      #303030,
+      #1c1c1c);
   --white: #ffffff;
   --secondary-white: #ececec;
   --red: #c20203;
@@ -230,8 +232,8 @@ button {
   transition: 1s;
 }
 
-.primary-btn:hover > .button-rightpart-primary,
-.primary-btn:hover > .button-leftpart-primary {
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary {
   opacity: 0.5;
 }
 
@@ -281,6 +283,7 @@ button {
 }
 
 @media screen and (min-width: 951px) {
+
   .hero-btn,
   .gradient-border-mask {
     margin: 0;
@@ -369,11 +372,11 @@ button {
   overflow: hidden;
 }
 
-.cta_card_inner:hover > .cta_card_inner_background > .ctadetails {
+.cta_card_inner:hover>.cta_card_inner_background>.ctadetails {
   display: block;
 }
 
-.cta_card_inner:hover > .cta_card_inner_background {
+.cta_card_inner:hover>.cta_card_inner_background {
   width: 100%;
   height: 100%;
 }
@@ -426,7 +429,7 @@ button {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 20px;
+  padding: 10px 20px;
   background-color: var(--primary-black);
 }
 
@@ -592,6 +595,7 @@ button {
     padding: 0;
   }
 }
+
 @media screen and (min-width: 951px) {
   .footer-links {
     display: flex;
@@ -646,6 +650,7 @@ button {
 .footer-logo {
   width: 30px;
 }
+
 @media screen and (min-width: 951px) {
   .footer-logo {
     margin: 0;
@@ -1002,7 +1007,9 @@ button {
   position: relative;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
+
   .opening-hours-section,
   .about-cover-section {
     height: 350px;
@@ -1021,7 +1028,7 @@ button {
   background-position: -323px;
   background-size: 270%;
   background-repeat: no-repeat;
-  background-image: url(../images/opening-hours-background-img.webp);
+  /* background-image: url(../images/opening-hours-background-img.webp); */
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -1032,7 +1039,7 @@ button {
   }
 }
 
-@media screen and (min-width: 951px) {
+/* @media screen and (min-width: 951px) {
   .opening-hours-section-left::before {
     -webkit-clip-path: polygon(32% 0, 100% 0, 100% 100%, 51% 100%);
     clip-path: polygon(32% 0, 100% 0, 100% 100%, 51% 100%);
@@ -1050,7 +1057,7 @@ button {
     background-size: 130%;
     opacity: 80%;
   }
-}
+} */
 
 .opening-hours-section-inside {
   position: relative;
@@ -1272,7 +1279,8 @@ button {
   font-size: 20px;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
   .contact-heading {
     font-size: 22px;
   }
@@ -1291,7 +1299,8 @@ button {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
   .contact-text {
     font-size: 20px;
   }
@@ -1302,7 +1311,8 @@ button {
   height: 100vh;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
+@media screen and (min-width: 672px) and (max-width: 950px),
+(min-width: 951px) {
   .contact-hero {
     height: 675px;
   }
