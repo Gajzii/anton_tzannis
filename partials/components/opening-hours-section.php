@@ -1,7 +1,7 @@
-<div class="opening-hours-section opening-hours-section-left">
-    <div class="opening-hours-section opening-hours-section-right">
-        <div class="opening-hours-section-inside">
-            <h2>Åbningstider</h2>
+
+        <div style="margin: 100px auto">
+        <div class="opening-hours-section-inside page-margin">
+            <h2 class="goldtext">Åbningstider</h2>
             <div class="opening-hours-container">
                 <div class="monday">
                     <p class="opening-hours-days">Mandag</p>
@@ -33,5 +33,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>

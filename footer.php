@@ -76,9 +76,9 @@
             </div>
         </div>
 
-        <img class="footer-logo"
+        
+<img class="footer-logo"
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
-
         <p class="copyright">©2023 m.wennerwald og c.nørgaard | Frisør Anton Tzannis.</p>
     </div>
 

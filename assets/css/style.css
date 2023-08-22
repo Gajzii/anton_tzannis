@@ -823,67 +823,29 @@ button {
 }
 
 /* FRONT PAGE - SALON SECTION */
-.salon-section {
-  margin: 55px 0;
+.displayboks {
+  margin-bottom: 170px;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .salon-section {
-    margin: 65px 0;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .salon-section {
-    margin: 90px 0;
-  }
+.salon-background {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: opacity(0.4);
+  height: 300px;
+  position: relative;
+  display: block;
+  z-index: -22;
 }
 
 .salon-text {
+  align-items: center;
+  justify-content: center;
+  width: 600px;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .salon-text {
-    width: 45%;
-    text-align: left;
-    margin: 0px auto;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .salon-text {
-    width: 35%;
-    text-align: left;
-    /* margin: 10px auto; */
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .salon-img {
-    /* width: 30%; */
-    width: 45%;
-    margin: 10px auto;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .salon-img {
-    width: 40%;
-    margin: auto;
-    height: 310px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    /* width: 30%;
-    margin: auto;
-    height: 250px;
-    -o-object-fit: cover;
-    object-fit: cover; */
-  }
+  display: flex;
+  flex-direction: column;
+  margin: -242px auto 0 auto;
 }
 
 /* FRONT PAGE - OPENING HOURS SECTION*/
