@@ -940,6 +940,7 @@ button {
   display: flex;
   flex-direction: column-reverse;
 }
+
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .about-section-flex {
     flex-direction: row;
@@ -970,6 +971,7 @@ button {
     max-height: 280px;
   }
 }
+
 @media screen and (min-width: 951px) {
   .about-section-img {
     max-width: 35%;
@@ -1012,6 +1014,7 @@ button {
   text-align: center;
   width: 90%;
 }
+
 @media screen and (min-width: 951px) {
   .about-salon-section-description {
     width: 40%;

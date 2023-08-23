@@ -5,7 +5,6 @@
 
 <?php get_header();?>
 
-
 <div class="page-margin">
     <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
 
@@ -17,8 +16,6 @@
         <img class="about-section-img" alt="anton tzannis"
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/anton-tzannis.jpg" />
     </div>
-
-
 </div>
 <div class="about-salon-section">
     <div class="about-salon-section-description">
@@ -28,6 +25,5 @@
             commodo consequat.</p>
     </div>
 </div>
-
 
 <?php get_footer(); ?>
