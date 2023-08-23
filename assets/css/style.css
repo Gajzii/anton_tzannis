@@ -271,7 +271,6 @@ button {
   align-items: center;
   position: relative;
   text-transform: uppercase;
-
 }
 
 .hero-btn {
@@ -1332,9 +1331,13 @@ button {
   }
 }
 
+.contact-h2 {
+  margin: 0;
+}
+
 .contact-heading-icon {
   font-size: 30px;
-  color: var(--gold);
+  color: #ceac68;
 }
 
 .contact-text {
