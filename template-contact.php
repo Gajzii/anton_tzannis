@@ -11,10 +11,9 @@
 
     </div>
 
-    <div class="contact-hero-right">
-        <iframe class="adress-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.1051971419192!2d10.205686892099356!3d56.16049524830549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f9664d62dd9%3A0x947605e35fcfb27b!2sN%C3%B8rregade%2053%2C%208000%20Aarhus!5e0!3m2!1sda!2sdk!4v1669634132310!5m2!1sda!2sdk"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="price-table__item">
+        <span><?= $product_name; ?></span>
+        <span><?= $product_price; ?></span>
     </div>
 
     <h1 style="display:none">Anton Tzannis</h1>

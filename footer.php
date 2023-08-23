@@ -1,3 +1,5 @@
+<?php $dataforordning = get_field('dataforordning', 'options'); ?>
+
 <footer class="footer-background">
 
     <div class="footer-grid">
@@ -25,11 +27,9 @@
             </a>
 
             <!-- DATAFORORDNING -->
-            <h4>
-                <?php if( get_field('dataforordning') ): ?>
-                <a href="<?php the_field('dataforordning'); ?>">d</a>
-                <?php endif; ?>
-            </h4>
+            <a target="_blank" href="<?= $dataforordning['url']; ?>">
+                <h4>Dataforordning</h4>
+            </a>
         </div>
         <!-- COPYRIGHT -->
         <div class="footer-copyright">

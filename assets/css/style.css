@@ -306,6 +306,13 @@ button {
 
 /* ======================================================================= */
 /* ======================== CALL TO ACTION BUTTONS ======================= */
+.cta-btn-section-container {
+  /* background-color: #1c1c1c60;
+  backdrop-filter: blur(10px);
+  padding: 1px 0; */
+  margin-top: 140px;
+}
+
 .cta-section {
   display: flex;
   flex-direction: column;
@@ -336,6 +343,7 @@ button {
   height: 250px;
   position: relative;
   box-shadow: var(--box-shadow);
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -366,6 +374,7 @@ button {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 0 0 5px 5px;
 }
 
 .cta_card_inner:hover > .cta_card_inner_background > .ctadetails {
@@ -375,6 +384,7 @@ button {
 .cta_card_inner:hover > .cta_card_inner_background {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 
 .cta_description {
@@ -425,7 +435,7 @@ button {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 20px;
+  padding: 10px 20px;
   background-color: var(--primary-black);
 }
 
@@ -614,7 +624,13 @@ button {
   padding: 20px 0;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px) {
+@media screen and (min-width: 951px) {
+  .footer-logo {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 951px) {
   .footer-links {
     flex-direction: row;
     justify-content: space-between;
@@ -659,6 +675,10 @@ button {
     width: 35px;
     margin: 0;
   }
+}
+
+.footer-logo {
+  width: 30px;
 }
 
 @media screen and (min-width: 951px) {
@@ -862,74 +882,16 @@ button {
 /* ========================== FRONT PAGE ============================== */
 .hero {
   width: 100%;
-  height: 675px;
-}
-
-.hero-right {
-  position: absolute;
-  width: 100%;
-  right: 0;
-  height: 675px;
-  opacity: 80%;
-  background-image: url("../images/hero-right.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: var(--white);
-  background-blend-mode: luminosity;
-  -webkit-clip-path: polygon(0 56%, 100% 70%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 56%, 100% 70%, 100% 100%, 0% 100%);
-  background-position: 0px 350px;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .hero-right {
-    width: 50%;
-    -webkit-clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
-    clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
-    background-size: cover;
-    background-position: right;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .hero-right {
-    width: 50%;
-    -webkit-clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
-    clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
-    background-size: cover;
-    background-position: right;
-  }
-}
-
-.hero-left {
-  position: absolute;
-  width: 100%;
-  height: 675px;
-  opacity: 80%;
-  background-color: var(--white);
-  -webkit-clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
-  clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
-  filter: grayscale(60%);
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .hero-left {
-    -webkit-clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
-    clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .hero-left {
-    -webkit-clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
-    clip-path: polygon(0% 0, 78% 0, 53% 100%, 0% 100%);
-  }
+  height: 505px;
+  position: relative;
 }
 
 .hero-video {
   width: 100%;
   height: 505px;
   object-fit: cover;
+  opacity: 80%;
+  filter: grayscale(60%);
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -945,22 +907,23 @@ button {
 }
 
 .hero-container {
-  position: relative;
-  top: 20%;
+  position: absolute;
+  top: 25%;
   width: 85%;
-  margin: 0 auto;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .hero-container {
-    top: 45%;
+    top: 60%;
     width: 90%;
   }
 }
 
 @media screen and (min-width: 951px) {
   .hero-container {
-    top: 45%;
+    top: 60%;
     width: 80%;
   }
 }
@@ -982,133 +945,34 @@ button {
 }
 
 /* FRONT PAGE - SALON SECTION */
-.salon-section {
-  margin: 55px 0;
+.displayboks {
+  margin-bottom: 170px;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .salon-section {
-    margin: 65px 0;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .salon-section {
-    margin: 90px 0;
-  }
+.salon-background {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: opacity(0.4);
+  height: 300px;
+  position: relative;
+  display: block;
+  z-index: -22;
 }
 
 .salon-text {
+  align-items: center;
+  justify-content: center;
+  width: 600px;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .salon-text {
-    width: 45%;
-    text-align: left;
-    margin: 0px auto;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .salon-text {
-    width: 35%;
-    text-align: left;
-    /* margin: 10px auto; */
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .salon-img {
-    /* width: 30%; */
-    width: 45%;
-    margin: 10px auto;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .salon-img {
-    width: 40%;
-    margin: auto;
-    height: 310px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    /* width: 30%;
-    margin: auto;
-    height: 250px;
-    -o-object-fit: cover;
-    object-fit: cover; */
-  }
+  display: flex;
+  flex-direction: column;
+  margin: -242px auto 0 auto;
 }
 
 /* FRONT PAGE - OPENING HOURS SECTION*/
-.opening-hours-section,
-.about-cover-section {
-  width: 100%;
-  height: 400px;
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px), (min-width: 951px) {
-  .opening-hours-section,
-  .about-cover-section {
-    /* height: 350px; */
-    height: 140px;
-  }
-}
-
-.opening-hours-section::before {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  filter: grayscale(30%);
-  opacity: 40%;
-  background-position: -323px;
-  background-size: 270%;
-  background-repeat: no-repeat;
-  /* background-image: url(../images/opening-hours-background-img.webp); */
-  background-color: var(--secondary-black);
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .opening-hours-section::before {
-    background-size: cover;
-    background-position: center;
-    opacity: 40%;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .opening-hours-section-left::before {
-    -webkit-clip-path: polygon(32% 0, 100% 0, 100% 100%, 51% 100%);
-    clip-path: polygon(32% 0, 100% 0, 100% 100%, 51% 100%);
-    background-position: -280px;
-    background-size: 130%;
-    opacity: 80%;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .opening-hours-section-right::before {
-    -webkit-clip-path: polygon(0% 0, 30% 0, 60% 161%, 0% 100%);
-    clip-path: polygon(0% 0, 30% 0, 60% 161%, 0% 100%);
-    background-position: -280px;
-    background-size: 130%;
-    opacity: 80%;
-  }
-}
-
-.opening-hours-section-inside {
-  position: relative;
+.opening-hours-section {
+  margin: 120px auto;
   text-align: center;
 }
 
@@ -1156,20 +1020,15 @@ button {
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .opening-hours-days {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
 @media screen and (min-width: 951px) {
   .opening-hours-days {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-}
-
-.opening-hours-hours {
-  font-size: 18px;
-  margin-bottom: 8px;
 }
 
 /* ======================================================================= */
