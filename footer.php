@@ -32,7 +32,7 @@
         </div>
         <!-- COPYRIGHT -->
         <div class="footer-copyright">
-            <h4>©2023 Frisør Anton Tzannis</h4>
+            <h4>© <?php echo get_the_date('Y'); ?> Frisør Anton Tzannis</h4>
         </div>
     </div>
 
