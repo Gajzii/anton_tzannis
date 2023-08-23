@@ -7,14 +7,9 @@
 
 <div class="contact-hero">
     <div class="contact-hero-left">
-
-
     </div>
 
-    <div class="price-table__item">
-        <span><?= $product_name; ?></span>
-        <span><?= $product_price; ?></span>
-    </div>
+
 
     <h1 style="display:none">Anton Tzannis</h1>
 
@@ -48,4 +43,4 @@
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis_secondary-logo.svg" />
     </div>
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>

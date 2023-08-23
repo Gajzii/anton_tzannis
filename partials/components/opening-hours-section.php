@@ -10,6 +10,7 @@
 
 <div class="opening-hours-section page-margin" id="opening-hours-section">
     <!-- <h2 class="goldtext">Åbningstider</h2> -->
+
     <div class="opening-hours-container">
         <div class="monday">
             <h2 class="opening-hours-days goldtext">Mandag</h2>
