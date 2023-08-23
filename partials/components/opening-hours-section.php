@@ -8,40 +8,39 @@
     $sunday = get_field('opening_sunday', 'options');
 ?>
 
-<div class="opening-hours-section opening-hours-section-left">
-    <div class="opening-hours-section opening-hours-section-right" id="opening-hours-section">
-        <div class="opening-hours-section-inside">
-            <h2 class="goldtext">Åbningstider</h2>
+<div class="opening-hours-section page-margin" id="opening-hours-section">
+            <!-- <h2 class="goldtext">Åbningstider</h2> -->
             <div class="opening-hours-container">
                 <div class="monday">
-                    <p class="opening-hours-days">Mandag</p>
+                    <h2 class="opening-hours-days goldtext">Mandag</h2>
                     <p><?= $monday; ?></p>
                 </div>
                 <div class="tuesday">
-                    <p class="opening-hours-days">Tirsdag</p>
+                    <h2 class="opening-hours-days goldtext">Tirsdag</h2>
                     <p><?= $tuesday; ?></p>
                 </div>
                 <div class="wednesday">
-                    <p class="opening-hours-days">Onsdag</p>
+                    <h2 class="opening-hours-days goldtext">Onsdag</h2>
                     <p><?= $wednesday; ?></p>
                 </div>
                 <div class="thursday">
-                    <p class="opening-hours-days">Torsdag</p>
+                    <h2 class="opening-hours-days goldtext">Torsdag</h2>
                     <p><?= $thursday; ?></p>
                 </div>
                 <div class="friday">
-                    <p class="opening-hours-days">Fredag</p>
+                    <h2 class="opening-hours-days goldtext">Fredag</h2>
                     <p><?= $friday; ?></p>
                 </div>
                 <div class="saturday">
-                    <p class="opening-hours-days">Lørdag</p>
+                    <h2 class="opening-hours-days goldtext">Lørdag</h2>
                     <p><?= $saturday; ?></p>
                 </div>
                 <div class="sunday">
-                    <p class="opening-hours-days">Søndag</p>
+                    <h2 class="opening-hours-days goldtext">Søndag</h2>
                     <p><?= $sunday; ?></p>
                 </div>
             </div>
-        </div>
-    </div>
+
+            
+
 </div>

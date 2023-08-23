@@ -1,3 +1,4 @@
+<div class="cta-btn-section-container">
 <div class="page-margin">
     <div class="cta-section">
         <!--- FACEBOOK CTA --->
@@ -65,4 +66,5 @@
             </div>
         </div>
     </div>    
+</div>
 </div>
