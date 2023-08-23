@@ -24,7 +24,7 @@
         <div class="contact-heading">
             <iconify-icon class="contact-heading-icon" icon="material-symbols:phone-enabled" flip="horizontal">
             </iconify-icon>
-            <h2>Kontakt</h2>
+            <h2 class="goldtext contact-h2">Kontakt</h2>
         </div>
 
         <a href="tel:+4586188277">
@@ -34,7 +34,7 @@
         <!----------------- ADRESS ----------------->
         <div class="contact-heading">
             <iconify-icon class="contact-heading-icon" icon="mdi:map-marker"></iconify-icon>
-            <h2>Adresse</h2>
+            <h2 class="goldtext contact-h2">Adresse</h2>
         </div>
 
         <a target="_blank" href="https://goo.gl/maps/ZbdRa6aoySkK1iWF9">
@@ -49,4 +49,4 @@
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis_secondary-logo.svg" />
     </div>
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
