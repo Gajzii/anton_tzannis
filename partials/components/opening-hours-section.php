@@ -1,39 +1,47 @@
-<div class="page-margin" id="opening-hours-section">
-    <div class="opening-hours-section opening-hours-section-left">
-        <div class="opening-hours-section opening-hours-section-right">
-            <div class="opening-hours-section-inside">
-                <h2>Åbningstider</h2>
-                <div class="opening-hours-container">
-                    <div class="monday">
-                        <p class="opening-hours-days">Mandag</p>
-                        <p>09.00 - 17.30</p>
-                    </div>
-                    <div class="tuesday">
-                        <p class="opening-hours-days">Tirsdag</p>
-                        <p>12.00 - 17.30</p>
-                    </div>
-                    <div class="wednesday">
-                        <p class="opening-hours-days">Onsdag</p>
-                        <p>09.00 - 17.30</p>
-                    </div>
-                    <div class="thursday">
-                        <p class="opening-hours-days">Torsdag</p>
-                        <p>12.00 - 18.00</p>
-                    </div>
-                    <div class="friday">
-                        <p class="opening-hours-days">Fredag</p>
-                        <p>09.00 - 18.00</p>
-                    </div>
-                    <div class="saturday">
-                        <p class="opening-hours-days">Lørdag</p>
-                        <p>08.00 - 13.00</p>
-                    </div>
-                    <div class="sunday">
-                        <p class="opening-hours-days">Søndag</p>
-                        <p>Lukket</p>
-                    </div>
-                </div>
-            </div>
+<?php
+    $monday = get_field('opening_monday', 'options');
+    $tuesday = get_field('opening_tuesday', 'options');
+    $wednesday = get_field('opening_wednesday', 'options');
+    $thursday = get_field('opening_thursday', 'options');
+    $friday = get_field('opening_friday', 'options');
+    $saturday = get_field('opening_saturday', 'options');
+    $sunday = get_field('opening_sunday', 'options');
+?>
+
+<div class="opening-hours-section page-margin" id="opening-hours-section">
+    <!-- <h2 class="goldtext">Åbningstider</h2> -->
+
+    <div class="opening-hours-container">
+        <div class="monday">
+            <h2 class="opening-hours-days goldtext">Mandag</h2>
+            <p><?= $monday; ?></p>
+        </div>
+        <div class="tuesday">
+            <h2 class="opening-hours-days goldtext">Tirsdag</h2>
+            <p><?= $tuesday; ?></p>
+        </div>
+        <div class="wednesday">
+            <h2 class="opening-hours-days goldtext">Onsdag</h2>
+            <p><?= $wednesday; ?></p>
+        </div>
+        <div class="thursday">
+            <h2 class="opening-hours-days goldtext">Torsdag</h2>
+            <p><?= $thursday; ?></p>
+        </div>
+        <div class="friday">
+            <h2 class="opening-hours-days goldtext">Fredag</h2>
+            <p><?= $friday; ?></p>
+        </div>
+        <div class="saturday">
+            <h2 class="opening-hours-days goldtext">Lørdag</h2>
+            <p><?= $saturday; ?></p>
+        </div>
+        <div class="sunday">
+            <h2 class="opening-hours-days goldtext">Søndag</h2>
+            <p><?= $sunday; ?></p>
         </div>
     </div>
+
+
+
 </div>
