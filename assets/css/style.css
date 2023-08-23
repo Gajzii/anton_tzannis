@@ -940,172 +940,79 @@ button {
 
 /* ======================================================================= */
 /* ========================== CONTACT PAGE =============================== */
+.contact-page {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 951px) {
+  .contact-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 951px) {
+  .contact-information {
+    margin-bottom: 0;
+  }
+}
+
+.contact-information-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact-heading {
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 2px;
-  font-size: 20px;
+  justify-content: center;
+  gap: 5px;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px),
-(min-width: 951px) {
-  .contact-heading {
-    font-size: 22px;
-  }
+.contact-header {
+  margin-bottom: 0 !important;
 }
 
-.contact-h2 {
-  margin: 0;
+.contact-icon {
+  height: 20px;
 }
 
-.contact-heading-icon {
-  font-size: 30px;
-}
-
-.contact-text {
-  font-size: 20px;
-}
-
-.contact-text:first-child {
-  margin-bottom: 15px;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px),
-(min-width: 951px) {
-  .contact-text {
-    font-size: 20px;
-  }
-}
-
-.contact-hero {
+.contact-map {
   width: 100%;
-  height: 100vh;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px),
-(min-width: 951px) {
-  .contact-hero {
-    height: 675px;
-  }
-}
-
-.contact-hero-left {
-  position: absolute;
-  width: 100%;
-  height: 735px;
-  opacity: 70%;
-  /* background-image: url(../images/contact-hero-left.jpg); */
-  background-image: url(../images/2contact-hero-left.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: var(--white);
-  -webkit-clip-path: polygon(0 51%, 100% 67%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 51%, 100% 67%, 100% 100%, 0% 100%);
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .contact-hero-left {
-    -webkit-clip-path: polygon(0% 0, 53% 0, 13% 158%, 0% 100%);
-    clip-path: polygon(0% 0, 53% 0, 13% 158%, 0% 100%);
-    height: 675px;
-  }
+  height: 400px;
 }
 
 @media screen and (min-width: 951px) {
-  .contact-hero-left {
-    -webkit-clip-path: polygon(0% 0, 55% 0, 20% 149%, 0% 100%);
-    clip-path: polygon(0% 0, 55% 0, 20% 149%, 0% 100%);
-    height: 675px;
-    background-size: contain;
+  .contact-map {
+    width: 400px;
   }
 }
 
-.contact-hero-right {
-  position: absolute;
-  width: 100%;
-  right: 0;
-  height: 675px;
-  /* opacity: 50%; */
-  opacity: 70%;
-  background-color: var(--primary-black);
-  -webkit-clip-path: polygon(0 0%, 130% 0%, 100% 69%, 0 52%);
-  clip-path: polygon(0 0%, 130% 0%, 100% 69%, 0 52%);
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .contact-hero-right {
-    width: 71%;
-    -webkit-clip-path: polygon(38% 0, 100% 0, 100% 100%, 2% 100%);
-    clip-path: polygon(38% 0, 100% 0, 100% 100%, 2% 100%);
-    background-size: cover;
-    background-position: right;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .contact-hero-right {
-    width: 75%;
-    -webkit-clip-path: polygon(42% 0, 100% 0, 100% 101%, 11% 100%);
-    clip-path: polygon(42% 0, 100% 0, 100% 101%, 11% 100%);
-    background-size: cover;
-    background-position: right;
-  }
-}
-
-.adress-map {
+.contact-map-inner {
   width: 100% !important;
   height: 100%;
 }
 
-.contact-information {
-  position: relative;
-  top: 58%;
-  text-align: center;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .contact-information {
-    top: 22%;
-    left: 15%;
-    transform: translate(-50%, -45%);
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .contact-information {
-    top: 10%;
-    left: 7%;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-
 .contact-logo {
-  width: 50px;
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .contact-logo {
-    width: 100px;
-    position: absolute;
-    top: 430px;
-    left: 7%;
-  }
+  display: none;
 }
 
 @media screen and (min-width: 951px) {
   .contact-logo {
+    margin-top: 50px;
+    display: block;
     width: 120px;
-    position: absolute;
-    top: 430px;
-    left: 7%;
   }
 }
 
