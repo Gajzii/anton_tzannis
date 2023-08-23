@@ -4,6 +4,7 @@
 
     <div class="footer-grid">
 
+
         <div class="footer-logo">
             <img class="footer-logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
@@ -12,17 +13,17 @@
         <div class="footer-links">
             <!-- ADRESS -->
             <?php echo '<a href="' . get_site_url() . '/contact">' ?>
-                <h4>Adresse</h4>
+            <h4>Adresse</h4>
             </a>
 
             <!-- CONTACT -->
             <?php echo '<a href="' . get_site_url() . '/contact">' ?>
-                <h4>Kontakt</h4>
+            <h4>Kontakt</h4>
             </a>
 
             <!-- OPENING HOURS -->
             <?php echo '<a href="' . get_site_url() . '/#opening-hours-section">' ?>
-                <h4>Åbningstider</h4>
+            <h4>Åbningstider</h4>
             </a>
 
             <!-- DATAFORORDNING -->

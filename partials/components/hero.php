@@ -1,8 +1,8 @@
 <div class="hero">
 
-        <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.mp4"
-            autoplay muted loop>
-        </video>
+    <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.mp4" autoplay muted
+        loop>
+    </video>
 
     <div class="hero-container">
         <h1 class="hero-text">Anton Tzannis | Bedste frisør i Aarhus</h1>
@@ -13,10 +13,11 @@
                 </button>
             </a>
             <?php echo '<a href="' . get_site_url() . '/prices">' ?>
-                <button class="gradient-border-mask">
-                    Se priser
-                </button>
+            <button class="gradient-border-mask">
+                Se priser
+            </button>
             </a>
         </div>
     </div>
+
 </div>

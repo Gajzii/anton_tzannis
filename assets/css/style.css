@@ -74,9 +74,7 @@ header {
   /* -------------------------------- COLORS ------------------------------- */
   --primary-black: #1c1c1c;
   --secondary-black: #262626;
-  --black-gradient: -webkit-linear-gradient(180deg, #1c1c1c, #303030, #1c1c1c,
-      #303030,
-      #1c1c1c);
+  --black-gradient: -webkit-linear-gradient(180deg, #1c1c1c, #303030, #1c1c1c, #303030, #1c1c1c);
   --white: #ffffff;
   --secondary-white: #ececec;
   --red: #c20203;
@@ -246,7 +244,6 @@ button {
   align-items: center;
   position: relative;
   text-transform: uppercase;
-
 }
 
 .hero-btn {
@@ -308,7 +305,6 @@ button {
   justify-content: center;
   align-items: center;
   gap: 15px;
-
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -959,6 +955,10 @@ button {
   .contact-heading {
     font-size: 22px;
   }
+}
+
+.contact-h2 {
+  margin: 0;
 }
 
 .contact-heading-icon {
