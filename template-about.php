@@ -14,7 +14,7 @@
             <p><?php echo esc_html( the_field('about_description') ); ?></p>
         </div>
         <img class="about-section-img" alt="anton tzannis"
-            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/anton-tzannis.jpg" />
+            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/anton-tzannis.webp" />
     </div>
 </div>
 <div class="about-salon-section">
