@@ -5,6 +5,7 @@
 
 <?php
     $phone = get_field('phone', 'options');
+    $mail = get_field('mail', 'options');
     $address = get_field('address', 'options');
     $zipcode = get_field('zipcode', 'options');
 ?>
@@ -18,7 +19,7 @@
         <div>
             <div class="contact-information">  
                 <!----------------- PHONE NUMBER ----------------->
-                <div class="contact-information-inner">
+                <div class="phone">
                     <div class="contact-heading">
                         <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-phone.png">
                         <h2 class="goldtext contact-header">Telefon</h2>
@@ -27,9 +28,9 @@
                     <a href="tel:+4586188277">
                         <p class="center">+45 <?= $phone; ?></p>
                     </a>
-                </div>      
-                <!----------------- ADRESS ----------------->
-                <div class="contact-information-inner">
+                </div>
+                <!------------------- ADDRESS -------------------->
+                <div class="address">
                     <div class="contact-heading">
                         <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-location.png">
                         <h2 class="goldtext contact-header">Adresse</h2>
@@ -43,10 +44,33 @@
                         </p>
                     </a>
                 </div>
+                <!-------------------- MAIL ---------------------->
+                <div class="mail">
+                    <div class="contact-heading">
+                        <img class="mail-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-mail.png">
+                        <h2 class="goldtext contact-header">Mail</h2>
+                    </div>
+
+                    <a href="mailto:anton-tzannis@hairtools.dk">
+                        <p class="center"><?= $mail; ?></p>
+                    </a>
+                </div>
+                <!------------------- FACEBOOK ------------------->
+                <div class="facebook">
+                    <div class="contact-heading">
+                        <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-facebook.png">
+                        <h2 class="goldtext contact-header">Facebook</h2>
+                    </div>
+
+                    <a target="_blank" href="https://www.facebook.com/AntonTzannis">
+                        <p class="center">Besøg vores <br> Facebook-side</p>
+                    </a>
+                </div>    
             </div>
             <!----------------------------------------->
             <img class="contact-logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis_secondary-logo.svg" />
+                
         </div>
         <div class="contact-map">
             <iframe class="contact-map-inner"
