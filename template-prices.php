@@ -7,6 +7,7 @@
 <div class="page-margin">
     <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
     <div class="center"><?php the_content(); ?></div>
+    <div class="whitespace"></div>
     <div class="prices-grid">
         <!----------------- HAIRCUT ----------------->
         <?php if ( have_rows('prices_cut') ) : ?>
