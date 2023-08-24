@@ -7,7 +7,7 @@
 
 <div class="page-margin">
     <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
-
+    <div class="whitespace"></div>
     <div class="about-section-flex">
         <div class="about-section-description">
             <h2 class="goldtext about-section-description-heading">Anton Tzannis</h2>
