@@ -79,6 +79,7 @@ header {
   --secondary-white: #ececec;
   --red: #c20203;
   --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
+  --gold-gradient-hover: -webkit-linear-gradient(100deg, #a98c54, #a98c54, #d0b990, #a98c54, #a98c54);
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
   --grey-hover: #bcbcbc;
   --black-transparent: #1c1c1cdb;
@@ -205,7 +206,8 @@ button {
 
 .primary-btn:hover > .button-rightpart-primary,
 .primary-btn:hover > .button-leftpart-primary {
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  background: var(--gold-gradient-hover);
 }
 
 .button-content-right {
@@ -252,6 +254,10 @@ button {
   border-radius: 5px;
 }
 
+.hero-btn:hover {
+  background: var(--gold-gradient-hover);
+}
+
 @media screen and (min-width: 951px) {
   .hero-btn,
   .gradient-border-mask {
@@ -272,6 +278,15 @@ button {
   border-radius: 5px;
   border: 2px solid transparent;
   background: var(--gold-gradient) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.gradient-border-mask:hover::before {
+  border-radius: 5px;
+  border: 3px solid transparent;
+  background: var(--gold-gradient-hover) border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
