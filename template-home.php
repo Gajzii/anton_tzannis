@@ -100,51 +100,148 @@
         </div>
     </div>
 </div>
-<!-- OPENING HOURS SECTION -->
-<?php
-    $monday = get_field('opening_monday', 'options');
-    $tuesday = get_field('opening_tuesday', 'options');
-    $wednesday = get_field('opening_wednesday', 'options');
-    $thursday = get_field('opening_thursday', 'options');
-    $friday = get_field('opening_friday', 'options');
-    $saturday = get_field('opening_saturday', 'options');
-    $sunday = get_field('opening_sunday', 'options');
-?>
-
+<!----------- OPENING HOURS SECTION ----------->
 <div class="opening-hours-section page-margin" id="opening-hours-section">
     <div class="opening-hours-container">
+
+        <!-- MONDAY -->
+        <?php if ( have_rows('opening_hours_monday') ) : ?>
+        <?php while ( have_rows('opening_hours_monday') ) : the_row(); ?>
+        <?php
+                $monday = get_sub_field('monday');
+                $time_opening = get_sub_field('time_opening');
+                $time_closed = get_sub_field('time_closed');
+            ?>
+
         <div class="monday">
-            <h2 class="opening-hours-days goldtext">Mandag</h2>
-            <p><?= $monday; ?></p>
+            <h2 class="opening-hours-days goldtext"><?= $monday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p>
+                <p>&nbsp;-&nbsp;</p>
+                <p><?= $time_closed; ?></p>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+        <!-- TUESDAY -->
+        <?php if ( have_rows('opening_hours_tuesday') ) : ?>
+        <?php while ( have_rows('opening_hours_tuesday') ) : the_row(); ?>
+        <?php
+                $tuesday = get_sub_field('tuesday');
+                $time_opening = get_sub_field('time_opening');
+                $time_closed = get_sub_field('time_closed');
+            ?>
+
         <div class="tuesday">
-            <h2 class="opening-hours-days goldtext">Tirsdag</h2>
-            <p><?= $tuesday; ?></p>
+            <h2 class="opening-hours-days goldtext"><?= $tuesday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p>
+                <p>&nbsp;-&nbsp;</p>
+                <p><?= $time_closed; ?></p>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+        <!-- WEDNESDAY -->
+        <?php if ( have_rows('opening_hours_wednesday') ) : ?>
+        <?php while ( have_rows('opening_hours_wednesday') ) : the_row(); ?>
+        <?php
+                $wednesday = get_sub_field('wednesday');
+                $time_opening = get_sub_field('time_opening');
+                $time_closed = get_sub_field('time_closed');
+            ?>
+
         <div class="wednesday">
-            <h2 class="opening-hours-days goldtext">Onsdag</h2>
-            <p><?= $wednesday; ?></p>
+            <h2 class="opening-hours-days goldtext"><?= $wednesday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p>
+                <p>&nbsp;-&nbsp;</p>
+                <p><?= $time_closed; ?></p>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+        <!-- THURSDAY -->
+        <?php if ( have_rows('opening_hours_thursday') ) : ?>
+        <?php while ( have_rows('opening_hours_thursday') ) : the_row(); ?>
+        <?php
+                $thursday = get_sub_field('thursday');
+                $time_opening = get_sub_field('time_opening');
+                $time_closed = get_sub_field('time_closed');
+            ?>
+
         <div class="thursday">
-            <h2 class="opening-hours-days goldtext">Torsdag</h2>
-            <p><?= $thursday; ?></p>
+            <h2 class="opening-hours-days goldtext"><?= $thursday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p>
+                <p>&nbsp;-&nbsp;</p>
+                <p><?= $time_closed; ?></p>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+        <!-- FRIDAY -->
+        <?php if ( have_rows('opening_hours_friday') ) : ?>
+        <?php while ( have_rows('opening_hours_friday') ) : the_row(); ?>
+        <?php
+                $friday = get_sub_field('friday');
+                $time_opening = get_sub_field('time_opening');
+                $time_closed = get_sub_field('time_closed');
+            ?>
+
         <div class="friday">
-            <h2 class="opening-hours-days goldtext">Fredag</h2>
-            <p><?= $friday; ?></p>
+            <h2 class="opening-hours-days goldtext"><?= $friday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p>
+                <p>&nbsp;-&nbsp;</p>
+                <p><?= $time_closed; ?></p>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+        <!-- SATURDAY -->
+        <?php if ( have_rows('opening_hours_saturday') ) : ?>
+        <?php while ( have_rows('opening_hours_saturday') ) : the_row(); ?>
+        <?php
+                $saturday = get_sub_field('saturday');
+                $time_opening = get_sub_field('time_opening');
+                $time_closed = get_sub_field('time_closed');
+            ?>
+
         <div class="saturday">
-            <h2 class="opening-hours-days goldtext">Lørdag</h2>
-            <p><?= $saturday; ?></p>
+            <h2 class="opening-hours-days goldtext"><?= $saturday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p>
+                <p>&nbsp;-&nbsp;</p>
+                <p><?= $time_closed; ?></p>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+        <!-- SUNDAY -->
+        <?php if ( have_rows('opening_hours_sunday') ) : ?>
+        <?php while ( have_rows('opening_hours_sunday') ) : the_row(); ?>
+        <?php
+                $sunday = get_sub_field('sunday');
+                $time_opening = get_sub_field('time_opening');
+            ?>
+
         <div class="sunday">
-            <h2 class="opening-hours-days goldtext">Søndag</h2>
-            <p><?= $sunday; ?></p>
+            <h2 class="opening-hours-days goldtext"><?= $sunday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
     </div>
-
-
-
 </div>
 
 <?php get_footer(); ?>
