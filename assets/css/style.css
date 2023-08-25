@@ -69,6 +69,7 @@ header {
     justify-content: center;
   }
 }
+
 .whitespace {
   height: 30px;
 }
@@ -205,8 +206,8 @@ button {
   font-size: 20px;
 }
 
-.primary-btn:hover > .button-rightpart-primary,
-.primary-btn:hover > .button-leftpart-primary {
+.primary-btn:hover>.button-rightpart-primary,
+.primary-btn:hover>.button-leftpart-primary {
   background: var(--gold-gradient-hover);
 }
 
@@ -259,6 +260,7 @@ button {
 }
 
 @media screen and (min-width: 951px) {
+
   .hero-btn,
   .gradient-border-mask {
     margin: 0;
@@ -377,11 +379,11 @@ button {
   border-radius: 0 0 5px 5px;
 }
 
-.cta_card_inner:hover > .cta_card_inner_background > .ctadetails {
+.cta_card_inner:hover>.cta_card_inner_background>.ctadetails {
   display: block;
 }
 
-.cta_card_inner:hover > .cta_card_inner_background {
+.cta_card_inner:hover>.cta_card_inner_background {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -412,6 +414,11 @@ button {
     width: 50px;
     margin: 0;
   }
+}
+
+.lang-item a img {
+  width: 25px !important;
+  height: auto !important;
 }
 
 #dropdownmenu {
@@ -1117,6 +1124,7 @@ button {
 }
 
 @media screen and (min-width: 951px) {
+
   .phone,
   .address {
     width: 100px;
