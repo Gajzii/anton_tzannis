@@ -1,6 +1,6 @@
 <?php   
 /**
- *  Template Name: Produkter */
+ *  Template Name: Products */
 ?>
 <?php get_header(); ?>
 <div class="page-margin">
