@@ -30,7 +30,7 @@
 <div class="page-margin">
 
     <?php if ( have_rows('ctahome') ) : ?>
-    <div class="products_card">
+    <div class="cta-section">
         <?php while ( have_rows('ctahome') ) : the_row(); ?>
 
         <?php
@@ -41,15 +41,15 @@
         ?>
             
         <!--- FACEBOOK CTA --->
-        <div class="cta_card_inner product_card_inner" style="background-image: url(<?= $cta_background_image['url']; ?>)">
+        <div class="cta_card_inner" style="background-image: url(<?= $cta_background_image['url']; ?>)">
             <div class="cta_card_inner_background">
                 <h3 class="goldtext"><?= $cta_title; ?></h3>
                 <div class="ctadetails">
                     <p class="cta_description"><?= $cta_description; ?></p>
-                    <form target="_blank" action="<?= $cta_link['url']; ?>">
+                    <form target="<?= $cta_link['target']; ?>" action="<?= $cta_link['url']; ?>">
                         <button class="primary-btn center">
                             <span class="button-leftpart-primary">
-                                123
+                                <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
                                 <iconify-icon class="button-content-right"
