@@ -115,7 +115,6 @@
 
         <div class="monday">
             <h2 class="opening-hours-days goldtext"><?= $monday; ?></h2>
-
             <div class="opening-hours-time">
                 <p><?= $time_opening; ?></p>
                 <p>&nbsp;-&nbsp;</p>
@@ -136,7 +135,6 @@
 
         <div class="tuesday">
             <h2 class="opening-hours-days goldtext"><?= $tuesday; ?></h2>
-
             <div class="opening-hours-time">
                 <p><?= $time_opening; ?></p>
                 <p>&nbsp;-&nbsp;</p>
@@ -157,7 +155,6 @@
 
         <div class="wednesday">
             <h2 class="opening-hours-days goldtext"><?= $wednesday; ?></h2>
-
             <div class="opening-hours-time">
                 <p><?= $time_opening; ?></p>
                 <p>&nbsp;-&nbsp;</p>
@@ -178,7 +175,6 @@
 
         <div class="thursday">
             <h2 class="opening-hours-days goldtext"><?= $thursday; ?></h2>
-
             <div class="opening-hours-time">
                 <p><?= $time_opening; ?></p>
                 <p>&nbsp;-&nbsp;</p>
@@ -199,7 +195,6 @@
 
         <div class="friday">
             <h2 class="opening-hours-days goldtext"><?= $friday; ?></h2>
-
             <div class="opening-hours-time">
                 <p><?= $time_opening; ?></p>
                 <p>&nbsp;-&nbsp;</p>
@@ -220,7 +215,6 @@
 
         <div class="saturday">
             <h2 class="opening-hours-days goldtext"><?= $saturday; ?></h2>
-
             <div class="opening-hours-time">
                 <p><?= $time_opening; ?></p>
                 <p>&nbsp;-&nbsp;</p>
@@ -240,7 +234,6 @@
 
         <div class="sunday">
             <h2 class="opening-hours-days goldtext"><?= $sunday; ?></h2>
-
             <div class="opening-hours-time">
                 <p><?= $time_opening; ?></p>
             </div>
