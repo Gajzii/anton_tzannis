@@ -619,16 +619,6 @@ button {
   }
 }
 
-.footer-logo {
-  padding-left: 30px;
-}
-
-@media screen and (min-width: 951px) {
-  .footer-logo {
-    padding: 0;
-  }
-}
-
 #menu-footer {
   grid-area: menu-footer;
   display: flex;
@@ -651,12 +641,17 @@ button {
     flex-direction: row;
     justify-content: space-around;
     padding: 0;
-    gap: 30px;
+    gap: 20px;
   }
 }
 
 #menu-footer a {
   font-size: 16px;
+}
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #menu-footer a {
+    font-size: 15px;
+  }
 }
 
 .footer-copyright {
@@ -688,18 +683,20 @@ button {
 
 .footer-logo {
   width: 30px;
+  padding-left: 30px;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .footer-logo {
-    width: 35px;
+    width: 40px;
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 951px) {
   .footer-logo {
-    margin: 0;
     width: 50px;
+    padding: 0;
   }
 }
 
