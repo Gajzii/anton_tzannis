@@ -568,7 +568,7 @@ button {
   gap: 20px;
   grid-template-areas:
     "footer-logo"
-    "menu-footer"
+    "footer-menu"
     "footer-copyright";
   align-items: center;
   text-align: left;
@@ -581,7 +581,7 @@ button {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-      "footer-logo menu-footer"
+      "footer-logo footer-menu"
       "footer-copyright footer-copyright";
     width: 90%;
     margin: auto;
@@ -594,7 +594,7 @@ button {
   .footer-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "footer-logo menu-footer footer-copyright";
+    grid-template-areas: "footer-logo footer-menu footer-copyright";
     padding: 0;
     width: 80%;
     margin: auto;
@@ -619,38 +619,30 @@ button {
   }
 }
 
-#menu-footer {
+.footer-menu ul {
   grid-area: menu-footer;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-left: 30px;
   list-style: none;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
-  #menu-footer {
+  .footer-menu ul {
     flex-direction: row;
-    gap: 20px;
+    gap: 25px;
   }
 }
 
 @media screen and (min-width: 951px) {
-  #menu-footer {
+  .footer-menu ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0;
-    gap: 20px;
-  }
-}
-
-#menu-footer a {
-  font-size: 16px;
-}
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  #menu-footer a {
-    font-size: 15px;
+    gap: 35px;
   }
 }
 
@@ -678,6 +670,8 @@ button {
   .footer-copyright h4 {
     text-align: right;
     margin-top: 0;
+    white-space: nowrap;
+    font-size: 13px;
   }
 }
 
@@ -695,7 +689,7 @@ button {
 
 @media screen and (min-width: 951px) {
   .footer-logo {
-    width: 50px;
+    width: 45px;
     padding: 0;
   }
 }

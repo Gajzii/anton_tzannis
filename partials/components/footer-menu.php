@@ -15,7 +15,7 @@
             ?>
 
             <div class="footer-copyright">
-                <h4>© <?php echo get_the_date('Y'); ?> Frisør Anton Tzannis</h4>
+                <h4>©<?php echo get_the_date('Y'); ?> Frisør Anton Tzannis</h4>
             </div>
         </div>
         <p class="footer-credit">m.wennerwald og c.nørgaard.</p>
