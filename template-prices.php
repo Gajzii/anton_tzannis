@@ -5,8 +5,9 @@
 
 <?php get_header();?>
 <div class="page-margin">
-    <h1><?php echo get_the_title(); ?></h1>
+    <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
     <div class="center"><?php the_content(); ?></div>
+    <div class="whitespace"></div>
     <div class="prices-grid">
         <!----------------- HAIRCUT ----------------->
         <?php if ( have_rows('prices_cut') ) : ?>
@@ -14,7 +15,7 @@
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="haircut icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/haircut.svg" />
-                <h2>Klip</h2>
+                <h2 class="goldtext">Klip</h2>
             </div>
 
             <?php while ( have_rows('prices_cut') ) : the_row(); ?>
@@ -43,7 +44,7 @@
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="brows and lashes icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brows-and-lashes.svg" />
-                <h2>Bryn og vipper</h2>
+                <h2 class="goldtext">Bryn og vipper</h2>
             </div>
             <?php while ( have_rows('prices_brows_and_lashes') ) : the_row(); ?>
             <?php
@@ -73,7 +74,7 @@
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="permanent curls icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/permanent.svg" />
-                <h2>Permanent</h2>
+                <h2 class="goldtext">Permanent</h2>
             </div>
             <?php while ( have_rows('prices_permanent') ) : the_row(); ?>
             <?php
@@ -102,7 +103,7 @@
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="other treatments icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/other-treatments.svg" />
-                <h2>Anden behandling</h2>
+                <h2 class="goldtext">Anden behandling</h2>
             </div>
             <?php while ( have_rows('prices_other_treatments') ) : the_row(); ?>
             <?php
@@ -131,7 +132,7 @@
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="haircoloring icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/coloring.svg" />
-                <h2>Farve</h2>
+                <h2 class="goldtext">Farve</h2>
             </div>
             <div class="price-category__item-coloring">
                 <?php while ( have_rows('prices_coloring') ) : the_row(); ?>

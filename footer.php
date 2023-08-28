@@ -1,8 +1,7 @@
+<?php $dataforordning = get_field('dataforordning', 'options'); ?>
+
 <footer class="footer-background">
-
     <div class="footer-grid">
-
-
         <div class="footer-logo">
             <img class="footer-logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
@@ -11,7 +10,7 @@
         <div class="footer-links">
             <!-- ADRESS -->
             <?php echo '<a href="' . get_site_url() . '/contact">' ?>
-            <h4>Adresse</h4>
+            <h4><?php _e( 'Adresse' ); ?></h4>
             </a>
 
             <!-- CONTACT -->
@@ -20,27 +19,23 @@
             </a>
 
             <!-- OPENING HOURS -->
+
             <?php echo '<a href="' . get_site_url() . '/#opening-hours-section">' ?>
             <h4>Åbningstider</h4>
             </a>
 
             <!-- DATAFORORDNING -->
-            <h4>
-                <?php if( get_field('dataforordning') ): ?>
-                <a href="<?php the_field('dataforordning'); ?>">d</a>
-                <?php endif; ?>
-            </h4>
+            <a target="_blank" href="<?= $dataforordning['url']; ?>">
+                <h4>Dataforordning</h4>
+            </a>
         </div>
         <!-- COPYRIGHT -->
         <div class="footer-copyright">
-            <h4>©2023 Frisør Anton Tzannis</h4>
+            <h4>© <?php echo get_the_date('Y'); ?> Frisør Anton Tzannis</h4>
         </div>
     </div>
 
     <p class="footer-credit">m.wennerwald og c.nørgaard.</p>
-
-
-
 </footer>
 
 <?php wp_footer(); ?>
@@ -48,5 +43,3 @@
 </body>
 
 </html>
-<!-- HVOR SKAL REFERANCEN VÆRE? -->
-<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
