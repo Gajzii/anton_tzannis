@@ -651,7 +651,12 @@ button {
     flex-direction: row;
     justify-content: space-around;
     padding: 0;
+    gap: 30px;
   }
+}
+
+#menu-footer a {
+  font-size: 16px;
 }
 
 .footer-copyright {
