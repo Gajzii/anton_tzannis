@@ -568,7 +568,7 @@ button {
   gap: 0px 0px;
   grid-template-areas:
     "footer-logo"
-    "footer-links"
+    "menu-footer"
     "footer-copyright";
   align-items: center;
   text-align: left;
@@ -577,9 +577,9 @@ button {
 
 @media screen and (min-width: 951px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "footer-logo footer-links footer-links footer-copyright";
+    grid-template-areas: "footer-logo menu-footer menu-footer footer-copyright";
     padding: 0;
     width: 80%;
     margin: auto;
@@ -597,25 +597,17 @@ button {
   }
 }
 
-@media screen and (min-width: 951px) {
-  .footer-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0;
-  }
-}
-
-.footer-links {
-  grid-area: footer-links;
+#menu-footer {
+  grid-area: menu-footer;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-left: 30px;
+  list-style: none;
 }
 
 @media screen and (min-width: 951px) {
-  .footer-links {
+  #menu-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
