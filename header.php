@@ -9,4 +9,5 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php get_template_part( 'partials/components/header-menu' ); ?>
+<body <?php body_class(); ?> 
+<?php get_template_part( 'partials/components/parts/parts','header-menu' ); ?>

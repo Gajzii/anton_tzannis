@@ -1,1 +1,3 @@
-<body <?php body_class(); ?> <?php get_template_part( 'partials/components/footer-menu' ); ?>
+<?php get_template_part( 'partials/components/parts/parts', 'footer-menu' ); ?>
+
+<?php wp_footer(); ?>
