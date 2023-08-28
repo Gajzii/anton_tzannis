@@ -20,5 +20,4 @@
         </div>
         <p class="footer-credit">m.wennerwald og c.nørgaard.</p>
     </div>
-    </div>
 </footer>
