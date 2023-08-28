@@ -4,7 +4,7 @@
     <div class="footer-grid">
         <div class="footer-logo">
             <img class="footer-logo"
-                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo.svg" />
         </div>
 
         <div class="footer-links">
