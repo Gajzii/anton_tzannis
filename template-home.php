@@ -10,95 +10,65 @@
         loop>
     </video>
 
+    <?php
+        $hero_btn_book = get_field('hero_btn_book');
+        $hero_btn_prices = get_field('hero_btn_prices');
+    ?>
+
     <div class="hero-container">
-        <h1 class="hero-text">Anton Tzannis | Bedste frisør i Aarhus</h1>
+        <h1 class="hero-text"><?php echo get_the_title(); ?></h1>
         <div class="hero-btn-container">
-            <a href="https://salonbook.one/?anton-tzannis#/" target="_blank">
+            <a href="<?= $hero_btn_book['url']; ?>" target="<?= $hero_btn_book['target']; ?>">
                 <button class="hero-btn">
-                    Book tid online
+                    <?= $hero_btn_book['title']; ?>
                 </button>
             </a>
-            <?php echo '<a href="' . get_site_url() . '/prices">' ?>
+            <a href="<?= $hero_btn_prices['url']; ?>" target="<?= $hero_btn_prices['target']; ?>">
             <button class="gradient-border-mask">
-                Se priser
+                <?= $hero_btn_prices['title']; ?>
             </button>
             </a>
         </div>
     </div>
 </div>
 <!-- CTA SECTION -->
-<div class="cta-btn-section-container">
-    <div class="page-margin">
-        <div class="cta-section">
-            <!--- FACEBOOK CTA --->
-            <div class="cta_card_inner"
-                style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cta-facebook.jpg)">
-                <div class="cta_card_inner_background">
-                    <h3 class="goldtext">Følg os på Facebook</h3>
-                    <div class="ctadetails">
-                        <p class="cta_description">Følg os på vores Facebook-side for nyheder mv.</p>
-                        <form action="https://www.facebook.com/AntonTzannis" target="_blank">
-                            <button class="primary-btn center">
-                                <span class="button-leftpart-primary">
-                                    Gå til Facebook
-                                </span>
-                                <span class="button-rightpart-primary">
-                                    <iconify-icon class="button-content-right"
-                                        icon="material-symbols:arrow-right-alt-rounded"></iconify-icon>
-                                </span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<div class="page-margin">
 
-            <div class="primary-whitespace-horizontal"></div>
-            <!--- PRODUCTS CTA --->
-            <div class="cta_card_inner"
-                style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/products.webp)">
-                <div class="cta_card_inner_background">
-                    <h3 class="goldtext">Se produkter</h3>
-                    <div class="ctadetails">
-                        <p class="cta_description">Vi forhandler en række eksklusive produkter i butikken.</p>
-                        <?php echo '<form action="' . get_site_url() . '/products">' ?>
+    <?php if ( have_rows('ctahome') ) : ?>
+    <div class="cta-section">
+        <?php while ( have_rows('ctahome') ) : the_row(); ?>
+
+        <?php
+            $cta_title = get_sub_field('cta_title');
+            $cta_link = get_sub_field('cta_link');
+            $cta_background_image = get_sub_field('cta_background_image');
+            $cta_description = get_sub_field('cta_description');
+        ?>
+            
+        <!--- FACEBOOK CTA --->
+        <div class="cta_card_inner" style="background-image: url(<?= $cta_background_image['url']; ?>)">
+            <div class="cta_card_inner_background">
+                <h3 class="goldtext"><?= $cta_title; ?></h3>
+                <div class="ctadetails">
+                    <p class="cta_description"><?= $cta_description; ?></p>
+                    <form target="<?= $cta_link['target']; ?>" action="<?= $cta_link['url']; ?>">
                         <button class="primary-btn center">
                             <span class="button-leftpart-primary">
-                                Gå til produkter
+                                <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
                                 <iconify-icon class="button-content-right"
                                     icon="material-symbols:arrow-right-alt-rounded"></iconify-icon>
                             </span>
                         </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="primary-whitespace-horizontal"></div>
-            <!--- OFFER CTA --->
-            <div class="cta_card_inner"
-                style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/scissor.webp)">
-                <div class="cta_card_inner_background">
-                    <h3 class="goldtext">Vi giver studierabat</h3>
-                    <div class="ctadetails">
-                        <p class="cta_description">Har du studiekort, trækker vi 10% fra prisen på klip.</p>
-                        <?php echo '<form action="' . get_site_url() . '/prices">' ?>
-                        <button class="primary-btn center">
-                            <span class="button-leftpart-primary">
-                                Gå til priser
-                            </span>
-                            <span class="button-rightpart-primary">
-                                <iconify-icon class="button-content-right"
-                                    icon="material-symbols:arrow-right-alt-rounded"></iconify-icon>
-                            </span>
-                        </button>
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+        <?php endwhile; ?>
     </div>
+    
+    <?php endif; ?>
 </div>
 <!----------- OPENING HOURS SECTION ----------->
 <div class="opening-hours-section page-margin" id="opening-hours-section">
