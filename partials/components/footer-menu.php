@@ -6,7 +6,7 @@
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo.svg" />
             </a>
 
-            <?php wp_footer_menu(
+            <?php wp_nav_menu(
                 array(
                     'theme_location' => 'footer-menu',
                     'container_class' => 'footer-menu',
