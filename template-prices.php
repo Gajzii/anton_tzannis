@@ -14,23 +14,23 @@
         <div class="price-category haircut">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="haircut icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/haircut.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-haircut.svg" />
                 <h2 class="goldtext">Klip</h2>
             </div>
 
             <?php while ( have_rows('prices_cut') ) : the_row(); ?>
             <?php
-                $product_name = get_sub_field('product_name');
+                $service = get_sub_field('service');
                 $price_specification = get_sub_field('price_specification');
-                $product_price = get_sub_field('product_price');
+                $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
 
             ?>
             <div class="price-category__item">
-                <span class="product-name"><?= $product_name; ?></span>
+                <span class="service"><?= $service; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?></span>
-                    <span><?= $product_price; ?></span>
+                    <span><?= $service_price; ?></span>
                     <span><?= $price_format; ?></span>
                 </div>
             </div>
@@ -43,23 +43,23 @@
         <div class="price-category brows">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="brows and lashes icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brows-and-lashes.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-brows_and_lashes.svg" />
                 <h2 class="goldtext">Bryn og vipper</h2>
             </div>
             <?php while ( have_rows('prices_brows_and_lashes') ) : the_row(); ?>
             <?php
-                $product_name = get_sub_field('product_name');
+                $service = get_sub_field('service');
                 $price_specification = get_sub_field('price_specification');
-                $product_price = get_sub_field('product_price');
+                $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
 
             ?>
 
             <div class="price-category__item">
-                <span class="product-name"><?= $product_name; ?></span>
+                <span class="service"><?= $service; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?>&nbsp;</span>
-                    <span><?= $product_price; ?></span>
+                    <span><?= $service_price; ?></span>
                     <span><?= $price_format; ?></span>
                 </div>
             </div>
@@ -73,23 +73,23 @@
         <div class="price-category permanent">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="permanent curls icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/permanent.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-permanent.svg" />
                 <h2 class="goldtext">Permanent</h2>
             </div>
             <?php while ( have_rows('prices_permanent') ) : the_row(); ?>
             <?php
-                $product_name = get_sub_field('product_name');
+                $service = get_sub_field('service');
                 $price_specification = get_sub_field('price_specification');
-                $product_price = get_sub_field('product_price');
+                $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
 
             ?>
 
             <div class="price-category__item">
-                <span class="product-name"><?= $product_name; ?></span>
+                <span class="service"><?= $service; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?>&nbsp;</span>
-                    <span><?= $product_price; ?></span>
+                    <span><?= $service_price; ?></span>
                     <span><?= $price_format; ?></span>
                 </div>
             </div>
@@ -102,23 +102,23 @@
         <div class="price-category other-treatments">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="other treatments icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/other-treatments.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-other_treatments.svg" />
                 <h2 class="goldtext">Anden behandling</h2>
             </div>
             <?php while ( have_rows('prices_other_treatments') ) : the_row(); ?>
             <?php
-                $product_name = get_sub_field('product_name');
+                $service = get_sub_field('service');
                 $price_specification = get_sub_field('price_specification');
-                $product_price = get_sub_field('product_price');
+                $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
 
             ?>
 
             <div class="price-category__item">
-                <span class="product-name"><?= $product_name; ?></span>
+                <span class="service"><?= $service; ?></span>
                 <div class="price-category__item-price">
                     <span><?= $price_specification; ?>&nbsp;</span>
-                    <span><?= $product_price; ?></span>
+                    <span><?= $service_price; ?></span>
                     <span><?= $price_format; ?></span>
                 </div>
             </div>
@@ -131,23 +131,23 @@
         <div class="price-category haircolor">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="haircoloring icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/coloring.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-coloring.svg" />
                 <h2 class="goldtext">Farve</h2>
             </div>
             <div class="price-category__item-coloring">
                 <?php while ( have_rows('prices_coloring') ) : the_row(); ?>
                 <?php
-                $product_name = get_sub_field('product_name');
+                $service = get_sub_field('service');
                 $price_specification = get_sub_field('price_specification');
-                $product_price = get_sub_field('product_price');
+                $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
 
             ?>
                 <div class="price-category__item">
-                    <span class="product-name"><?= $product_name; ?></span>
+                    <span class="service"><?= $service; ?></span>
                     <div class="price-category__item-price">
                         <span><?= $price_specification; ?>&nbsp;</span>
-                        <span><?= $product_price; ?></span>
+                        <span><?= $service_price; ?></span>
                         <span><?= $price_format; ?></span>
                     </div>
                 </div>

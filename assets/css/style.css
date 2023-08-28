@@ -867,6 +867,7 @@ button {
     margin-bottom: 10px;
   }
 }
+
 .opening-hours-time {
   display: flex;
   flex-direction: row;
@@ -983,12 +984,12 @@ button {
   margin: 5px 0;
 }
 
-.product-name {
+.service {
   width: 70%;
 }
 
 @media screen and (min-width: 951px) {
-  .product-name {
+  .service {
     width: 100%;
   }
 }
