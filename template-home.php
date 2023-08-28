@@ -10,17 +10,22 @@
         loop>
     </video>
 
+    <?php
+        $hero_btn_book = get_field('hero_btn_book');
+        $hero_btn_prices = get_field('hero_btn_prices');
+    ?>
+
     <div class="hero-container">
-        <h1 class="hero-text">Anton Tzannis | Bedste frisør i Aarhus</h1>
+        <h1 class="hero-text"><?php echo get_the_title(); ?></h1>
         <div class="hero-btn-container">
-            <a href="https://salonbook.one/?anton-tzannis#/" target="_blank">
+            <a href="<?= $hero_btn_book['url']; ?>" target="<?= $hero_btn_book['target']; ?>">
                 <button class="hero-btn">
-                    Book tid online
+                    <?= $hero_btn_book['title']; ?>
                 </button>
             </a>
-            <?php echo '<a href="' . get_site_url() . '/prices">' ?>
+            <a href="<?= $hero_btn_prices['url']; ?>" target="<?= $hero_btn_prices['target']; ?>">
             <button class="gradient-border-mask">
-                Se priser
+                <?= $hero_btn_prices['title']; ?>
             </button>
             </a>
         </div>
