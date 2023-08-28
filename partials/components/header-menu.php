@@ -2,7 +2,7 @@
     <div class="header-inner">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img class="logo"
-            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo-red.png" />
+            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo.svg" />
         </a>
         
         <div class="menu-container">
