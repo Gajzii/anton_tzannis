@@ -3,9 +3,12 @@
 add_theme_support('menus');
 
 //Menus
+function menus(){
 register_nav_menus(
   array(
-    'top-menu' => 'Top Menu Location',
-    'footer-menu' => 'Footer Menu Location',
+    'top-menu' => __('Top Menu Location'),
+    'footer-menu' => __('Footer Menu Location'),
   )
 );
+}
+add_action('init', 'menus');
