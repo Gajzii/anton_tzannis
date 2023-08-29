@@ -211,6 +211,28 @@
         <?php endwhile; ?>
         <?php endif; ?>
 
+
+        <?php if ( have_rows('opening_hours') ) : ?>
+        <?php while ( have_rows('opening_hours') ) : the_row(); ?>
+        <?php
+                $weekday = get_sub_field('weekday');
+                $active = get_sub_field('active');
+                $time_opening = get_sub_field('time_opening');
+                $time_closed = get_sub_field('time_closed');
+            ?>
+
+        <div class="">
+            <h2 class="opening-hours-days goldtext"><?= $weekday; ?></h2>
+            <div class="opening-hours-time">
+                <p><?= $time_opening; ?></p> - <p><?= $time_closed; ?></p>
+            </div>
+        </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+
+
+
     </div>
 </div>
 
