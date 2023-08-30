@@ -10,17 +10,25 @@
     <div class="whitespace"></div>
     <div class="about-section-flex">
         <div class="about-section-description">
-            <h2 class="goldtext about-section-description-heading">Anton Tzannis</h2>
             <p><?php the_content(); ?></p>
+            <img class="about-logo"
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis_secondary-logo.svg" />
         </div>
+        
         <img class="about-section-img" alt="anton tzannis"
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/anton_tzannis.png" />
     </div>
 </div>
+
+<?php
+    $red_floor_description_heading = get_field('red_floor_description_heading');
+    $red_floor_description = get_field('red_floor_description');
+?>
+
 <div class="about-salon-section">
     <div class="about-salon-section-description">
-        <h2 class="goldtext">Frisøren med det røde gulv</h2>
-        <p>Når du træder ind i salonen vil du hurtigt opdage det ikoniske røde gulv. Ved overtagelsen af lokalerne i 2009, var salonens gulv malet i en flot dyb rød farve.  Idag forbliver det røde gulv hjertet i salonens design, hvor også logoet, der bærer den samme røde farve som gulvet, har en symbolsk forbindelse til stedets oprindelse. Antons frisørsalon er ikke bare et sted for hårpleje, det er en hyldest til passion og skønhed, forankret i det røde gulvs varige charme.</p>
+        <h2 class="goldtext"><?= $red_floor_description_heading; ?></h2>
+        <p><?= $red_floor_description; ?></p>
     </div>
 </div>
 

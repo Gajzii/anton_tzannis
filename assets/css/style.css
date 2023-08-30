@@ -444,7 +444,8 @@ button {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 2%;
+  height: 62px;
   background-color: var(--primary-black);
 }
 
@@ -457,7 +458,7 @@ button {
 .top-menu {
   background-color: var(--primary-black);
   position: absolute;
-  top: 7vh;
+  top: 75px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -1018,6 +1019,17 @@ button {
 
 /* ======================================================================= */
 /* ========================== ABOUT PAGE ================================= */
+.about-logo {
+  display: none;
+}
+
+@media screen and (min-width: 951px) {
+  .about-logo {
+    width: 100px;
+    display: block;
+  }
+}
+
 .about-section-flex {
   display: flex;
   flex-direction: column-reverse;
@@ -1026,15 +1038,14 @@ button {
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .about-section-flex {
     flex-direction: row;
-    gap: 100px;
+    gap: 30px;
   }
 }
 
 @media screen and (min-width: 951px) {
   .about-section-flex {
     flex-direction: row;
-    justify-content: center;
-    gap: 100px;
+    justify-content: space-between;
   }
 }
 
@@ -1056,7 +1067,7 @@ button {
 
 @media screen and (min-width: 951px) {
   .about-section-img {
-    max-width: 35%;
+    max-width: 45%;
     height: 460px;
     max-height: 360px;
     margin: 0;
@@ -1066,14 +1077,21 @@ button {
 .about-section-description {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
   gap: 5px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .about-section-description {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 951px) {
   .about-section-description {
-    width: 30%;
+    width: 45%;
     margin: 0;
+    justify-content: space-between;
   }
 }
 
@@ -1088,7 +1106,7 @@ button {
   background-image: url(../images/salon-floor-anton-tzannis.webp);
   background-size: cover;
   background-position: center;
-  opacity: 60%;
+  opacity: 40%;
 }
 
 .about-salon-section-description {
@@ -1163,7 +1181,7 @@ button {
 @media screen and (min-width: 951px) {
   .contact-information {
     gap: 20px 0px;
-    width: 340px;
+    width: 360px;
   }
 }
 
@@ -1235,8 +1253,22 @@ button {
   .contact-logo {
     margin-top: 50px;
     display: block;
-    width: 120px;
+    width: 100px;
   }
+}
+
+/* ======================================================================= */
+/* ======================== PRIVACY NOTICE PAGE ========================== */
+.privacy-ul {
+  font-family: var(--primary_font);
+  color: var(--white);
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.page-id-3 .entry-title {
+  display: none !important;
 }
 
 /* ======================================================================= */
