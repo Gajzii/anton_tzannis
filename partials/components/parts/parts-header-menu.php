@@ -3,8 +3,7 @@
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo.svg" />
         </a>
-
-        <div class="menu-container">
+        <nav class="menu-container">
             <div id="dropdownmenu" onclick="onClickMenu()">
                 <div id="bar1" class="bar"></div>
                 <div id="bar2" class="bar"></div>
@@ -18,6 +17,6 @@
                 )
                 );
             ?>
-        </div>
+        </nav>
     </div>
 </header>

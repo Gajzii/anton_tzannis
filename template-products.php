@@ -16,6 +16,7 @@
         <?php
         $product_name = get_sub_field('product_name');
         $product_specification = get_sub_field('product_specification');
+        $btn_text = get_sub_field('btn_text');
         $background_image = get_sub_field('background_image');
         $product_description = get_sub_field('product_description');
     ?>
@@ -28,11 +29,10 @@
                     <form target="_blank" action="<?= $product_specification['url']; ?>">
                         <button class="primary-btn center">
                             <span class="button-leftpart-primary">
-                                Læs mere
+                                <?= $btn_text; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <iconify-icon class="button-content-right"
-                                    icon="material-symbols:arrow-right-alt-rounded"></iconify-icon>
+                                <svg class="button-content-right" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 15 15"><path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414Z"/></svg>
                             </span>
                         </button>
                     </form>
