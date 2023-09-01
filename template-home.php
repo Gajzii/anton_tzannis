@@ -57,7 +57,7 @@
                                 <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <p class="button-content-right">&#x1F852;</p>
+                                <div class="button-content-right">&#x1F852;</div>
                             </span>
                         </button>
                     </form>
