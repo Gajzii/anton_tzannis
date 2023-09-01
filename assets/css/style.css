@@ -1284,6 +1284,7 @@ button {
   display: none;
   background-color: var(--black-transparent);
   backdrop-filter: blur(2px);
+  z-index: 9999;
 }
 
 .products-popup {
@@ -1294,7 +1295,6 @@ button {
   display: none;
   width: 95%;
   max-width: 375px;
-  z-index: 1;
   margin: auto;
   background-color: var(--secondary-black);
   -webkit-transform: translate(-50%, -50%);

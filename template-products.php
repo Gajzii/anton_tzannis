@@ -19,31 +19,28 @@
         $btn_text = get_sub_field('btn_text');
         $background_image = get_sub_field('background_image');
         $product_description = get_sub_field('product_description');
-        $images = get_sub_field('product_gallery');?>
+        ?>
+        
+
 
         <div class="cta_card_inner product_card_inner" style="background-image: url(<?= $background_image['url']; ?>)">
             <div class="cta_card_inner_background">
                 <h3 class="goldtext"><?= $product_name; ?></h3>
                 <div class="ctadetails">
                     <p class="cta_description"><?= $product_description; ?></p>
-
-                        <button onclick="openForm()" class="primary-btn center">
-                            <span class="button-leftpart-primary">
-                                <?= $btn_text; ?>
-                            </span>
-                            <span class="button-rightpart-primary">
-                                <svg class="button-content-right" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 15 15"><path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414Z"/></svg>
-                            </span>
-                        </button>
-
+                    <button onclick="openForm()" class="primary-btn center">
+                        <span class="button-leftpart-primary">
+                            <?= $btn_text; ?>
+                        </span>
+                        <span class="button-rightpart-primary">
+                            <svg class="button-content-right" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 15 15"><path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414Z"/></svg>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
 
-        <?php endwhile; ?>
-    </div>
-
-    <div class="modal" id="productsPopupModal">
+        <div class="modal" id="productsPopupModal">
         <div class="products-popup" id="productsPopup">
             <div class="products-popup-heading">
                 <button type="button" class="products-close-popup goldtext" onclick="closeForm()">&#10006;</button>
@@ -51,18 +48,19 @@
             </div>
 
             <div class="products-slideshow">
-                <?php if( $images ): ?>
+                
                     <?php foreach( $images as $image ): ?>
-                                <img class="productsSlideImg" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-
+                                <img class="productsSlideImg" src="<?php echo $image['url']; ?>" />
                     <?php endforeach; ?>
-                <?php endif; ?>
-
 
                 <button class="slideshow-arrow-left goldtext" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="slideshow-arrow-right goldtext" onclick="plusDivs(1)">&#10095;</button>
             </div>
         </div>
+    </div>
+    
+
+        <?php endwhile; ?>
     </div>
 
     <?php endif; ?>
