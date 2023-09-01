@@ -32,7 +32,7 @@
                                 <?= $btn_text; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <p class="button-content-right">&#129106;</p>
+                                <p class="button-content-right">&#x1F852;</p>
                             </span>
                         </button>
                     </form>
