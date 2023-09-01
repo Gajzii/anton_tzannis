@@ -1,10 +1,10 @@
 <footer>
     <div class="footer-background">
-        <div class="footer-grid">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <img class="footer-logo"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo.svg" />
-            </a>
+            <div class="footer-grid">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <img class="footer-logo"
+                        src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo.svg" />
+                </a>
 
             <?php wp_nav_menu(
                 array(
@@ -18,5 +18,6 @@
             </div>
         </div>
         <p class="footer-credit">m.wennerwald og c.nørgaard.</p>
+    </div>
     </div>
 </footer>

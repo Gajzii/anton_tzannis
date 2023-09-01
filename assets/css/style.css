@@ -698,7 +698,9 @@ button {
   }
 }
 
-.footer-credit {
+.footer-credit,
+.footer-credit_secondary,
+.footer-credit_secondary a {
   text-align: center;
   margin: auto;
   color: #4c4c4c;
@@ -717,6 +719,11 @@ button {
   .footer-credit {
     bottom: 10px;
   }
+}
+
+.footer-credit_secondary,
+.footer-credit_secondary a {
+  font-size: 8px;
 }
 
 /* ======================================================================= */
