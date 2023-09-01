@@ -4,10 +4,13 @@
 ?>
 
 <?php
-    $phone = get_field('phone', 'options');
-    $mail = get_field('mail', 'options');
-    $address = get_field('address', 'options');
-    $zipcode = get_field('zipcode', 'options');
+    $phone_heading = get_field('contact_phone_heading');
+    $phone = get_field('contact_phone');
+    $address_heading = get_field('contact_address_heading');
+    $address = get_field('contact_address');
+    $zipcode = get_field('contact_zipcode');
+    $mail = get_field('contact_mail'); 
+    $facebook = get_field('contact_facebook');
 ?>
 
 
@@ -22,7 +25,7 @@
                 <div class="phone">
                     <div class="contact-heading">
                         <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-phone.png">
-                        <h2 class="goldtext contact-header">Telefon</h2>
+                        <h2 class="goldtext contact-header"><?= $phone_heading; ?></h2>
                     </div>
 
                     <a href="tel:+4586188277">
@@ -33,7 +36,7 @@
                 <div class="address">
                     <div class="contact-heading">
                         <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-location.png">
-                        <h2 class="goldtext contact-header">Adresse</h2>
+                        <h2 class="goldtext contact-header"><?= $address_heading; ?></h2>
                     </div>
 
                     <a target="_blank" href="https://goo.gl/maps/ZbdRa6aoySkK1iWF9">
@@ -63,7 +66,7 @@
                     </div>
 
                     <a target="_blank" href="https://www.facebook.com/AntonTzannis">
-                        <p class="center">Besøg vores <br> Facebook-side</p>
+                        <p class="center"><?= $facebook; ?></p>
                     </a>
                 </div>    
             </div>
