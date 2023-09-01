@@ -214,8 +214,7 @@ button {
 
 .button-content-right {
   filter: drop-shadow(0 0 5px var(--primary-black));
-  /* width: 16px; */
-  font-size: 20px;
+  width: 16px;
 }
 
 .hero-btn-container {
@@ -709,7 +708,7 @@ footer {
 
 .secondary-credit,
 .secondary-credit a {
-  font-size: 6px;
+  font-size: 7px;
   margin-top: -6px;
 }
 

@@ -57,7 +57,7 @@
                                 <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <div class="button-content-right">🡒</div>
+                                <img class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow.png"/>
                             </span>
                         </button>
                     </form>
