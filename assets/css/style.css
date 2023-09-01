@@ -207,8 +207,8 @@ button {
   font-size: 20px;
 }
 
-.primary-btn:hover>.button-rightpart-primary,
-.primary-btn:hover>.button-leftpart-primary {
+.primary-btn:hover > .button-rightpart-primary,
+.primary-btn:hover > .button-leftpart-primary {
   background: var(--gold-gradient-hover);
 }
 
@@ -262,7 +262,6 @@ button {
 }
 
 @media screen and (min-width: 951px) {
-
   .hero-btn,
   .gradient-border-mask {
     margin: 0;
@@ -381,11 +380,11 @@ button {
   border-radius: 0 0 5px 5px;
 }
 
-.cta_card_inner:hover>.cta_card_inner_background>.ctadetails {
+.cta_card_inner:hover > .cta_card_inner_background > .ctadetails {
   display: block;
 }
 
-.cta_card_inner:hover>.cta_card_inner_background {
+.cta_card_inner:hover > .cta_card_inner_background {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -1202,7 +1201,6 @@ button {
 }
 
 @media screen and (min-width: 951px) {
-
   .phone,
   .address {
     width: 100px;
@@ -1293,7 +1291,7 @@ button {
   transform: translate(-50%, -50%);
   position: fixed;
   display: none;
-  width: 95%;
+  width: 80%;
   max-width: 375px;
   margin: auto;
   background-color: var(--secondary-black);
@@ -1307,6 +1305,7 @@ button {
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .products-popup {
     height: 560px;
+    width: 85%;
     max-width: 600px;
   }
 }
@@ -1351,7 +1350,6 @@ button {
 }
 
 @media screen and (min-width: 951px) {
-
   .slideshow-arrow-left:hover,
   .slideshow-arrow-right:hover,
   .products-close-popup:hover {
@@ -1445,7 +1443,6 @@ button {
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
-
   .slideshow-arrow-left,
   .slideshow-arrow-right {
     display: inline;
@@ -1456,7 +1453,6 @@ button {
 }
 
 @media screen and (min-width: 951px) {
-
   .slideshow-arrow-left,
   .slideshow-arrow-right {
     display: inline;
