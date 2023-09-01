@@ -34,7 +34,7 @@
                                 <?= $btn_text; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <div class="button-content-right">&#x1F852;</div>
+                                <div class="button-content-right">🡒</div>
                             </span>
                         </button>
                     </form>
