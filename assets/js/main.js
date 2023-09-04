@@ -1,19 +1,36 @@
-// burger menu
+// BURGER MENU
 function onClickMenu() {
   document.getElementById("dropdownmenu").classList.toggle("change");
   document.querySelector(".top-menu").classList.toggle("change");
 }
 
 // MODAL
-function openForm() {
-  document.getElementById("productsPopupModal").style.display = "block";
-  document.getElementById("productsPopup").style.display = "block";
-}
+const readMoreBtns = document.querySelectorAll(".openModal");
+const closeBtns = document.querySelectorAll(".closeModal");
+var cardCount = 0;
 
-function closeForm() {
-  document.getElementById("productsPopupModal").style.display = "none";
-  document.getElementById("productsPopup").style.display = "none";
-}
+readMoreBtns.forEach((btn) => {
+  let productsPopupModal = "card-" + cardCount;
+  let productsPopup = "cards-" + cardCount;
+
+  btn.addEventListener("click", () => {
+    document.querySelector("#" + productsPopupModal).style.display = "block";
+    document.querySelector("#" + productsPopup).style.display = "block";
+  });
+
+  closeBtns.forEach((btn) => {
+    let productsPopupModal = "card-" + cardCount;
+    let productsPopup = "cards-" + cardCount;
+
+    btn.addEventListener("click", () => {
+      document.querySelector("#" + productsPopupModal).style.display = "none";
+      document.querySelector("#" + productsPopup).style.display = "none";
+    });
+  });
+
+  cardCount += 1;
+});
+
 // SLIDESHOW
 var slideIndex = 1;
 showDivs(slideIndex);
