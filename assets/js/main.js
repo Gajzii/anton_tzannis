@@ -7,47 +7,84 @@ function onClickMenu() {
 // MODAL
 const readMoreBtns = document.querySelectorAll(".openModal");
 const closeBtns = document.querySelectorAll(".closeModal");
-var cardCount = 0;
 
-readMoreBtns.forEach((btn) => {
-  let productsPopupModal = "card-" + cardCount;
-  let productsPopup = "cards-" + cardCount;
+// Create an array to store modal elements and their associated data
+const modals = [];
 
+readMoreBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
+    let productsPopupModal = "card-" + index;
+    let productsPopup = "cards-" + index;
+
+    // Check if the modal is already in the modals array
+    let modalData = modals.find((modal) => modal.id === productsPopup);
+
+    if (!modalData) {
+      // If the modal is not in the array, initialize its data
+      const modalElement = document.querySelector("#" + productsPopup);
+      modalElement.setAttribute("data-slide-index", 1); // Initialize to 1
+      modalData = { id: productsPopup, element: modalElement };
+      modals.push(modalData);
+
+      // Attach event listeners for navigation within this modal
+      modalElement.querySelector(".slideshow-arrow-left").addEventListener("click", () => {
+        decrementSlideIndex(modalElement);
+        showDivs(modalElement);
+      });
+
+      modalElement.querySelector(".slideshow-arrow-right").addEventListener("click", () => {
+        incrementSlideIndex(modalElement);
+        showDivs(modalElement);
+      });
+    }
+
+    // Show the first image and display the modal
+    showDivs(modalData.element);
     document.querySelector("#" + productsPopupModal).style.display = "block";
-    document.querySelector("#" + productsPopup).style.display = "block";
+    modalData.element.style.display = "block";
   });
-
-  closeBtns.forEach((btn) => {
-    let productsPopupModal = "card-" + cardCount;
-    let productsPopup = "cards-" + cardCount;
-
-    btn.addEventListener("click", () => {
-      document.querySelector("#" + productsPopupModal).style.display = "none";
-      document.querySelector("#" + productsPopup).style.display = "none";
-    });
-  });
-
-  cardCount += 1;
 });
 
-// SLIDESHOW
-var slideIndex = 1;
-showDivs(slideIndex);
+closeBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    let productsPopupModal = "card-" + index;
+    let productsPopup = "cards-" + index;
 
-function plusDivs(n) {
-  showDivs((slideIndex += n));
+    // Hide the modal
+    document.querySelector("#" + productsPopupModal).style.display = "none";
+
+    // Find the corresponding modal data and hide it
+    const modalData = modals.find((modal) => modal.id === productsPopup);
+    if (modalData) {
+      modalData.element.style.display = "none";
+    }
+  });
+});
+
+function incrementSlideIndex(modalElement) {
+  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
+  if (currentSlideIndex < slideCount) {
+    modalElement.setAttribute("data-slide-index", currentSlideIndex + 1);
+  } else {
+    modalElement.setAttribute("data-slide-index", 1); // Wrap around to the first image
+  }
 }
 
-function showDivs(n) {
+function decrementSlideIndex(modalElement) {
+  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
+  if (currentSlideIndex > 1) {
+    modalElement.setAttribute("data-slide-index", currentSlideIndex - 1);
+  } else {
+    modalElement.setAttribute("data-slide-index", slideCount); // Wrap around to the last image
+  }
+}
+
+function showDivs(modalElement) {
+  const slideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
   var i;
-  var x = document.getElementsByClassName("productsSlideImg");
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = x.length;
-  }
+  var x = modalElement.querySelectorAll(".productsSlideImg");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }

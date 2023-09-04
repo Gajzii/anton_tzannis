@@ -14,7 +14,7 @@ $card_counter = 0;
     <div class="product_card">
         <?php while ( have_rows('products') ) : the_row(); ?>
 
-            <?php
+        <?php
                 $product_name = get_sub_field('product_name');
                 $btn_text = get_sub_field('btn_text');
                 $background_image = get_sub_field('background_image');
@@ -22,41 +22,43 @@ $card_counter = 0;
                 $images = get_sub_field('product_gallery');
             ?>
 
-            <div class="cta_card_inner product_card_inner" style="background-image: url(<?= $background_image['url']; ?>)">
-                <div class="cta_card_inner_background">
-                    <h3 class="goldtext"><?= $product_name; ?></h3>
-                    <div class="ctadetails">
-                        <p class="cta_description"><?= $product_description; ?></p>
-                            <button class="primary-btn center openModal">
-                                <span class="button-leftpart-primary">
-                                    <?= $btn_text; ?>
-                                </span>
-                                <span class="button-rightpart-primary">
-                                    <p class="button-content-right">&#x1F852;</p>
-                                </span>
-                            </button>
+        <div class="cta_card_inner product_card_inner" style="background-image: url(<?= $background_image['url']; ?>)">
+            <div class="cta_card_inner_background">
+                <h3 class="goldtext"><?= $product_name; ?></h3>
+                <div class="ctadetails">
+                    <p class="cta_description"><?= $product_description; ?></p>
+                    <button class="primary-btn center openModal">
+                        <span class="button-leftpart-primary">
+                            <?= $btn_text; ?>
+                        </span>
+                        <span class="button-rightpart-primary">
+                            <p class="button-content-right">&#x1F852;</p>
+                        </span>
+                    </button>
 
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="modal productsPopupModal" id="card-<?php echo $card_counter;?>">
-                <div class="products-popup productsPopup " id="cards-<?php echo $card_counter; $card_counter += 1; ?>">
-                    <div class="products-popup-heading">
-                        <button type="button" class="products-close-popup goldtext closeModal">&#10006;</button>
-                        <h3 class="goldtext center"><?= $product_name; ?></h3>
-                    </div>
-                    <div class="products-slideshow">
-                        <?php if($images): ?>
-                            <?php foreach( $images as $image ): ?>
-                                <img class="productsSlideImg" src="<?php echo $image['url']; ?>" />
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                        <button class="slideshow-arrow-left goldtext" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="slideshow-arrow-right goldtext" onclick="plusDivs(1)">&#10095;</button>
-                    </div>
+        <div class="modal productsPopupModal" id="card-<?php echo $card_counter;?>">
+            <div class="products-popup productsPopup " id="cards-<?php echo $card_counter; $card_counter += 1; ?>">
+                <div class="products-popup-heading">
+                    <button type="button" class="products-close-popup goldtext closeModal">&#10006;</button>
+                    <h3 class="goldtext center"><?= $product_name; ?></h3>
+                </div>
+                <div class="products-slideshow">
+                    <?php if($images): ?>
+                    <?php foreach( $images as $image ): ?>
+                    <img class="productsSlideImg" src="<?php echo $image['url']; ?>" />
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                    <button class="slideshow-arrow-left goldtext"
+                        onclick="decrementSlideIndex(this.closest('.products-popup'))">&#10094;</button>
+                    <button class="slideshow-arrow-right goldtext"
+                        onclick="incrementSlideIndex(this.closest('.products-popup'))">&#10095;</button>
                 </div>
             </div>
+        </div>
 
         <?php endwhile; ?>
     </div>
