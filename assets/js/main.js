@@ -7,47 +7,67 @@ function onClickMenu() {
 // MODAL
 const readMoreBtns = document.querySelectorAll(".openModal");
 const closeBtns = document.querySelectorAll(".closeModal");
-var cardCount = 0;
 
-readMoreBtns.forEach((btn) => {
-  let productsPopupModal = "card-" + cardCount;
-  let productsPopup = "cards-" + cardCount;
-
+readMoreBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
+    let productsPopupModal = "card-" + index;
+    let productsPopup = "cards-" + index;
+
+    // Initialize slideIndex for this modal and set it as an attribute to 1
+    const modalElement = document.querySelector("#" + productsPopup);
+    modalElement.setAttribute("data-slide-index", 1); // Initialize to 1
+    showDivs(modalElement); // Show the first image
+
     document.querySelector("#" + productsPopupModal).style.display = "block";
     document.querySelector("#" + productsPopup).style.display = "block";
-  });
 
-  closeBtns.forEach((btn) => {
-    let productsPopupModal = "card-" + cardCount;
-    let productsPopup = "cards-" + cardCount;
+    // Attach event listeners for navigation within this modal
+    document.querySelector("#" + productsPopup + " .slideshow-arrow-left").addEventListener("click", () => {
+      decrementSlideIndex(modalElement);
+      showDivs(modalElement);
+    });
 
-    btn.addEventListener("click", () => {
-      document.querySelector("#" + productsPopupModal).style.display = "none";
-      document.querySelector("#" + productsPopup).style.display = "none";
+    document.querySelector("#" + productsPopup + " .slideshow-arrow-right").addEventListener("click", () => {
+      incrementSlideIndex(modalElement);
+      showDivs(modalElement);
     });
   });
-
-  cardCount += 1;
 });
 
-// SLIDESHOW
-var slideIndex = 1;
-showDivs(slideIndex);
+closeBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    let productsPopupModal = "card-" + index;
+    let productsPopup = "cards-" + index;
 
-function plusDivs(n) {
-  showDivs((slideIndex += n));
+    document.querySelector("#" + productsPopupModal).style.display = "none";
+    document.querySelector("#" + productsPopup).style.display = "none";
+  });
+});
+
+function incrementSlideIndex(modalElement) {
+  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
+  if (currentSlideIndex < slideCount) {
+    modalElement.setAttribute("data-slide-index", currentSlideIndex + 1);
+  } else {
+    modalElement.setAttribute("data-slide-index", 1); // Wrap around to the first image
+  }
 }
 
-function showDivs(n) {
+function decrementSlideIndex(modalElement) {
+  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
+  if (currentSlideIndex > 1) {
+    modalElement.setAttribute("data-slide-index", currentSlideIndex - 1);
+  } else {
+    modalElement.setAttribute("data-slide-index", slideCount); // Wrap around to the last image
+  }
+}
+
+function showDivs(modalElement) {
+  const slideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
   var i;
-  var x = document.getElementsByClassName("productsSlideImg");
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = x.length;
-  }
+  var x = modalElement.querySelectorAll(".productsSlideImg");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
