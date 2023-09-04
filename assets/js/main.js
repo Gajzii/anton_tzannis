@@ -8,29 +8,40 @@ function onClickMenu() {
 const readMoreBtns = document.querySelectorAll(".openModal");
 const closeBtns = document.querySelectorAll(".closeModal");
 
+// Create an array to store modal elements and their associated data
+const modals = [];
+
 readMoreBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     let productsPopupModal = "card-" + index;
     let productsPopup = "cards-" + index;
 
-    // Initialize slideIndex for this modal and set it as an attribute to 1
-    const modalElement = document.querySelector("#" + productsPopup);
-    modalElement.setAttribute("data-slide-index", 1); // Initialize to 1
-    showDivs(modalElement); // Show the first image
+    // Check if the modal is already in the modals array
+    let modalData = modals.find((modal) => modal.id === productsPopup);
 
+    if (!modalData) {
+      // If the modal is not in the array, initialize its data
+      const modalElement = document.querySelector("#" + productsPopup);
+      modalElement.setAttribute("data-slide-index", 1); // Initialize to 1
+      modalData = { id: productsPopup, element: modalElement };
+      modals.push(modalData);
+
+      // Attach event listeners for navigation within this modal
+      modalElement.querySelector(".slideshow-arrow-left").addEventListener("click", () => {
+        decrementSlideIndex(modalElement);
+        showDivs(modalElement);
+      });
+
+      modalElement.querySelector(".slideshow-arrow-right").addEventListener("click", () => {
+        incrementSlideIndex(modalElement);
+        showDivs(modalElement);
+      });
+    }
+
+    // Show the first image and display the modal
+    showDivs(modalData.element);
     document.querySelector("#" + productsPopupModal).style.display = "block";
-    document.querySelector("#" + productsPopup).style.display = "block";
-
-    // Attach event listeners for navigation within this modal
-    document.querySelector("#" + productsPopup + " .slideshow-arrow-left").addEventListener("click", () => {
-      decrementSlideIndex(modalElement);
-      showDivs(modalElement);
-    });
-
-    document.querySelector("#" + productsPopup + " .slideshow-arrow-right").addEventListener("click", () => {
-      incrementSlideIndex(modalElement);
-      showDivs(modalElement);
-    });
+    modalData.element.style.display = "block";
   });
 });
 
@@ -39,8 +50,14 @@ closeBtns.forEach((btn, index) => {
     let productsPopupModal = "card-" + index;
     let productsPopup = "cards-" + index;
 
+    // Hide the modal
     document.querySelector("#" + productsPopupModal).style.display = "none";
-    document.querySelector("#" + productsPopup).style.display = "none";
+
+    // Find the corresponding modal data and hide it
+    const modalData = modals.find((modal) => modal.id === productsPopup);
+    if (modalData) {
+      modalData.element.style.display = "none";
+    }
   });
 });
 
