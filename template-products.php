@@ -35,7 +35,6 @@ $card_counter = 0;
                             <p class="button-content-right">&#x1F852;</p>
                         </span>
                     </button>
-
                 </div>
             </div>
         </div>
