@@ -64,20 +64,32 @@ closeBtns.forEach((btn, index) => {
 function incrementSlideIndex(modalElement) {
   const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
   const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
-  if (currentSlideIndex < slideCount) {
-    modalElement.setAttribute("data-slide-index", currentSlideIndex + 1);
+  if (slideCount === 2) {
+    // If there are only two images, toggle between them
+    modalElement.setAttribute("data-slide-index", currentSlideIndex === 1 ? 2 : 1);
   } else {
-    modalElement.setAttribute("data-slide-index", 1); // Wrap around to the first image
+    // If there are more than two images, proceed as usual
+    if (currentSlideIndex < slideCount) {
+      modalElement.setAttribute("data-slide-index", currentSlideIndex + 1);
+    } else {
+      modalElement.setAttribute("data-slide-index", 1); // Wrap around to the first image
+    }
   }
 }
 
 function decrementSlideIndex(modalElement) {
   const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
   const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
-  if (currentSlideIndex > 1) {
-    modalElement.setAttribute("data-slide-index", currentSlideIndex - 1);
+  if (slideCount === 2) {
+    // If there are only two images, toggle between them
+    modalElement.setAttribute("data-slide-index", currentSlideIndex === 1 ? 2 : 1);
   } else {
-    modalElement.setAttribute("data-slide-index", slideCount); // Wrap around to the last image
+    // If there are more than two images, proceed as usual
+    if (currentSlideIndex > 1) {
+      modalElement.setAttribute("data-slide-index", currentSlideIndex - 1);
+    } else {
+      modalElement.setAttribute("data-slide-index", slideCount); // Wrap around to the last image
+    }
   }
 }
 
