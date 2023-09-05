@@ -5,6 +5,7 @@ $card_counter = 0;
 ?>
 
 <?php get_header(); ?>
+
 <div class="page-margin">
     <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
     <div class="center"><?php the_content(); ?></div>
@@ -13,7 +14,6 @@ $card_counter = 0;
     <?php if ( have_rows('products') ) : ?>
     <div class="product_card">
         <?php while ( have_rows('products') ) : the_row(); ?>
-
         <?php
                 $product_name = get_sub_field('product_name');
                 $btn_text = get_sub_field('btn_text');
@@ -32,7 +32,8 @@ $card_counter = 0;
                             <?= $btn_text; ?>
                         </span>
                         <span class="button-rightpart-primary">
-                            <img class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png"/>
+                            <img class="button-content-right"
+                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png" />
                         </span>
                     </button>
                 </div>
@@ -58,10 +59,9 @@ $card_counter = 0;
                 </div>
             </div>
         </div>
-
         <?php endwhile; ?>
     </div>
-
     <?php endif; ?>
 </div>
+
 <?php get_footer(); ?>
