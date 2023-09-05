@@ -4,6 +4,7 @@
 ?>
 
 <?php get_header();?>
+
 <div class="page-margin">
     <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
     <div class="center"><?php the_content(); ?></div>
@@ -15,7 +16,7 @@
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="haircut icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-haircut.svg" />
-                    <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_cut') ); ?></h2>
+                <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_cut') ); ?></h2>
             </div>
 
             <?php while ( have_rows('prices_cut') ) : the_row(); ?>
@@ -24,8 +25,8 @@
                 $price_specification = get_sub_field('price_specification');
                 $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
-
             ?>
+
             <div class="price-category__item">
                 <span class="service"><?= $service; ?></span>
                 <div class="price-category__item-price">
@@ -44,7 +45,8 @@
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="brows and lashes icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-brows_and_lashes.svg" />
-                <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_eye_brows_and_lashes') ); ?></h2>
+                <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_eye_brows_and_lashes') ); ?>
+                </h2>
             </div>
             <?php while ( have_rows('prices_brows_and_lashes') ) : the_row(); ?>
             <?php
@@ -52,7 +54,6 @@
                 $price_specification = get_sub_field('price_specification');
                 $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
-
             ?>
 
             <div class="price-category__item">
@@ -82,7 +83,6 @@
                 $price_specification = get_sub_field('price_specification');
                 $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
-
             ?>
 
             <div class="price-category__item">
@@ -111,7 +111,6 @@
                 $price_specification = get_sub_field('price_specification');
                 $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
-
             ?>
 
             <div class="price-category__item">
@@ -141,8 +140,8 @@
                 $price_specification = get_sub_field('price_specification');
                 $service_price = get_sub_field('service_price');
                 $price_format = get_sub_field('price_format');
-
             ?>
+
                 <div class="price-category__item">
                     <span class="service"><?= $service; ?></span>
                     <div class="price-category__item-price">
@@ -157,6 +156,5 @@
         <?php endif; ?>
     </div>
 </div>
-
 
 <?php get_footer(); ?>
