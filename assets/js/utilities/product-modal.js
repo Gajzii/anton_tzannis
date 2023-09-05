@@ -21,19 +21,15 @@ export function productModal() {
         modals.push(modalData);
 
         // Attach event listeners for navigation within this modal
-        modalElement
-          .querySelector(".slideshow-arrow-left")
-          .addEventListener("click", () => {
-            decrementSlideIndex(modalElement);
-            showDivs(modalElement);
-          });
+        modalElement.querySelector(".slideshow-arrow-left").addEventListener("click", () => {
+          decrementSlideIndex(modalElement);
+          showDivs(modalElement);
+        });
 
-        modalElement
-          .querySelector(".slideshow-arrow-right")
-          .addEventListener("click", () => {
-            incrementSlideIndex(modalElement);
-            showDivs(modalElement);
-          });
+        modalElement.querySelector(".slideshow-arrow-right").addEventListener("click", () => {
+          incrementSlideIndex(modalElement);
+          showDivs(modalElement);
+        });
       }
 
       // Show the first image and display the modal
@@ -60,11 +56,8 @@ export function productModal() {
   });
 
   function incrementSlideIndex(modalElement) {
-    const currentSlideIndex = parseInt(
-      modalElement.getAttribute("data-slide-index")
-    );
-    const slideCount =
-      modalElement.querySelectorAll(".productsSlideImg").length;
+    const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+    const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
     if (currentSlideIndex < slideCount) {
       modalElement.setAttribute("data-slide-index", currentSlideIndex + 1);
     } else {
@@ -73,11 +66,8 @@ export function productModal() {
   }
 
   function decrementSlideIndex(modalElement) {
-    const currentSlideIndex = parseInt(
-      modalElement.getAttribute("data-slide-index")
-    );
-    const slideCount =
-      modalElement.querySelectorAll(".productsSlideImg").length;
+    const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+    const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
     if (currentSlideIndex > 1) {
       modalElement.setAttribute("data-slide-index", currentSlideIndex - 1);
     } else {

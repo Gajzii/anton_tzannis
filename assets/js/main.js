@@ -1,9 +1,3 @@
-// import { productModal } from "./utilities/product-modal";
-// import { navigation } from "./utilities/navigation";
-
-// productModal();
-// navigation();
-
 // BURGER MENU
 function onClickMenu() {
   document.getElementById("dropdownmenu").classList.toggle("change");
@@ -86,17 +80,6 @@ readMoreBtns.forEach((btn, index) => {
       modalElement.setAttribute("data-slide-index", 0); // Initialize to 0
       modalData = { id: productsPopup, element: modalElement };
       modals.push(modalData);
-
-      // Attach event listeners for navigation within this modal
-      modalElement.querySelector(".slideshow-arrow-left").addEventListener("click", () => {
-        decrementSlideIndex(modalElement);
-        showDivs(modalElement);
-      });
-
-      modalElement.querySelector(".slideshow-arrow-right").addEventListener("click", () => {
-        incrementSlideIndex(modalElement);
-        showDivs(modalElement);
-      });
     }
 
     // Show the first image and display the modal
@@ -121,33 +104,3 @@ closeBtns.forEach((btn, index) => {
     }
   });
 });
-
-function incrementSlideIndex(modalElement) {
-  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
-  const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
-  if (currentSlideIndex < slideCount) {
-    modalElement.setAttribute("data-slide-index", currentSlideIndex + 1);
-  } else {
-    modalElement.setAttribute("data-slide-index", 1); // Wrap around to the first image
-  }
-}
-
-function decrementSlideIndex(modalElement) {
-  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
-  const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
-  if (currentSlideIndex > 1) {
-    modalElement.setAttribute("data-slide-index", currentSlideIndex - 1);
-  } else {
-    modalElement.setAttribute("data-slide-index", slideCount); // Wrap around to the last image
-  }
-}
-
-function showDivs(modalElement) {
-  const slideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
-  var i;
-  var x = modalElement.querySelectorAll(".productsSlideImg");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex - 1].style.display = "block";
-}
