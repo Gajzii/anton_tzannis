@@ -39,8 +39,8 @@ $card_counter = 0;
             </div>
         </div>
 
-        <div class="modal productsPopupModal" id="card-<?php echo $card_counter;?>">
-            <div class="products-popup productsPopup " id="cards-<?php echo $card_counter; $card_counter += 1; ?>">
+        <div class="modal productsPopupModal" id="card-<?php echo $card_counter; ?>">
+            <div class="products-popup productsPopup" id="cards-<?php echo $card_counter; $card_counter += 1; ?>">
                 <div class="products-popup-heading">
                     <button type="button" class="products-close-popup goldtext closeModal">&#10006;</button>
                     <h3 class="goldtext center"><?= $product_name; ?></h3>
@@ -52,9 +52,9 @@ $card_counter = 0;
                     <?php endforeach; ?>
                     <?php endif; ?>
                     <button class="slideshow-arrow-left goldtext"
-                        onclick="decrementSlideIndex(this.closest('.products-popup'))">&#10094;</button>
+                        onclick="decrementSlideIndex(this.closest('.productsPopup'))">&#10094;</button>
                     <button class="slideshow-arrow-right goldtext"
-                        onclick="incrementSlideIndex(this.closest('.products-popup'))">&#10095;</button>
+                        onclick="incrementSlideIndex(this.closest('.productsPopup'))">&#10095;</button>
                 </div>
             </div>
         </div>
