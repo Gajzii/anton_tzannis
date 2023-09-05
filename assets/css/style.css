@@ -52,6 +52,10 @@ header {
   }
 }
 
+.page-height {
+  min-height: 65vh;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -87,6 +91,7 @@ header {
   --gold-gradient-hover: -webkit-linear-gradient(100deg, #a98c54, #a98c54, #d0b990, #a98c54, #a98c54);
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
   --grey-hover: #bcbcbc;
+  --grey-active: #4d4d4d;
   --black-transparent: #1c1c1cdb;
   /* --------------------------------- FONTS ------------------------------- */
   --primary_font: "Arial";
@@ -505,6 +510,10 @@ button {
   }
 }
 
+.active {
+  color: var(--grey-active);
+}
+
 /* ------------------------- BURGER MENU SYMBOL -------------------------- */
 .change {
   display: block !important;
@@ -605,23 +614,6 @@ footer {
     height: 130px;
   }
 }
-
-/* .footer-background {
-  height: 270px;
-  background-color: var(--primary-black);
-}
-
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .footer-background {
-    height: 150px;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .footer-background {
-    height: 145px;
-  }
-} */
 
 .footer-menu ul {
   grid-area: footer-menu;
