@@ -4,6 +4,12 @@ function onClickMenu() {
   document.querySelector(".top-menu").classList.toggle("change");
 }
 
+for (var i = 0; i < document.links.length; i++) {
+  if (document.links[i].href == document.URL) {
+    document.links[i].className = "active";
+  }
+}
+
 // MODAL
 const readMoreBtns = document.querySelectorAll(".openModal");
 const closeBtns = document.querySelectorAll(".closeModal");
