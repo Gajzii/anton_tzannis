@@ -1,7 +1,20 @@
+// import { productModal } from "./utilities/product-modal";
+// import { navigation } from "./utilities/navigation";
+
+// productModal();
+// navigation();
+
 // BURGER MENU
 function onClickMenu() {
   document.getElementById("dropdownmenu").classList.toggle("change");
   document.querySelector(".top-menu").classList.toggle("change");
+}
+
+// ADD CLASS TO ACTIVE MENU ITEM
+for (var i = 0; i < document.links.length; i++) {
+  if (document.links[i].href == document.URL) {
+    document.links[i].className = "active";
+  }
 }
 
 // MODAL
@@ -27,15 +40,19 @@ readMoreBtns.forEach((btn, index) => {
       modals.push(modalData);
 
       // Attach event listeners for navigation within this modal
-      modalElement.querySelector(".slideshow-arrow-left").addEventListener("click", () => {
-        decrementSlideIndex(modalElement);
-        showDivs(modalElement);
-      });
+      modalElement
+        .querySelector(".slideshow-arrow-left")
+        .addEventListener("click", () => {
+          decrementSlideIndex(modalElement);
+          showDivs(modalElement);
+        });
 
-      modalElement.querySelector(".slideshow-arrow-right").addEventListener("click", () => {
-        incrementSlideIndex(modalElement);
-        showDivs(modalElement);
-      });
+      modalElement
+        .querySelector(".slideshow-arrow-right")
+        .addEventListener("click", () => {
+          incrementSlideIndex(modalElement);
+          showDivs(modalElement);
+        });
     }
 
     // Show the first image and display the modal
@@ -62,7 +79,9 @@ closeBtns.forEach((btn, index) => {
 });
 
 function incrementSlideIndex(modalElement) {
-  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const currentSlideIndex = parseInt(
+    modalElement.getAttribute("data-slide-index")
+  );
   const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
   if (currentSlideIndex < slideCount) {
     modalElement.setAttribute("data-slide-index", currentSlideIndex + 1);
@@ -72,7 +91,9 @@ function incrementSlideIndex(modalElement) {
 }
 
 function decrementSlideIndex(modalElement) {
-  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const currentSlideIndex = parseInt(
+    modalElement.getAttribute("data-slide-index")
+  );
   const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
   if (currentSlideIndex > 1) {
     modalElement.setAttribute("data-slide-index", currentSlideIndex - 1);
