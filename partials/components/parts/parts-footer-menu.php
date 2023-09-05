@@ -2,7 +2,7 @@
     <div class="footer-grid">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img class="footer-logo"
-            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/antontzannis-logo.svg" />
+            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/antontzannis-logo.svg" />
         </a>
 
         <?php wp_nav_menu(

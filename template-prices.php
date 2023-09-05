@@ -14,7 +14,7 @@
         <div class="price-category haircut">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="haircut icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-haircut.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-haircut.svg" />
                     <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_cut') ); ?></h2>
             </div>
 
@@ -43,7 +43,7 @@
         <div class="price-category brows">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="brows and lashes icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-brows_and_lashes.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-brows_and_lashes.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_eye_brows_and_lashes') ); ?></h2>
             </div>
             <?php while ( have_rows('prices_brows_and_lashes') ) : the_row(); ?>
@@ -73,7 +73,7 @@
         <div class="price-category permanent">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="permanent curls icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-permanent.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-permanent.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_perm') ); ?></h2>
             </div>
             <?php while ( have_rows('prices_permanent') ) : the_row(); ?>
@@ -102,7 +102,7 @@
         <div class="price-category other-treatments">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="other treatments icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-other_treatments.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-other_treatments.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_other_treatment') ); ?></h2>
             </div>
             <?php while ( have_rows('prices_other_treatments') ) : the_row(); ?>
@@ -131,7 +131,7 @@
         <div class="price-category haircolor">
             <div class="price-category-heading">
                 <img class="price-category-heading-icon" alt="haircoloring icon"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-coloring.svg" />
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-coloring.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_colour') ); ?></h2>
             </div>
             <div class="price-category__item-coloring">
