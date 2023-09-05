@@ -24,7 +24,7 @@
                 <!----------------- PHONE NUMBER ----------------->
                 <div class="phone">
                     <div class="contact-heading">
-                        <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-phone.png">
+                        <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/icon-phone.png">
                         <h2 class="goldtext contact-header"><?= $phone_heading; ?></h2>
                     </div>
 
@@ -35,7 +35,7 @@
                 <!------------------- ADDRESS -------------------->
                 <div class="address">
                     <div class="contact-heading">
-                        <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-location.png">
+                        <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/icon-location.png">
                         <h2 class="goldtext contact-header"><?= $address_heading; ?></h2>
                     </div>
 
@@ -50,7 +50,7 @@
                 <!-------------------- MAIL ---------------------->
                 <div class="mail">
                     <div class="contact-heading">
-                        <img class="mail-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-mail.png">
+                        <img class="mail-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/icon-mail.png">
                         <h2 class="goldtext contact-header">Mail</h2>
                     </div>
 
@@ -61,7 +61,7 @@
                 <!------------------- FACEBOOK ------------------->
                 <div class="facebook">
                     <div class="contact-heading">
-                        <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-facebook.png">
+                        <img class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/icon-facebook.png">
                         <h2 class="goldtext contact-header">Facebook</h2>
                     </div>
 

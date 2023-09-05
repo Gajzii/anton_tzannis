@@ -6,7 +6,7 @@
 <?php get_header();?>
 <!-- HERO VIDEO -->
 <div class="hero">
-    <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.mp4" autoplay muted
+    <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" autoplay muted
         loop>
     </video>
 
@@ -57,7 +57,7 @@
                                 <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <img class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arrow.png"/>
+                                <img class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png"/>
                             </span>
                         </button>
                     </form>
