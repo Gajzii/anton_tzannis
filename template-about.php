@@ -14,7 +14,6 @@
             <img class="about-logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/antontzannis_secondary-logo.svg" />
         </div>
-        
         <img class="about-section-img" alt="anton tzannis"
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/at_profile.webp" />
     </div>

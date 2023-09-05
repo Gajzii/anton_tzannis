@@ -4,10 +4,11 @@
 ?>
 
 <?php get_header();?>
+
 <!-- HERO VIDEO -->
 <div class="hero">
-    <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" autoplay muted
-        loop>
+    <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" autoplay
+        muted loop>
     </video>
 
     <?php
@@ -31,9 +32,9 @@
         </div>
     </div>
 </div>
+
 <!-- CTA SECTION -->
 <div class="page-margin">
-
     <?php if ( have_rows('ctahome') ) : ?>
     <div class="cta-section">
         <?php while ( have_rows('ctahome') ) : the_row(); ?>
@@ -57,7 +58,8 @@
                                 <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <img class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png"/>
+                                <img class="button-content-right"
+                                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png" />
                             </span>
                         </button>
                     </form>
@@ -66,9 +68,9 @@
         </div>
         <?php endwhile; ?>
     </div>
-
     <?php endif; ?>
 </div>
+
 <!----------- OPENING HOURS SECTION ----------->
 <div class="opening-hours-section page-margin" id="opening-hours-section">
     <div class="opening-hours-container">
@@ -209,7 +211,6 @@
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
-
     </div>
 </div>
 
