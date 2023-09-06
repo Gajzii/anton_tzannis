@@ -7,8 +7,8 @@
 
 <!-- HERO VIDEO -->
 <div class="hero">
-    <video class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" autoplay
-        muted loop>
+    <video alt="Close-up af et par frisørhænder, der glatter håret på en kunde med et glattejern." class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" autoplay muted
+        loop>
     </video>
 
     <?php
@@ -58,8 +58,7 @@
                                 <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <img class="button-content-right"
-                                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png" />
+                                <img alt="pil" class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png"/>
                             </span>
                         </button>
                     </form>
