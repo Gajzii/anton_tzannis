@@ -300,9 +300,6 @@ button {
 /* ======================================================================= */
 /* ======================== CALL TO ACTION BUTTONS ======================= */
 .cta-btn-section-container {
-  /* background-color: #1c1c1c60;
-  backdrop-filter: blur(10px);
-  padding: 1px 0; */
   margin-top: 140px;
 }
 
@@ -888,6 +885,202 @@ footer {
   width: 100% !important;
 }
 
+/* ----------------- PRODUCTS PAGE - MODAL SLIDESHOW ------------------ */
+.modal {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  float: right;
+  display: none;
+  background-color: var(--black-transparent);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+}
+
+.products-popup {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: none;
+  width: 80%;
+  max-width: 375px;
+  margin: auto;
+  background-color: var(--secondary-black);
+  -webkit-transform: translate(-50%, -50%);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  padding: 20px;
+  height: 460px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .products-popup {
+    height: 560px;
+    width: 85%;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .products-popup {
+    width: 100%;
+    max-width: 700px;
+    height: 620px;
+  }
+}
+
+.products-popup-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-close-popup {
+  border: none;
+  font-size: 20px;
+  width: 18px;
+  cursor: pointer;
+  display: inline;
+  align-self: flex-end;
+  text-shadow: none;
+  height: 25px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .products-close-popup {
+    font-size: 22px;
+    width: 20px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .products-close-popup {
+    font-size: 23px;
+    width: 35px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+
+  .slideshow-arrow-left:hover,
+  .slideshow-arrow-right:hover,
+  .products-close-popup:hover {
+    background: var(--gold-gradient-hover);
+    background-size: 100px;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.products-slideshow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "productsSlideImg productsSlideImg"
+    "slideshow-arrow-left slideshow-arrow-right";
+  height: 390px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .products-slideshow {
+    grid-template-columns: 1fr 87% 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
+    gap: 12px;
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .products-slideshow {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
+    height: 500px;
+  }
+}
+
+.productsSlideImg {
+  width: 100%;
+  margin: auto;
+  display: none;
+  padding: 20px 0 0 0;
+  object-fit: cover;
+  object-position: 0px 0px;
+  max-height: 330px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .productsSlideImg {
+    padding: 20px 0 0 0;
+    max-height: 450px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .productsSlideImg {
+    padding: 20px 0;
+    max-height: 500px;
+  }
+}
+
+.slideshow-arrow-left {
+  grid-area: slideshow-arrow-left;
+  padding-left: 80px;
+}
+
+.productsSlideImg {
+  grid-area: productsSlideImg;
+}
+
+.slideshow-arrow-right {
+  grid-area: slideshow-arrow-right;
+  padding-right: 80px;
+}
+
+.slideshow-arrow-left,
+.slideshow-arrow-right {
+  width: 100%;
+  font-size: 25px;
+  display: block;
+  text-shadow: none;
+  position: relative;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+
+  .slideshow-arrow-left,
+  .slideshow-arrow-right {
+    display: inline;
+    width: 100%;
+    padding: 0;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+
+  .slideshow-arrow-left,
+  .slideshow-arrow-right {
+    display: inline;
+    width: 100%;
+    padding: 0;
+    font-size: 28px;
+  }
+}
+
 /* ======================================================================= */
 /* ========================== PRICING PAGE ============================== */
 .prices-grid {
@@ -929,10 +1122,6 @@ footer {
     height: 780px;
     max-width: 1000px;
   }
-}
-
-.haircolor {
-  grid-area: haircolor;
 }
 
 .price-category {

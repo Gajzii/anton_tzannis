@@ -4,6 +4,7 @@
 ?>
 
 <?php get_header();?>
+
 <!-- HERO VIDEO -->
 <div class="hero">
     <video alt="Close-up af et par frisørhænder, der glatter håret på en kunde med et glattejern." class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" autoplay muted
@@ -31,9 +32,9 @@
         </div>
     </div>
 </div>
+
 <!-- CTA SECTION -->
 <div class="page-margin">
-
     <?php if ( have_rows('ctahome') ) : ?>
     <div class="cta-section">
         <?php while ( have_rows('ctahome') ) : the_row(); ?>
@@ -66,9 +67,9 @@
         </div>
         <?php endwhile; ?>
     </div>
-
     <?php endif; ?>
 </div>
+
 <!----------- OPENING HOURS SECTION ----------->
 <div class="opening-hours-section page-margin" id="opening-hours-section">
     <div class="opening-hours-container">
@@ -209,7 +210,6 @@
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
-
     </div>
 </div>
 
