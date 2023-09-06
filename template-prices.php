@@ -13,7 +13,7 @@
         <?php if ( have_rows('prices_cut') ) : ?>
         <div class="price-category haircut">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt="haircut icon"
+                <img alt="Klipning af hår." class="price-category-heading-icon" alt="haircut icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-haircut.svg" />
                     <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_cut') ); ?></h2>
             </div>
@@ -42,7 +42,7 @@
         <?php if ( have_rows('prices_brows_and_lashes') ) : ?>
         <div class="price-category brows">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt="brows and lashes icon"
+                <img alt="Øjenbryn og vipper." class="price-category-heading-icon" alt="brows and lashes icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-brows_and_lashes.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_eye_brows_and_lashes') ); ?></h2>
             </div>
@@ -72,7 +72,7 @@
         <?php if ( have_rows('prices_permanent') ) : ?>
         <div class="price-category permanent">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt="permanent curls icon"
+                <img alt="Hår permanent." class="price-category-heading-icon" alt="permanent curls icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-permanent.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_perm') ); ?></h2>
             </div>
@@ -101,7 +101,7 @@
         <?php if ( have_rows('prices_other_treatments') ) : ?>
         <div class="price-category other-treatments">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt="other treatments icon"
+                <img alt="Generelle frisør ydelser og behandlinger." class="price-category-heading-icon" alt="other treatments icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-other_treatments.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_other_treatment') ); ?></h2>
             </div>
@@ -130,7 +130,7 @@
         <?php if ( have_rows('prices_coloring') ) : ?>
         <div class="price-category haircolor">
             <div class="price-category-heading">
-                <img class="price-category-heading-icon" alt="haircoloring icon"
+                <img alt="Farvning af hår til ny hårfarve." class="price-category-heading-icon" alt="haircoloring icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/icon-coloring.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_colour') ); ?></h2>
             </div>
