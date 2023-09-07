@@ -33,7 +33,7 @@ $card_counter = 0;
                         </span>
                         <span class="button-rightpart-primary">
                             <img alt="pil" class="button-content-right"
-                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png" />
+                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/arrow.png" />
                         </span>
                     </button>
                 </div>
