@@ -156,5 +156,5 @@
         <?php endif; ?>
     </div>
 </div>
-
+<div class="whitespace"></div>
 <?php get_footer(); ?>
