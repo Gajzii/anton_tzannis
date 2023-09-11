@@ -1088,7 +1088,20 @@ footer {
     grid-template-rows: 1fr;
     grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
     gap: 12px;
-    height: 450px;
+    height: 470px;
+  }
+  .slideshow-arrow-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .productsSlideImg {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .slideshow-arrow-right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
   }
 }
 @media screen and (min-width: 951px) {
@@ -1096,7 +1109,7 @@ footer {
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 1fr;
     grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
-    height: 500px;
+    height: 540px;
   }
 }
 .productsSlideImg {
@@ -1641,7 +1654,7 @@ footer {
     -webkit-text-fill-color: transparent;
   }
 }
-.products-slideshow {
+/* .products-slideshow {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -1656,8 +1669,8 @@ footer {
     grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
     gap: 12px;
     height: 450px;
-  }
-  .slideshow-arrow-left {
+  } 
+    .slideshow-arrow-left {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
@@ -1670,7 +1683,7 @@ footer {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
   }
-}
+}*/
 @media screen and (min-width: 951px) {
   .products-slideshow {
     grid-template-columns: 10% 80% 10%;
@@ -1694,7 +1707,7 @@ footer {
 }
 .productsSlideImg {
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: none;
   padding: 20px 0 0 0;
   -o-object-fit: cover;
@@ -1835,7 +1848,7 @@ footer {
   position: relative;
   height: 50px;
   left: 50%;
-  top: 50%;
+  top: 90%;
   transform: translate(-50%, -50%);
 }
 
@@ -1846,6 +1859,9 @@ footer {
     width: 100%;
     padding: 0;
     font-size: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media screen and (min-width: 951px) {
@@ -1855,5 +1871,8 @@ footer {
     width: 100%;
     padding: 0;
     font-size: 28px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 } /*# sourceMappingURL=style.css.map */
