@@ -84,7 +84,6 @@ header {
   --black-gradient: -webkit-linear-gradient(180deg, #1c1c1c, #303030, #1c1c1c, #303030, #1c1c1c);
   --white: #ffffff;
   --secondary-white: #ececec;
-  --red: #c20203;
   --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
   --gold-gradient-hover: -webkit-linear-gradient(100deg, #a98c54, #a98c54, #d0b990, #a98c54, #a98c54);
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
@@ -171,9 +170,29 @@ a {
 }
 
 /* ======================================================================= */
+/* =============================== SCROLLBAR ============================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black-transparent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-black);
+  border-radius: 20px;
+  border: 2px solid var(--primary-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ======================================================================= */
 /* ================================ BUTTONS ============================== */
 button {
-  width: 165px;
+  width: 175px;
   height: auto;
   background-color: transparent;
   display: flex;
@@ -190,12 +209,13 @@ button {
 .button-leftpart-primary {
   border-radius: 8px 0px 0px 8px;
   left: 0;
-  width: 130px;
+  width: 140px;
   background: var(--gold-gradient);
-  height: 26px;
+  height: 30px;
   align-items: center;
   display: flex;
   justify-content: center;
+  font-size: 16px;
 }
 
 .button-rightpart-primary {
@@ -203,7 +223,7 @@ button {
   right: 0;
   width: 30px;
   background: var(--gold-gradient);
-  height: 26px;
+  height: 30px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -242,14 +262,15 @@ button {
 }
 .hero-btn,
 .gradient-border-mask {
-  width: 185px;
-  height: 40px;
+  width: 195px;
+  height: 45px;
   font-family: var(--primary_font);
   cursor: pointer;
   justify-content: center;
   align-items: center;
   position: relative;
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 .hero-btn {
@@ -268,7 +289,6 @@ button {
     margin: 0;
     width: 210px;
     height: 45px;
-    font-size: 15px;
   }
 }
 .gradient-border-mask::before {
@@ -406,9 +426,16 @@ button {
     margin: 0;
   }
 }
+
 .lang-item a img {
-  width: 25px !important;
+  width: 30px !important;
   height: auto !important;
+}
+
+@media screen and (min-width: 951px) {
+  .lang-item a img {
+    width: 25px !important;
+  }
 }
 
 #dropdownmenu {
@@ -464,6 +491,7 @@ button {
   color: var(--secondary-white);
   font-size: 15px;
   padding: 5px 20px 15px 20px;
+  border-bottom: 2px solid var(--primary-black);
 }
 
 @media screen and (min-width: 951px) {
@@ -497,7 +525,7 @@ button {
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .top-menu a {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -831,8 +859,18 @@ footer {
 
 /* ----------------- FRONT PAGE - OPENING HOURS SECTION ------------------ */
 .opening-hours-section {
-  margin: 100px auto;
+  margin: 70px auto;
   text-align: center;
+}
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .opening-hours-section {
+    margin: 100px auto;
+  }
+}
+@media screen and (min-width: 951px) {
+  .opening-hours-section {
+    margin: 100px auto;
+  }
 }
 
 .opening-hours-container {
@@ -840,11 +878,11 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
-  gap: 30px 30px;
+  gap: 30px 0px;
   grid-auto-flow: row;
   grid-template-areas: "monday tuesday" "wednesday thursday" "friday saturday" "sunday sunday";
-  width: 100%;
-  margin: 20px 0;
+  width: 90%;
+  margin: auto;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -852,8 +890,10 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-auto-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
     grid-template-areas: "monday tuesday wednesday thursday friday saturday sunday";
+    width: 100%;
+    margin: 20px 0;
   }
 }
 @media screen and (min-width: 951px) {
@@ -861,8 +901,11 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-auto-columns: 1fr;
-    gap: 30px 48px;
+    /* gap: 30px 48px; */
+    gap: 0 30px;
     grid-template-areas: "monday tuesday wednesday thursday friday saturday sunday";
+    width: 100%;
+    margin: 20px 0;
   }
 }
 .sunday {
@@ -887,7 +930,7 @@ footer {
   }
 }
 .opening-hours-days {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 8px;
 }
 
@@ -899,7 +942,7 @@ footer {
 }
 @media screen and (min-width: 951px) {
   .opening-hours-days {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 10px;
   }
 }
@@ -907,6 +950,19 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.opening-hours-time p {
+  font-size: 16px;
+}
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .opening-hours-time p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .opening-hours-time p {
+    font-size: 16px;
+  }
 }
 
 /* ======================================================================= */
@@ -1023,7 +1079,7 @@ footer {
 .products-slideshow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 90% 10%;
   grid-template-areas: "productsSlideImg productsSlideImg" "slideshow-arrow-left slideshow-arrow-right";
   height: 390px;
 }
@@ -1034,7 +1090,20 @@ footer {
     grid-template-rows: 1fr;
     grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
     gap: 12px;
-    height: 450px;
+    height: 470px;
+  }
+  .slideshow-arrow-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .productsSlideImg {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .slideshow-arrow-right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
   }
 }
 @media screen and (min-width: 951px) {
@@ -1042,12 +1111,25 @@ footer {
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 1fr;
     grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
-    height: 500px;
+    height: 540px;
+  }
+  .slideshow-arrow-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .productsSlideImg {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  .slideshow-arrow-right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
   }
 }
 .productsSlideImg {
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: none;
   padding: 20px 0 0 0;
   -o-object-fit: cover;
@@ -1587,60 +1669,10 @@ footer {
     -webkit-text-fill-color: transparent;
   }
 }
-.products-slideshow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "productsSlideImg productsSlideImg" "slideshow-arrow-left slideshow-arrow-right";
-  height: 390px;
-}
 
-@media screen and (min-width: 672px) and (max-width: 950px) {
-  .products-slideshow {
-    grid-template-columns: 1fr 87% 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
-    gap: 12px;
-    height: 450px;
-  }
-  .slideshow-arrow-left {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .productsSlideImg {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-  }
-  .slideshow-arrow-right {
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
-  }
-}
-@media screen and (min-width: 951px) {
-  .products-slideshow {
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 1fr;
-    grid-template-areas: "slideshow-arrow-left productsSlideImg slideshow-arrow-right";
-    height: 500px;
-  }
-  .slideshow-arrow-left {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .productsSlideImg {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-  }
-  .slideshow-arrow-right {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-}
 .productsSlideImg {
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: none;
   padding: 20px 0 0 0;
   -o-object-fit: cover;
@@ -1781,7 +1813,7 @@ footer {
   position: relative;
   height: 50px;
   left: 50%;
-  top: 50%;
+  top: 90%;
   transform: translate(-50%, -50%);
 }
 
@@ -1792,6 +1824,9 @@ footer {
     width: 100%;
     padding: 0;
     font-size: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media screen and (min-width: 951px) {
@@ -1801,5 +1836,8 @@ footer {
     width: 100%;
     padding: 0;
     font-size: 28px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 } /*# sourceMappingURL=style.css.map */
