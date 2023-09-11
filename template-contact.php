@@ -11,6 +11,8 @@
     $zipcode = get_field('contact_zipcode');
     $mail = get_field('contact_mail'); 
     $facebook = get_field('contact_facebook');
+
+    $rate_us_btn = get_field('contact_rate_us');
 ?>
 
 <?php get_header();?>
@@ -24,7 +26,8 @@
                 <!----------------- PHONE NUMBER ----------------->
                 <div class="phone">
                     <div class="contact-heading">
-                        <img alt="Salonens telefonnummer." class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-phone.png">
+                        <img alt="Salonens telefonnummer." class="contact-icon"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-phone.png">
                         <h2 class="goldtext contact-header"><?= $phone_heading; ?></h2>
                     </div>
 
@@ -36,7 +39,8 @@
                 <!------------------- ADDRESS -------------------->
                 <div class="address">
                     <div class="contact-heading">
-                        <img alt="Salonens lokation." class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-location.png">
+                        <img alt="Salonens lokation." class="contact-icon"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-location.png">
                         <h2 class="goldtext contact-header"><?= $address_heading; ?></h2>
                     </div>
 
@@ -52,7 +56,8 @@
                 <!-------------------- MAIL ---------------------->
                 <div class="mail">
                     <div class="contact-heading">
-                        <img alt="Salonens mail." class="mail-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-mail.png">
+                        <img alt="Salonens mail." class="mail-icon"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-mail.png">
                         <h2 class="goldtext contact-header">Mail</h2>
                     </div>
 
@@ -64,7 +69,8 @@
                 <!------------------- FACEBOOK ------------------->
                 <div class="facebook">
                     <div class="contact-heading">
-                        <img alt="Salonens Facebook." class="contact-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-facebook.png">
+                        <img alt="Salonens Facebook." class="contact-icon"
+                            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-facebook.png">
                         <h2 class="goldtext contact-header">Facebook</h2>
                     </div>
 
@@ -77,7 +83,15 @@
             <!----------------------------------------->
             <img alt="Frisør Anton Tzannis’ logo." class="contact-logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/antontzannis_secondary-logo.svg" />
-                
+
+
+            <a href="<?= $rate_us_btn['url']; ?>" target="<?= $rate_us_btn['target']; ?>">
+                <button class="gradient-border-mask rate-us-btn">
+                    <?= $rate_us_btn['title']; ?>
+                </button>
+            </a>
+
+
         </div>
         <div class="contact-map">
             <iframe class="contact-map-inner"

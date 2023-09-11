@@ -14,9 +14,9 @@
             <img alt="Frisør Anton Tzannis’ logo." class="about-logo"
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/antontzannis_secondary-logo.svg" />
         </div>
-        
+
         <img alt="Profilbillede af salonens ejer og frisør Anton Tzannis." class="about-section-img" alt="anton tzannis"
-            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/at_profile.webp" />
+            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/at_profile_compressed.jpg" />
     </div>
 </div>
 
