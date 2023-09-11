@@ -7,7 +7,7 @@
 
 <!-- HERO VIDEO -->
 <div class="hero">
-    <video alt="Close-up af et par frisørhænder, der glatter håret på en kunde med et glattejern." class="hero-video" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" autoplay muted
+    <video playsinline src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/video/hero.mp4" alt="Close-up af et par frisørhænder, der glatter håret på en kunde med et glattejern." class="hero-video" type="video/mp4" autoplay  muted style="position: absolute;"
         loop>
     </video>
 
@@ -47,8 +47,8 @@
         ?>
 
         <!--- FACEBOOK CTA --->
-        <div class="cta_card_inner" style="background-image: url(<?= $cta_background_image['url']; ?>)">
-            <div class="cta_card_inner_background">
+        <div class="cta_card_inner" tabindex="0" onclick ontouchmove style="background-image: url(<?= $cta_background_image['url']; ?>)">
+            <div class="cta_card_inner_background" tabindex="0" onclick ontouchmove>
                 <h3 class="goldtext"><?= $cta_title; ?></h3>
                 <div class="ctadetails">
                     <p class="cta_description"><?= $cta_description; ?></p>
@@ -58,7 +58,7 @@
                                 <?= $cta_link['title']; ?>
                             </span>
                             <span class="button-rightpart-primary">
-                                <img alt="pil" class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png"/>
+                                <img alt="pil" class="button-content-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/arrow.png"/>
                             </span>
                         </button>
                     </form>

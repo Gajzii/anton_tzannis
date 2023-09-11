@@ -12,7 +12,13 @@
             )
         ); ?>
         <div class="footer-copyright">
-            <h4>©<?php echo get_the_date('Y'); ?> Frisør Anton Tzannis</h4>
+
+        <?php
+            $currentDate = new DateTime();
+            $year = $currentDate->format("Y");
+        ?>
+
+            <h4>©<?php echo $year; ?> Frisør Anton Tzannis</h4>
         </div>
     </div>
     <div class="credits">

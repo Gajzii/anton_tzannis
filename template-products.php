@@ -22,8 +22,8 @@ $card_counter = 0;
                 $images = get_sub_field('product_gallery');
             ?>
 
-        <div class="cta_card_inner product_card_inner" style="background-image: url(<?= $background_image['url']; ?>)">
-            <div class="cta_card_inner_background">
+        <div class="cta_card_inner product_card_inner" tabindex="0" onclick ontouchmove style="background-image: url(<?= $background_image['url']; ?>)">
+            <div class="cta_card_inner_background" tabindex="0" onclick ontouchmove>
                 <h3 class="goldtext"><?= $product_name; ?></h3>
                 <div class="ctadetails">
                     <p class="cta_description"><?= $product_description; ?></p>
@@ -33,7 +33,7 @@ $card_counter = 0;
                         </span>
                         <span class="button-rightpart-primary">
                             <img alt="pil" class="button-content-right"
-                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/icons/arrow.png" />
+                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/arrow.png" />
                         </span>
                     </button>
                 </div>

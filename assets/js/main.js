@@ -1,23 +1,17 @@
-// import { productModal } from "./utilities/product-modal";
-// import { navigation } from "./utilities/navigation";
-
-// productModal();
-// navigation();
-
-//------------------ BURGER MENU ------------------
+// ----------------------- BURGER MENU -----------------------
 function onClickMenu() {
   document.getElementById("dropdownmenu").classList.toggle("change");
   document.querySelector(".top-menu").classList.toggle("change");
 }
 
-//------------------ ADD CLASS TO ACTIVE MENU ITEM ------------------
+// Add class to active menu item
 for (var i = 0; i < document.links.length; i++) {
   if (document.links[i].href == document.URL) {
     document.links[i].className = "active";
   }
 }
 
-//------------------ MODAL SLIDESHOW ------------------
+// ---------------------- PRODUCT MODAL ----------------------
 const readMoreBtns = document.querySelectorAll(".openModal");
 const closeBtns = document.querySelectorAll(".closeModal");
 
@@ -30,7 +24,9 @@ function incrementSlideIndex(modalElement) {
     return;
   }
 
-  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const currentSlideIndex = parseInt(
+    modalElement.getAttribute("data-slide-index")
+  );
   const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
 
   if (currentSlideIndex < slideCount - 1) {
@@ -48,7 +44,9 @@ function decrementSlideIndex(modalElement) {
     return;
   }
 
-  const currentSlideIndex = parseInt(modalElement.getAttribute("data-slide-index"));
+  const currentSlideIndex = parseInt(
+    modalElement.getAttribute("data-slide-index")
+  );
   const slideCount = modalElement.querySelectorAll(".productsSlideImg").length;
 
   if (currentSlideIndex > 0) {
@@ -90,7 +88,10 @@ readMoreBtns.forEach((btn, index) => {
     }
 
     // Show the first image and display the modal
-    showDivs(modalData.element, modalData.element.getAttribute("data-slide-index"));
+    showDivs(
+      modalData.element,
+      modalData.element.getAttribute("data-slide-index")
+    );
     document.querySelector("#" + productsPopupModal).style.display = "block";
     modalData.element.style.display = "block";
   });
