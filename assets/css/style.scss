@@ -489,6 +489,7 @@ button {
   justify-content: center;
   overflow: hidden;
   border-radius: 0 0 5px 5px;
+  text-align: center;
 }
 
 .cta_card_inner:hover > .cta_card_inner_background > .ctadetails {
@@ -953,13 +954,25 @@ footer {
 /* ========================== FRONT PAGE ================================= */
 .hero {
   width: 100%;
-  height: 545px;
+  height: 90vh;
   position: relative;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero {
+    height: 58vh;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .hero {
+    height: 60vh;
+  }
 }
 
 .hero-video {
   width: 100%;
-  height: 545px;
+  height: 90vh;
   -o-object-fit: cover;
   object-fit: cover;
   opacity: 80%;
@@ -969,13 +982,13 @@ footer {
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .hero-video {
-    height: 745px;
+    height: 80vh;
   }
 }
 
 @media screen and (min-width: 951px) {
   .hero-video {
-    height: 745px;
+    height: 80vh;
   }
 }
 
