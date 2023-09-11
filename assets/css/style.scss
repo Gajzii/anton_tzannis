@@ -102,7 +102,6 @@ header {
   --black-gradient: -webkit-linear-gradient(180deg, #1c1c1c, #303030, #1c1c1c, #303030, #1c1c1c);
   --white: #ffffff;
   --secondary-white: #ececec;
-  // --red: #c20203;
   --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
   --gold-gradient-hover: -webkit-linear-gradient(100deg, #a98c54, #a98c54, #d0b990, #a98c54, #a98c54);
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
@@ -534,7 +533,7 @@ button {
   height: auto !important;
 }
 
-@media screen and (min-width: 672px) and (max-width: 950px) and (min-width: 951px) {
+@media screen and (min-width: 951px) {
   .lang-item a img {
     width: 25px !important;
   }
@@ -613,6 +612,7 @@ button {
   color: var(--secondary-white);
   font-size: 15px;
   padding: 5px 20px 15px 20px;
+  border-bottom: 2px solid var(--primary-black);
 }
 
 @media screen and (min-width: 951px) {
@@ -646,7 +646,7 @@ button {
 }
 
 .top-menu a {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
