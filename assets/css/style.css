@@ -81,36 +81,15 @@ header {
   /* -------------------------------- COLORS ------------------------------- */
   --primary-black: #1c1c1c;
   --secondary-black: #262626;
-  --black-gradient: -webkit-linear-gradient(
-    180deg,
-    #1c1c1c,
-    #303030,
-    #1c1c1c,
-    #303030,
-    #1c1c1c
-  );
+  --black-gradient: -webkit-linear-gradient(180deg, #1c1c1c, #303030, #1c1c1c, #303030, #1c1c1c);
   --white: #ffffff;
   --secondary-white: #ececec;
   --red: #c20203;
-  --gold-gradient: -webkit-linear-gradient(
-    100deg,
-    #ceac68,
-    #ceac68,
-    #f0d4a4,
-    #ceac68,
-    #ceac68
-  );
-  --gold-gradient-hover: -webkit-linear-gradient(
-    100deg,
-    #a98c54,
-    #a98c54,
-    #d0b990,
-    #a98c54,
-    #a98c54
-  );
+  --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
+  --gold-gradient-hover: -webkit-linear-gradient(100deg, #a98c54, #a98c54, #d0b990, #a98c54, #a98c54);
   --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
   --grey-hover: #bcbcbc;
-  --grey-active: #4d4d4d;
+  --grey-active: #858383;
   --black-transparent: #1c1c1cdb;
   /* --------------------------------- FONTS ------------------------------- */
   --primary_font: "Arial";
@@ -451,7 +430,7 @@ button {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 2%;
+  padding: 10px 4%;
   height: 62px;
   background-color: var(--primary-black);
 }
@@ -459,6 +438,7 @@ button {
 @media screen and (min-width: 951px) {
   .header-inner {
     flex-direction: row;
+    padding: 10px 2%;
   }
 }
 .top-menu {
@@ -493,7 +473,7 @@ button {
   }
 }
 .top-menu li {
-  padding: 8px 0;
+  padding: 15px 0;
 }
 
 @media screen and (min-width: 951px) {
@@ -509,6 +489,34 @@ button {
 }
 .active {
   color: var(--grey-active);
+}
+
+.top-menu a {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .top-menu a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .top-menu a {
+    font-size: 14px;
+  }
+}
+
+.dropdownmenuBg {
+  background-color: var(--black-transparent);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  display: none;
+  z-index: 998;
+  backdrop-filter: blur(2px);
 }
 
 /* ------------------------- BURGER MENU SYMBOL -------------------------- */
@@ -579,6 +587,7 @@ footer {
   grid-template-areas: "footer-logo" "footer-menu" "footer-copyright";
   align-items: center;
   text-align: left;
+  height: 360px;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -589,6 +598,7 @@ footer {
     width: 90%;
     margin: auto;
     padding: 25px 0 10px 0;
+    height: 140px;
   }
 }
 @media screen and (min-width: 951px) {
@@ -608,7 +618,7 @@ footer {
   grid-area: footer-menu;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   padding-left: 30px;
   list-style: none;
   white-space: nowrap;
@@ -629,6 +639,23 @@ footer {
     gap: 35px;
   }
 }
+
+.footer-menu a {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .footer-menu a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .footer-menu a {
+    font-size: 14px;
+  }
+}
+
 .footer-copyright {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -1110,7 +1137,7 @@ footer {
   gap: 20px 0px;
   grid-template-areas: "haircut" "brows" "permanent" "other-treatments" "haircolor";
   width: 100%;
-  height: 1310px;
+  height: 1440px;
   margin: 20px auto 0 auto;
   justify-content: center;
 }
@@ -1123,7 +1150,7 @@ footer {
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .prices-grid {
-    height: 1260px;
+    height: 1350px;
   }
 }
 @media screen and (min-width: 951px) {
@@ -1176,7 +1203,13 @@ footer {
 .price-category__item {
   display: flex;
   justify-content: space-between;
-  margin: 5px 0;
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 951px) {
+  .price-category__item {
+    margin: 5px 0;
+  }
 }
 
 .service {
@@ -1769,4 +1802,4 @@ footer {
     padding: 0;
     font-size: 28px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
