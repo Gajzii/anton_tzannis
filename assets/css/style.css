@@ -342,19 +342,21 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .cta-section {
     flex-direction: row;
     justify-content: space-between;
+    gap: 15px;
   }
 }
 @media screen and (min-width: 951px) {
   .cta-section {
     flex-direction: row;
     justify-content: space-between;
+    gap: 15px;
   }
 }
 .cta_card_inner {
