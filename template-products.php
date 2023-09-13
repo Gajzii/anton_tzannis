@@ -6,7 +6,7 @@ $card_counter = 0;
 
 <?php get_header(); ?>
 
-<div class="page-margin">
+<div class="page-margin page-height">
     <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
     <div class="center"><?php the_content(); ?></div>
     <div class="whitespace"></div>
@@ -22,7 +22,8 @@ $card_counter = 0;
                 $images = get_sub_field('product_gallery');
             ?>
 
-        <div class="cta_card_inner product_card_inner" tabindex="0" onclick ontouchmove style="background-image: url(<?= $background_image['url']; ?>)">
+        <div class="cta_card_inner product_card_inner" tabindex="0" onclick ontouchmove
+            style="background-image: url(<?= $background_image['url']; ?>)">
             <div class="cta_card_inner_background" tabindex="0" onclick ontouchmove>
                 <h3 class="goldtext"><?= $product_name; ?></h3>
                 <div class="ctadetails">
