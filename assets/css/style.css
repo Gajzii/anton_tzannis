@@ -49,6 +49,7 @@ header {
     width: 90%;
   }
 }
+
 @media screen and (min-width: 951px) {
   .page-margin {
     width: 80%;
@@ -56,10 +57,15 @@ header {
     margin: 5% auto;
   }
 }
+
 .flex {
   display: flex;
   flex-direction: column;
   margin: 0;
+}
+
+.page-height {
+  height: 100%;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -1234,7 +1240,7 @@ footer {
   gap: 20px 0px;
   grid-template-areas: "haircut" "brows" "permanent" "other-treatments" "haircolor";
   width: 100%;
-  height: 1440px;
+  height: 1480px;
   margin: 20px auto 0 auto;
   justify-content: center;
 }
@@ -1247,7 +1253,7 @@ footer {
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .prices-grid {
-    height: 1350px;
+    height: 1390px;
   }
 }
 @media screen and (min-width: 951px) {
@@ -1585,11 +1591,13 @@ footer {
 
 .rate-us-btn {
   margin: 0 auto 30px auto;
+  width: 220px !important;
 }
 
 @media screen and (min-width: 951px) {
   .rate-us-btn {
     margin: 40px auto 0 0;
+    width: 195px;
   }
 }
 

@@ -11,7 +11,6 @@
     $zipcode = get_field('contact_zipcode');
     $mail = get_field('contact_mail'); 
     $facebook = get_field('contact_facebook');
-
     $rate_us_btn = get_field('contact_rate_us');
 ?>
 
@@ -61,7 +60,7 @@
                         <h2 class="goldtext contact-header">Mail</h2>
                     </div>
 
-                    <a href="mailto:anton-tzannis@hairtools.dk">
+                    <a href="mailto:at@antontzannis.dk">
                         <p class="center"><?= $mail; ?></p>
                     </a>
                 </div>
