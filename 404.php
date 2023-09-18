@@ -4,10 +4,8 @@
 ?>
 
 <?php get_header(); ?>
-<div class="page-margin page-height">
-    <header class="page-header">
-        <h1 class="goldtext"><?php _e( 'Siden blev ikke fundet', 'anton_tzannis' ); ?></h1>
-    </header>
+<div class="page-margin">
+    <h1 class="goldtext"><?php _e( 'Siden blev ikke fundet', 'anton_tzannis' ); ?></h1>
 
     <h4 class="center">
         <?php _e( 'Vi beklager, men den side, du forsøgte at besøge, eksisterer ikke.', 'anton_tzannis' ); ?></h4>
@@ -25,14 +23,15 @@
                 </p>
             </li>
             <li>
-                <p><?php _e( 'Klik på Tilbage-knappen i din browser for at gå til den side, du kom fra.', 'anton_tzannis' ); ?>
+                <p><?php _e( 'Klik på tilbage-knappen i din browser for at gå til den side, du kom fra.', 'anton_tzannis' ); ?>
                 </p>
             </li>
         </ul>
     </div>
-
-    <img alt="Frisør Anton Tzannis’ logo." class="contact-logo center"
-        src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/antontzannis_secondary-logo.svg" />
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <img alt="Frisør Anton Tzannis’ logo." class="contact-logo center"
+            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/media/images/antontzannis_secondary-logo.svg" />
+    </a>
 </div>
 
 

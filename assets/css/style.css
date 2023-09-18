@@ -22,7 +22,9 @@ Author: Noerwald v/ Camilla Nørgaard og Maja Wennwewald
 
 body {
   background: var(--black-gradient);
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
@@ -42,6 +44,7 @@ header {
 .page-margin {
   width: 85%;
   margin: 10% auto;
+  flex-grow: 1;
 }
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
@@ -64,9 +67,9 @@ header {
   margin: 0;
 }
 
-.page-height {
+/* .page-height {
   min-height: 80%;
-}
+} */
 
 @media screen and (min-width: 672px) and (max-width: 950px) {
   .flex {
@@ -615,6 +618,8 @@ button {
 /* ================================ FOOTER =============================== */
 footer {
   background-color: var(--primary-black);
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .footer-grid {

@@ -16,7 +16,7 @@
 
 <?php get_header();?>
 
-<div class="page-margin page-height">
+<div class="page-margin">
     <h1 class="goldtext"><?php echo get_the_title(); ?></h1>
     <div class="center"><?php the_content(); ?></div>
     <div class="contact-page">
