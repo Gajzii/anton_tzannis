@@ -101,7 +101,8 @@
         <?php if ( have_rows('prices_other_treatments') ) : ?>
         <div class="price-category other-treatments">
             <div class="price-category-heading">
-                <img alt="Generelle frisør ydelser og behandlinger." class="price-category-heading-icon" alt="other treatments icon"
+                <img alt="Generelle frisør ydelser og behandlinger." class="price-category-heading-icon"
+                    alt="other treatments icon"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/icon-other_treatments.svg" />
                 <h2 class="goldtext price_heading"><?php echo esc_html( the_field('heading_other_treatment') ); ?></h2>
             </div>
