@@ -957,6 +957,30 @@ footer {
 }
 
 /* ======================================================================= */
+/* ========================== 404 PAGE ================================= */
+.page-not-found {
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.page-not-found-ul {
+  color: var(--white);
+  display: inline-block;
+  text-align: left;
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.page-not-found-ul a {
+  text-decoration: underline;
+}
+
+.page-not-found-ul a:hover {
+  color: var(--grey-hover);
+}
+
+/* ======================================================================= */
 /* ========================== FRONT PAGE ================================= */
 .hero {
   width: 100%;
