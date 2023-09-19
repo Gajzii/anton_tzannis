@@ -3,6 +3,9 @@ function onClickMenu() {
   document.getElementById("dropdownmenu").classList.toggle("change");
   document.querySelector(".top-menu").classList.toggle("change");
   document.querySelector(".dropdownmenuBg").classList.toggle("change");
+
+  // Add or remove a class from the body to prevent scrolling
+  document.body.classList.toggle("menu-open");
 }
 
 // Add class to active menu item
@@ -88,6 +91,8 @@ readMoreBtns.forEach((btn, index) => {
     showDivs(modalData.element, modalData.element.getAttribute("data-slide-index"));
     document.querySelector("#" + productsPopupModal).style.display = "block";
     modalData.element.style.display = "block";
+    // Add the class to the body to disable scrolling
+    document.body.classList.add("modal-open");
   });
 });
 
@@ -95,6 +100,9 @@ closeBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     const productsPopupModal = "card-" + index;
     const productsPopup = "cards-" + index;
+
+    // Remove the class from the body to enable scrolling
+    document.body.classList.remove("modal-open");
 
     // Hide the modal
     document.querySelector("#" + productsPopupModal).style.display = "none";
